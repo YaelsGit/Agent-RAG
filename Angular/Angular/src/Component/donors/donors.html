@@ -1,0 +1,218 @@
+<!-- <div class="flex justify-content-center p-4">
+    <button pButton 
+            type="button" 
+            label="ניהול תורמים" 
+            icon="pi pi-users" 
+            class="p-button-info" 
+            (click)="displayModal = true">
+    </button>
+</div>
+
+<p-dialog 
+    header="פרטי תורם" 
+    [(visible)]="displayModal" 
+    [modal]="true" 
+    [style]="{width: '450px'}" 
+    [draggable]="false">
+<!-- 
+    <div class="flex flex-column gap-3 mt-2">
+        <div class="flex flex-column gap-2">
+            <label for="firstName" class="font-bold text-700">First Name</label>
+            <input pInputText id="firstName" [(ngModel)]="firstName" class="w-full" />
+        </div>
+
+        <div class="flex flex-column gap-2">
+            <label for="lastName" class="font-bold text-700">Last Name</label>
+            <input pInputText id="lastName" [(ngModel)]="lastName" class="w-full" />
+        </div>
+
+        <div class="flex flex-column gap-2">
+            <label for="email" class="font-bold text-700">Email</label>
+            <input pInputText id="email" [(ngModel)]="email" class="w-full" />
+        </div>
+
+        <div class="flex flex-column gap-2">
+            <label for="phone" class="font-bold text-700">Phone</label>
+            <input pInputText id="phone" [(ngModel)]="phone" class="w-full" />
+        </div>
+    </div>
+
+    <ng-template pTemplate="footer">
+        <div class="flex justify-content-center gap-2">
+            <button pButton 
+                    label="שמור חדש" 
+                    icon="pi pi-plus" 
+                    class="p-button-success" 
+                    (click)="createDonor()">
+            </button> -->
+
+            <!-- <button pButton 
+                    label="עדכן קיים" 
+                    icon="pi pi-refresh" 
+                    class="p-button-warning" 
+                    [disabled]="id === 0" 
+                    (click)="updateDonor()">
+            </button>
+            
+            <button pButton label="ביטול" class="p-button-text" (click)="displayModal = false"></button>
+        </div>
+    </ng-template>
+</p-dialog> -->
+<!-- 
+<p-table [value]="donors" dataKey="id" editMode="row" [tableStyle]="{ 'min-width': '60rem' }">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>שם פרטי</th>
+      <th>שם משפחה</th>
+      <th>אימייל</th>
+      <th>טלפון</th>
+      <th>פעולות</th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-donor let-editing="editing" let-ri="rowIndex">
+    <tr [pEditableRow]="donor">
+
+      <td>
+        <p-cellEditor>
+          <ng-template pTemplate="input">
+            <input pInputText [(ngModel)]="donor.firstName" />
+          </ng-template>
+          <ng-template pTemplate="output">{{ donor.firstName }}</ng-template>
+        </p-cellEditor>
+      </td>
+
+      <td>
+        <p-cellEditor>
+          <ng-template pTemplate="input">
+            <input pInputText [(ngModel)]="donor.lastName" />
+          </ng-template>
+          <ng-template pTemplate="output">{{ donor.lastName }}</ng-template>
+        </p-cellEditor>
+      </td>
+
+      <td>
+        <p-cellEditor>
+          <ng-template pTemplate="input">
+            <input pInputText [(ngModel)]="donor.email" />
+          </ng-template>
+          <ng-template pTemplate="output">{{ donor.email }}</ng-template>
+        </p-cellEditor>
+      </td>
+
+      <td>
+        <p-cellEditor>
+          <ng-template pTemplate="input">
+            <input pInputText [(ngModel)]="donor.phone" />
+          </ng-template>
+          <ng-template pTemplate="output">{{ donor.phone }}</ng-template>
+        </p-cellEditor>
+      </td>
+
+      <td class="text-center">
+        <button *ngIf="!editing" pButton pInitEditableRow icon="pi pi-pencil" (click)="onRowEditInit(donor)" text rounded></button>
+        <button *ngIf="editing" pButton pSaveEditableRow icon="pi pi-check" (click)="onRowEditSave(donor)" text rounded></button>
+        <button *ngIf="editing" pButton pCancelEditableRow icon="pi pi-times" (click)="onRowEditCancel(donor, ri)" text rounded></button>
+      </td>
+
+    </tr>
+  </ng-template>
+</p-table> -->
+<div class="card p-4">
+    <h2 class="mb-4 text-2xl font-bold">ניהול תורמים</h2>
+
+    <div class="flex flex-wrap gap-3 mb-4 p-3 bg-gray-50 border-round shadow-1">
+        <div class="flex flex-column gap-2">
+            <span class="p-input-icon-left">
+                <i class="pi pi-user"></i>
+                <input pInputText type="text" [(ngModel)]="firstName" placeholder="שם פרטי" class="p-inputtext-sm">
+            </span>
+            <input pInputText type="text" [(ngModel)]="lastName" placeholder="שם משפחה" class="p-inputtext-sm">
+            <button pButton label="חפש לפי שם" icon="pi pi-search" (click)="searchByName(firstName, lastName)" class="p-button-sm"></button>
+        </div>
+
+        <div class="border-left-1 border-gray-300 mx-2"></div>
+
+        <div class="flex flex-column gap-2">
+            <span class="p-input-icon-left">
+                <i class="pi pi-envelope"></i>
+                <input pInputText type="text" #emailSearch placeholder="אימייל" class="p-inputtext-sm">
+            </span>
+            <button pButton label="חפש אימייל" icon="pi pi-at" (click)="searchByEmail(emailSearch.value)" class="p-button-sm p-button-info"></button>
+        </div>
+
+        <div class="border-left-1 border-gray-300 mx-2"></div>
+
+        <div class="flex flex-column gap-2">
+            <span class="p-input-icon-left">
+                <i class="pi pi-gift"></i>
+                <input pInputText type="text" #giftSearch placeholder="שם מתנה" class="p-inputtext-sm">
+            </span>
+            <button pButton label="חפש מתנה" icon="pi pi-search" (click)="searchByGift(giftSearch.value)" class="p-button-sm p-button-help"></button>
+        </div>
+
+        <div class="flex align-items-end">
+            <button pButton icon="pi pi-refresh" label="נקה הכל" (click)="getAllDonors(); resetForm()" class="p-button-sm p-button-secondary p-button-outlined"></button>
+        </div>
+    </div>
+
+    <p-table [value]="sourceDonors()" [paginator]="true" [rows]="10" 
+             [tableStyle]="{ 'min-width': '50rem' }" 
+             styleClass="p-datatable-striped p-datatable-gridlines">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>מזהה</th>
+                <th>שם פרטי</th>
+                <th>שם משפחה</th>
+                <th>אימייל</th>
+                <th>טלפון</th>
+                <th style="width: 10rem">פעולות</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-donor>
+            <tr>
+                <td>{{ donor.id || donor.Id }}</td>
+                <td>{{ donor.firstName }}</td>
+                <td>{{ donor.lastName }}</td>
+                <td>{{ donor.email }}</td>
+                <td>{{ donor.phone }}</td>
+                <td class="flex gap-2">
+                    <button pButton icon="pi pi-pencil" class="p-button-rounded p-button-text p-button-warning" 
+                            (click)="editDonor(donor)"></button>
+                    <button pButton icon="pi pi-trash" class="p-button-rounded p-button-text p-button-danger" 
+        (click)="deleteDonor(donor)"></button>
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+            <tr>
+                <td colspan="6" class="text-center p-4">לא נמצאו תורמים העונים לחיפוש.</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+
+<p-dialog header="עדכון פרטי תורם" [(visible)]="displayModal" [modal]="true" [style]="{ width: '25vw' }" [draggable]="false" [resizable]="false">
+    <div class="flex flex-column gap-3 mt-2">
+        <div class="flex flex-column gap-1">
+            <label for="fname">שם פרטי</label>
+            <input pInputText id="fname" [(ngModel)]="firstName" />
+        </div>
+        <div class="flex flex-column gap-1">
+            <label for="lname">שם משפחה</label>
+            <input pInputText id="lname" [(ngModel)]="lastName" />
+        </div>
+        <div class="flex flex-column gap-1">
+            <label for="mail">אימייל</label>
+            <input pInputText id="mail" [(ngModel)]="email" />
+        </div>
+        <div class="flex flex-column gap-1">
+            <label for="phn">טלפון</label>
+            <input pInputText id="phn" [(ngModel)]="phone" />
+        </div>
+    </div>
+    <ng-template pTemplate="footer">
+        <button pButton label="ביטול" icon="pi pi-times" (click)="displayModal=false" class="p-button-text"></button>
+        <button pButton label="שמור שינויים" icon="pi pi-check" (click)="updateDonor()"></button>
+    </ng-template>
+</p-dialog>

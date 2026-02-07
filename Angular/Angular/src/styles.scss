@@ -1,0 +1,5 @@
+@use "tailwindcss";
+@plugin "tailwindcss-primeui";
+
+@source "../src/**/*.{html,ts}";
+@import "primeflex/primeflex.css";

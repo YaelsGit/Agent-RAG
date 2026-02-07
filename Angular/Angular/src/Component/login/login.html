@@ -1,0 +1,36 @@
+<div class="card shadow-2 border-round-xl p-4">
+    <div class="grid">
+        
+        <div class="col-12 md:col-5 flex align-items-center justify-content-center py-5">
+            <p-button label="משתמש חדש" 
+                      icon="pi pi-user-plus" 
+                      severity="success" 
+                      styleClass="w-full max-w-15rem"
+                      (click)="signup()">
+            </p-button>
+        </div>
+
+        <div class="col-12 md:col-2">
+            <p-divider layout="vertical" styleClass="hidden md:flex"><b>או</b></p-divider>
+            <p-divider layout="horizontal" styleClass="flex md:hidden" align="center"><b>או</b></p-divider>
+        </div>
+
+        <div class="col-12 md:col-5 flex flex-column align-items-center justify-content-center gap-4 py-5">
+            <div class="w-full max-w-15rem flex flex-column gap-2">
+                <label for="username" class="font-bold">שם משתמש</label>
+                <input pInputText id="username" type="text" [(ngModel)]="username" class="w-full" />
+            </div>
+            <div class="w-full max-w-15rem flex flex-column gap-2">
+                <label for="password" class="font-bold">סיסמה</label>
+                <input pInputText id="password" type="password" [(ngModel)]="password" class="w-full" />
+            </div>
+            <p-button label="כניסה" 
+                      icon="pi pi-user" 
+                      severity="contrast" 
+                      styleClass="w-full max-w-15rem"
+                      (click)="login()">
+            </p-button>
+        </div>
+        
+    </div>
+</div>
