@@ -26,6 +26,7 @@ builder.Services.AddScoped<IDonorService,DonorService>();
 builder.Services.AddScoped<IGiftService, GiftService>();
 
 
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

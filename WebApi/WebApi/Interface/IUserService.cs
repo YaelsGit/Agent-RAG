@@ -8,9 +8,7 @@ namespace WebApi.Interface
     {
         Task<UserResponseDto> UserRegister(UserRegisterDto userRegister);
         Task<LoginResponseDto?> UserLogin(UserLoginedDto userLogin);
-        Task<PurchaseBasketDto?> AddToBasket(PurchaseBasketDto Purchase);
-        Task<PurchaseWithUserDto?> TicketPurchase(PurchaseBasketDto purchase);
-
-
+        Task<PurchaseBasketUserDto?> AddToBasket(PurchaseBasketDto Purchase, int userId);
+        Task<List<PurchaseWithUserDto?>> TicketPurchase(PurchaseBasketDto purchase, int userId);
     }
 }

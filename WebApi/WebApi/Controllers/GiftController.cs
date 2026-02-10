@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Text;
+using System.Text.Json;
 using WebApi.DTOs;
 using WebApi.Interface;
 using WebApi.Models;
@@ -16,7 +18,7 @@ namespace WebApi.Controllers
     public class GiftController : ControllerBase
     {
         private readonly IGiftService _giftService;
-        GiftController(IGiftService giftService)
+        public GiftController(IGiftService giftService)
         {
             _giftService = giftService;
         }
@@ -65,12 +67,12 @@ namespace WebApi.Controllers
         {
             try
             {
-                var categoty = await _giftService.CreateCategory(CategoryForm);
-                return categoty;
+                var category = await _giftService.CreateCategory(CategoryForm);
+                return Ok(category);
             }
-            catch (ArgumentException ex)
+            catch (Exception ex)
             {
-                return BadRequest(new { massage = ex.Message });
+                return StatusCode(500, new { message = ex.Message, stackTrace = ex.StackTrace });
             }
         }
         [Authorize(Roles = "Admin")]
@@ -126,7 +128,7 @@ namespace WebApi.Controllers
         [RandomValidation]
         [HttpGet]
         [Route("Purchase&Gift")]
-        public async Task<IActionResult> GetGiftPurchases([FromBody] int giftId)
+        public async Task<IActionResult> GetGiftPurchases(int giftId)
         {
             var result = await _giftService.GetGiftPurchases(giftId);
 
@@ -152,8 +154,8 @@ namespace WebApi.Controllers
             return Ok(result);
         }
         [RandomValidation]
-        [HttpGet("/purchases-with-users")]
-        public async Task<ActionResult<GiftPurchasesWithUsersDto>> GetGiftPurchasesWithUsers([FromBody] int giftId)
+        [HttpGet("purchases-with-users")]
+        public async Task<ActionResult<GiftPurchasesWithUsersDto>> GetGiftPurchasesWithUsers(int giftId)
         {
             var result = await _giftService.GetGiftPurchasesWithUsers(giftId);
 
@@ -165,24 +167,48 @@ namespace WebApi.Controllers
         [Authorize(Roles = "Admin")]
         [HttpGet]
         [Route("Random")]
-        public async Task<ActionResult<IEnumerable<GiftWinnerDto>>> GiftRandom()
+        public async Task<IActionResult> GiftRandom()
         {
-            var result = await _giftService.GiftRandom();
-            return Ok(result);
+            var winners = await _giftService.GiftRandom();
+
+            var json = JsonSerializer.Serialize(
+            winners,
+            new JsonSerializerOptions { WriteIndented = true }
+            );
+
+            var bytes = System.Text.Encoding.UTF8.GetBytes(json);
+
+            return File(
+             bytes,
+             "application/json",
+             "giftWinners.json"
+           );
         }
         [Authorize(Roles = "Admin")]
         [RandomValidation]
         [HttpGet]
         [Route("TotalSum")]
-        public async Task<ActionResult<TotalSumDto>> GetTotalSum()
+        public async Task<IActionResult> GetTotalSum()
         {
-            var result = await _giftService.GetTotalSum();
-            return Ok(result);
+            var dto = await _giftService.GetTotalSum();
+
+            var json = JsonSerializer.Serialize(
+            dto,
+            new JsonSerializerOptions { WriteIndented = true }
+            );
+
+            var bytes = Encoding.UTF8.GetBytes(json);
+
+            return File(
+             bytes,
+             "application/json",
+             "totalSum.json"
+            );
         }
         [RandomValidation]
         [HttpGet]
         [Route("GetBySorted")]
-        public async Task<ActionResult<IEnumerable<GiftCategoryDto?>>> SortedGiftByPriceOrCategory([FromRoute]string sortedBy)
+        public async Task<ActionResult<IEnumerable<GiftCategoryDto?>>> SortedGiftByPriceOrCategory(string sortedBy)
         {
 
             var result = await _giftService.SortedGiftByPriceOrCategory(sortedBy);

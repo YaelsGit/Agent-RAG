@@ -1,4 +1,6 @@
-﻿namespace WebApi.DTOs
+﻿using WebApi.Models;
+
+namespace WebApi.DTOs
 {
     public class PurchaseDTO
     {
@@ -23,9 +25,15 @@
             public int Id { get; set; }
             public DateTime Date { get; set; }
             public int GiftId { get; set; }
-            public int UserId { get; set; }
             public int Quentity { get; set; } = 1;
-
+        }
+        public class PurchaseBasketUserDto
+        {
+            public int UserId { get; set; }
+            public int Id { get; set; }
+            public DateTime Date { get; set; }
+            public int GiftId { get; set; }
+            public int Quentity { get; set; } = 1;
         }
     }
 }

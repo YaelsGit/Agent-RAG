@@ -94,46 +94,62 @@ namespace WebApi.Service
         {
             return Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(password));
         }
-        public async Task<PurchaseBasketDto?> AddToBasket(PurchaseBasketDto Purchase)
+        public async Task<PurchaseBasketUserDto?> AddToBasket(PurchaseBasketDto purchase,int userId)
         {
-            var user = await _userRepository.GetByUserId(Purchase.UserId);
+        
+            var purchases = new PurchaseBasketUserDto
+            {
+                UserId = userId,
+                GiftId = purchase.GiftId,
+                Date = purchase.Date,
+                Quentity=purchase.Quentity,
+            };
+            var user = await _userRepository.GetByUserId(purchases.UserId);
+
             if (user == null)
             {
                 return null;
             }
             for (var i = 0; user.PurchaseDto.Count() > 0; i++)
             {
-                if (user.PurchaseDto[i].GiftId == Purchase.GiftId)
+                if (user.PurchaseDto[i].GiftId == purchases.GiftId)
                 {
                     user.PurchaseDto[i].Quentity++;
-                    return Purchase;
+                    return purchases;
                 }
             }
-            user.PurchaseDto.Add(Purchase);
-            return Purchase;
+            user.PurchaseDto.Add(purchases);
+            return purchases;
         }
-        public async Task<PurchaseWithUserDto?> TicketPurchase(PurchaseBasketDto purchase)
+        public async Task<List<PurchaseWithUserDto?>> TicketPurchase(PurchaseBasketDto purchase,int userId)
+
         {
+            List<PurchaseWithUserDto> lp=new List<PurchaseWithUserDto>();
             if (purchase == null)
                 return null;
-            var purch = new Purchase()
+            for(int i = 0; i < purchase.Quentity; i++)
             {
-                Date = DateTime.Now,
-                GiftId = purchase.GiftId,
-                UserId = purchase.UserId,
-            };
-            Purchase.TotalSum += purch.Gift.PriceCard;
-            var newPurchase =await _userRepository.TicketPurchase(purch);
-            if (newPurchase == null)
-                return null;    
-            return new PurchaseWithUserDto()
-            {
-                Date = newPurchase.Date ,
-                UserId=newPurchase.UserId,
-                GiftId=newPurchase.GiftId,
-                FirstName=newPurchase.User.FirstName,
-                LastName=newPurchase.User.LastName,
-            };
+                var purch = new Purchase()
+                {
+                    Date = DateTime.Now,
+                    GiftId = purchase.GiftId,
+                    UserId = userId,
+                };
+                Purchase.TotalSum += purch.Gift.PriceCard;
+                var newPurchase = await _userRepository.TicketPurchase(purch);
+                if (newPurchase != null)
+                    lp.Add(new PurchaseWithUserDto()
+                    {
+                        Date = newPurchase.Date,
+                        UserId = newPurchase.UserId,
+                        GiftId = newPurchase.GiftId,
+                        FirstName = newPurchase.User.FirstName,
+                        LastName = newPurchase.User.LastName,
+                    });
+            }
+            return lp;
+
+
         }
 
     }

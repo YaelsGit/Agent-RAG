@@ -22,7 +22,7 @@ namespace WebApi.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("WebApi.DTOs.PurchaseDTO+PurchaseBasketDto", b =>
+            modelBuilder.Entity("WebApi.DTOs.PurchaseDTO+PurchaseBasketUserDto", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -46,7 +46,7 @@ namespace WebApi.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("PurchaseBasketDto");
+                    b.ToTable("PurchaseBasketUserDto");
                 });
 
             modelBuilder.Entity("WebApi.Models.Category", b =>
@@ -232,7 +232,7 @@ namespace WebApi.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("WebApi.DTOs.PurchaseDTO+PurchaseBasketDto", b =>
+            modelBuilder.Entity("WebApi.DTOs.PurchaseDTO+PurchaseBasketUserDto", b =>
                 {
                     b.HasOne("WebApi.Models.User", null)
                         .WithMany("PurchaseDto")

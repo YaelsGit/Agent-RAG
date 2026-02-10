@@ -1,0 +1,70 @@
+<div class="card">
+    <p-toast></p-toast>
+    
+    <p-dataview #dv [value]="sourceGifts()" [layout]="layout">
+        
+        <ng-template #header>
+            <div class="flex justify-between items-center p-4">
+                <span class="text-xl font-bold">ניהול מתנות</span>
+                <p-selectbutton [(ngModel)]="layout" [options]="options" [allowEmpty]="false">
+                    <ng-template #item let-item>
+                        <i class="pi" [ngClass]="{ 'pi-bars': item === 'list', 'pi-table': item === 'grid' }"></i>
+                    </ng-template>
+                </p-selectbutton>
+            </div>
+        </ng-template>
+
+        <ng-template #list let-items>
+            <div class="grid grid-nogutter">
+                <div *ngFor="let item of items; let first = first" class="col-12">
+                    <div class="flex flex-col sm:flex-row sm:items-center p-6 gap-4" [ngClass]="{ 'border-t border-surface-200': !first }">
+                        <div class="md:w-40 relative">
+                            <img class="block mx-auto rounded w-full" [src]="item.image || 'assets/gift-placeholder.png'" [alt]="item.name" />
+                        </div>
+                        <div class="flex flex-col md:flex-row justify-between md:items-center flex-1 gap-6">
+                            <div>
+                                <span class="font-medium text-secondary text-sm">{{ item.categoryName }}</span>
+                                <div class="text-lg font-medium mt-2">{{ item.name }}</div>
+                                <div class="text-sm text-surface-600">{{ item.description }}</div>
+                            </div>
+                            <div class="flex flex-col md:items-end gap-4">
+                                <span class="text-xl font-semibold">{{ item.priceCard | currency: 'ILS' }}</span>
+                                <div class="flex gap-2">
+                                    <button pButton icon="pi pi-pencil" (click)="openEdit(item)" class="p-button-outlined"></button>
+                                    <button pButton icon="pi pi-trash" (click)="deleteGift(item)" class="p-button-danger"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+
+        <ng-template #grid let-items>
+            <div class="grid grid-cols-12 gap-4">
+                <div *ngFor="let product of items" class="col-span-12 sm:col-span-6 md:col-span-4 p-2">
+                    <div class="p-6 border border-surface-200 rounded flex flex-col h-full">
+                        <div class="bg-surface-50 flex justify-center rounded p-4">
+                            <img class="rounded w-full" [src]="product.image || 'assets/gift-placeholder.png'" style="max-width: 200px" />
+                        </div>
+                        <div class="pt-6 flex-1">
+                            <div class="flex flex-row justify-between items-start">
+                                <div>
+                                    <span class="font-medium text-sm">{{ product.categoryName }}</span>
+                                    <div class="text-lg font-medium mt-1">{{ product.name }}</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-4 mt-4">
+                                <span class="text-2xl font-semibold">{{ product.priceCard | currency: 'ILS' }}</span>
+                                <div class="flex gap-2">
+                                    <button pButton label="עריכה" icon="pi pi-pencil" (click)="openEdit(product)" class="flex-auto"></button>
+                                    <button pButton icon="pi pi-trash" (click)="deleteGift(product)" class="p-button-danger p-button-outlined"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-dataview>
+</div>

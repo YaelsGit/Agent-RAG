@@ -354,4 +354,5 @@ C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\obj\Debug\net8.0\refint\We
 C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\obj\Debug\net8.0\WebApi.pdb
 C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\obj\Debug\net8.0\WebApi.genruntimeconfig.cache
 C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\obj\Debug\net8.0\ref\WebApi.dll
+C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\obj\Debug\net8.0\WebApi.sourcelink.json
 C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

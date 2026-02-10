@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using WebApi.Interface;
 using WebApi.Models;
 using WebApi.Service;
@@ -26,7 +27,10 @@ namespace WebApi.Controllers
         [HttpPost]
         public async Task<ActionResult<PurchaseBasketDto?>> AddToBasket(PurchaseBasketDto Purchase)
         {
-            var purchase=await _userService.AddToBasket(Purchase);
+            var userId = int.Parse(
+            User.FindFirst(ClaimTypes.NameIdentifier)!.Value
+           );
+            var purchase=await _userService.AddToBasket(Purchase,userId);
             if (purchase == null)
             {
                 return BadRequest();
@@ -37,7 +41,10 @@ namespace WebApi.Controllers
         [Route("TicketPurchase")]
         public async Task<ActionResult<PurchaseWithUserDto?>>TicketPurchase([FromBody] PurchaseBasketDto purchase)
         {
-            var Purchase = await _userService.TicketPurchase(purchase);
+            var userId = int.Parse(
+             User.FindFirst(ClaimTypes.NameIdentifier)!.Value
+            );
+            var Purchase = await _userService.TicketPurchase(purchase,userId);
             if (Purchase == null)
             {
                 return BadRequest();

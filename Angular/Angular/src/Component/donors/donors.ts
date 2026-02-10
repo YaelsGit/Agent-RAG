@@ -35,24 +35,40 @@ export class Donors implements OnInit {
   displayModal: boolean = false;
 
   constructor(private http: HttpClient, private messageService: MessageService) { }
+  craeteDonor() {
+    const newDonor = {
+      firstName: this.firstName,
+      lastName: this.lastName,
+      email: this.email,
+      phone: this.phone,
+    };
+    this.serviceDonors.createDonor(newDonor).subscribe({
+      next: () => {
+        this.getAllDonors();
+        this.resetForm();
+        this.messageService.add({ severity: 'success', summary: 'הצלחה', detail: 'התורם נוצר בהצלחה' });
+      },
+      error: (err) => {
+        console.error('Creation failed:', err);
+        this.messageService.add({ severity: 'error', summary: 'שגיאה', detail: 'יצירת התורם נכשלה' });
+      }
+    });
+  }
 
   updateDonor() {
     console.log("Current ID:", this.id);
-  console.log("Current Data:", this.firstName, this.lastName);
+    console.log("Current Data:", this.firstName, this.lastName);
     console.log("Attempting to update donor with ID:", this.id);
     if (!this.id) {
       alert('לא נבחר תורם לעדכון');
       return;
     }
-    // Remove id from the body, only send it as a query param
     const updatedDonor = {
       firstName: this.firstName,
       lastName: this.lastName,
       email: this.email,
       phone: this.phone,
-      gifts: this.gifts
     };
-    // In your updateDonor() method:
     this.serviceDonors.updateDonor(this.id, updatedDonor).subscribe({
       next: () => {
         this.getAllDonors();
@@ -65,7 +81,6 @@ export class Donors implements OnInit {
       }
     });
   }
-
   ngOnInit() {
     this.getAllDonors();
     this.route.queryParams.subscribe(params => {
@@ -83,7 +98,6 @@ export class Donors implements OnInit {
   }
 
   searchByName(first: string, last: string) {
-    // בדיקה ששלחנו ערכים ולא undefined
     const fName = first || "";
     const lName = last || "";
 
@@ -91,23 +105,21 @@ export class Donors implements OnInit {
       next: (res) => this.sourceDonors.set(res),
       error: (err) => {
         console.error('Search by name failed', err);
-        // כאן תוכלי לראות אם השרת החזיר הודעה מפורטת יותר ב-Body
         if (err.error && err.error.message) {
           alert("שגיאת שרת: " + err.error.message);
         }
       }
     });
   }
-  // חיפוש לפי אימייל
   searchByEmail(email: string) {
     if (!email) {
-      this.getAllDonors(); // רענון לרשימה המלאה אם התיבה ריקה
+      this.getAllDonors();
       return;
     }
 
     this.serviceDonors.getDonorByEmail(email).subscribe({
       next: (res: Donor[]) => {
-        this.sourceDonors.set(res); // מעדכן את הטבלה בתוצאות
+        this.sourceDonors.set(res);
       },
       error: (err) => {
         console.error('Search by email failed:', err);
@@ -116,7 +128,6 @@ export class Donors implements OnInit {
     });
   }
 
-  // ודאי שגם זו קיימת, למקרה שהקומפיילר יצעק עליה בשלב הבא
   searchByGift(giftName: string) {
     if (!giftName) {
       this.getAllDonors();
@@ -152,27 +163,25 @@ export class Donors implements OnInit {
   resetForm() {
     this.id = 0; this.firstName = ''; this.lastName = ''; this.email = ''; this.phone = ''; this.gifts = [];
   }
-  // הפונקציה שנקראת מהטבלה כשלוחצים על "ערוך"
-openEdit(donor: any) {
-    console.log("Donor object received from table:", donor); // בדיקה מה יש באובייקט
-    
-    // השורה הזו מוודאת שאנחנו לוקחים את ה-ID גם אם הוא באות גדולה או קטנה
-    this.id = donor.id || donor.Id; 
+  openEdit(donor: any) {
+    console.log("Donor object received from table:", donor);
+
+    this.id = donor.id || donor.Id;
     this.firstName = donor.firstName;
     this.lastName = donor.lastName;
     this.email = donor.email;
     this.phone = donor.phone;
     this.gifts = donor.gifts || [];
     this.displayModal = true;
-}
-editDonor(donor: any) {
-  console.log("זה האובייקט המלא:", donor); // השורה הזו תדפיס לדפדפן את כל מה שהגיע מהשרת
-  this.id = donor.id; // כאן הקסם קורה - שמירת ה-ID לעדכון
-  this.firstName = donor.firstName;
-  this.lastName = donor.lastName;
-  this.email = donor.email;
-  this.phone = donor.phone;
-  this.displayModal = true;
-  console.log("Selected Donor ID:", this.id);
-}
+  }
+  editDonor(donor: any) {
+    console.log("זה האובייקט המלא:", donor);
+    this.id = donor.id;
+    this.firstName = donor.firstName;
+    this.lastName = donor.lastName;
+    this.email = donor.email;
+    this.phone = donor.phone;
+    this.displayModal = true;
+    console.log("Selected Donor ID:", this.id);
+  }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Globalization;
+using System.Text.Json;
 using WebApi.Data;
 using WebApi.Interface;
 using WebApi.Models;
@@ -107,40 +108,56 @@ namespace WebApi.Repository
                     .ThenInclude(p => p.User) 
                 .FirstOrDefaultAsync(g => g.Id == giftId);
         }
-        public async Task<IEnumerable<GiftWinnerDto?>>GiftRandom()
+        public async Task<List<GiftWinnerDto>> GiftRandom()
         {
             var random = new Random();
-            List<GiftWinnerDto>Winners=new List<GiftWinnerDto>();
-            var gifts =await _context.Gifts.ToListAsync();
-            for (int i = 0; i < gifts.Count(); i++)
+            List<GiftWinnerDto> winners = new();
+
+            var gifts = await _context.Gifts
+                .Include(g => g.Purchases)
+                .ThenInclude(p => p.User)
+                .ToListAsync();
+
+            foreach (var gift in gifts)
             {
-                if (gifts[i].Purchases.Count() == 0)
+                if (!gift.Purchases.Any())
                 {
-                    var win = new GiftWinnerDto
+                    winners.Add(new GiftWinnerDto
                     {
-                        GiftId = gifts[i].Id,
-                        GiftName = gifts[i].Name,
+                        GiftId = gift.Id,
+                        GiftName = gift.Name,
                         WinnerId = 0,
-                        WinnerName = "",
-                    };
-                    Winners.Add(win);
+                        WinnerName = ""
+                    });
                 }
-                else {
-                    int index = random.Next(gifts[i].Purchases.Count());
-                    var win = new GiftWinnerDto
+                else
+                {
+                    int index = random.Next(gift.Purchases.Count);
+                    var purchase = gift.Purchases[index];
+
+                    winners.Add(new GiftWinnerDto
                     {
-                        GiftId = gifts[i].Id,
-                        GiftName = gifts[i].Name,
-                        WinnerId = gifts[i].Purchases[index].UserId,
-                        WinnerName = gifts[i].Purchases[index].User.FirstName+" "+ gifts[i].Purchases[index].User.LastName,
-                    };
-                    Winners.Add(win);
-
+                        GiftId = gift.Id,
+                        GiftName = gift.Name,
+                        WinnerId = purchase.UserId,
+                        WinnerName = purchase.User.FirstName + " " + purchase.User.LastName
+                    });
                 }
-
             }
-            return Winners;
 
+            var json = JsonSerializer.Serialize(
+                winners,
+                new JsonSerializerOptions { WriteIndented = true }
+            );
+
+            var path = Path.Combine(
+                Directory.GetCurrentDirectory(),
+                "giftWinners.json"
+            );
+
+            await File.WriteAllTextAsync(path, json);
+
+            return winners;
         }
         public async Task<IEnumerable<Gift?>> SortedGiftByPriceOrCategory(string sorteBy)
         {

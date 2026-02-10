@@ -13,6 +13,5 @@ export class Gift{
     public donor: Donor= new Donor();
     public priceCard: number= 0;
     public quantity: number= 0;
-    public static isRandom: boolean = false;
-  
+    public static isRandom: boolean = false; 
 }

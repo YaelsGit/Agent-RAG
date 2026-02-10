@@ -8,8 +8,7 @@ namespace WebApi.DTOs
     {
         public class GiftFormDto
         {
-            [Required]
-            public int Id { get; set; }
+  
             [Required, MaxLength(30)]
             public string Name { get; set; } = string.Empty;
             [Required]
@@ -17,14 +16,11 @@ namespace WebApi.DTOs
             public int CategoryId { get; set; }
             public int DonorId { get; set; }
             [Required]
-            [MinLength(2)]
-            [MaxLength(2)]
+            [Range(0, 99.99)]
             public Decimal PriceCard { get; set; }
         }
         public class CateroyFormDto
         {
-            [Required]
-            public int Id { get; set; }
             [Required, MaxLength(30)]
             public string Name { get; set; } = string.Empty;
         }
@@ -36,6 +32,8 @@ namespace WebApi.DTOs
             public string Description { get; set; } = string.Empty;
             public int CategoryId { get; set; }
             public int DonorId { get; set; }
+            [Range(0, 99.99)]
+
             public Decimal PriceCard { get; set; }
         }
         public class GiftCategoryDto

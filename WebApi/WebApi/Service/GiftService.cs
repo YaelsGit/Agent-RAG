@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
 using WebApi.DTOs;
 using WebApi.Interface;
 using WebApi.Models;
@@ -209,8 +210,27 @@ namespace WebApi.Service
         }
         public async Task<TotalSumDto> GetTotalSum()
         {
-            return new TotalSumDto() { TotalSum = Purchase.TotalSum };
+            var dto = new TotalSumDto
+            {
+                TotalSum = Purchase.TotalSum
+            };
+
+            var json = JsonSerializer.Serialize(
+                dto,
+                new JsonSerializerOptions { WriteIndented = true }
+            );
+
+            var path = Path.Combine(
+                Directory.GetCurrentDirectory(),
+                "totalSum.json"
+            );
+
+            await File.WriteAllTextAsync(path, json);
+
+            return dto;
         }
+
+
         public async Task<IEnumerable<GiftCategoryDto?>> SortedGiftByPriceOrCategory(string sorteBy)
         {
             var result = await _GiftRepository.SortedGiftByPriceOrCategory(sorteBy);

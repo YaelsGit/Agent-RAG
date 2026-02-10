@@ -31,7 +31,7 @@ namespace WebApi.Models
         public string Street { get; set; } = String.Empty;
         public int BuildingNumber { get; set; }
         public List<Purchase> Purchases { get; set; }= new List<Purchase>();
-        public List<PurchaseBasketDto> PurchaseDto { get; set; } = new List<PurchaseBasketDto>();
+        public List<PurchaseBasketUserDto> PurchaseDto { get; set; } = new List<PurchaseBasketUserDto>();
 
 
     }
