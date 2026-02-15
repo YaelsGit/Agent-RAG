@@ -26,7 +26,7 @@ namespace WebApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<GiftCategoryDto?>>> GetAllGift()
         {
-            var result= await _giftService.GetAllGift();
+            var result = await _giftService.GetAllGift();
             return Ok(result);
         }
         [Authorize(Roles = "Admin")]
@@ -46,7 +46,7 @@ namespace WebApi.Controllers
 
         public async Task<ActionResult<IEnumerable<GiftResponseDto>>> GetGiftByDonor(string firstName, string lastName) {
 
-            var result =await _giftService.GetGiftByDonor(firstName, lastName);
+            var result = await _giftService.GetGiftByDonor(firstName, lastName);
             return Ok(result);
         }
         [Authorize(Roles = "Admin")]
@@ -55,7 +55,7 @@ namespace WebApi.Controllers
         [Route("Count")]
         public async Task<ActionResult<IEnumerable<GiftResponseDto>>> GetGiftByNumPurchase(int num)
         {
-            var result =await _giftService.GetGiftByNumPurchase(num);
+            var result = await _giftService.GetGiftByNumPurchase(num);
             return Ok(result);
         }
         [Authorize(Roles = "Admin")]
@@ -92,8 +92,8 @@ namespace WebApi.Controllers
         }
         [Authorize(Roles = "Admin")]
         [RandomValidation]
-        [HttpPut]
-        public async Task<ActionResult<GiftResponseDto>> Update(int Id, [FromBody] GiftResponseDto giftForm)
+        [HttpPut("{id}")]
+        public async Task<ActionResult<GiftResponseDto>> Update( int Id, [FromBody] GiftResponseDto giftForm)
         {
             try
             {
@@ -112,11 +112,9 @@ namespace WebApi.Controllers
         }
         [Authorize(Roles = "Admin")]
         [RandomValidation]
-        [HttpDelete]
+        [HttpDelete("{Id:int}")]
         public async Task<ActionResult> Delete(int Id)
         {
-
-
             var result = await _giftService.DeleteGift(Id);
             if (result == false)
             {

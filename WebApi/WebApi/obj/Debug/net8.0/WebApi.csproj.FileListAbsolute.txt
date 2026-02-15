@@ -172,6 +172,8 @@ D:\WebApi-Angular\WebApi\WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentica
 D:\WebApi-Angular\WebApi\WebApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\bin\Debug\net8.0\appsettings.json
+C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\bin\Debug\net8.0\giftWinners.json
+C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\bin\Debug\net8.0\totalSum.json
 C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\bin\Debug\net8.0\WebApi.staticwebassets.endpoints.json
 C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\bin\Debug\net8.0\WebApi.exe
 C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\bin\Debug\net8.0\WebApi.deps.json
@@ -340,6 +342,7 @@ C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\obj\Debug\net8.0\WebApi.As
 C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\obj\Debug\net8.0\WebApi.csproj.CoreCompileInputs.cache
 C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\obj\Debug\net8.0\WebApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\obj\Debug\net8.0\WebApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\obj\Debug\net8.0\WebApi.sourcelink.json
 C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\obj\Debug\net8.0\rjimswa.dswa.cache.json
 C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
@@ -354,5 +357,4 @@ C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\obj\Debug\net8.0\refint\We
 C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\obj\Debug\net8.0\WebApi.pdb
 C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\obj\Debug\net8.0\WebApi.genruntimeconfig.cache
 C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\obj\Debug\net8.0\ref\WebApi.dll
-C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\obj\Debug\net8.0\WebApi.sourcelink.json
 C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

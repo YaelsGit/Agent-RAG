@@ -1,0 +1,293 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|c:\\users\\user1\\downloads\\webapi-angular\\webapi\\webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|c:\\users\\user1\\downloads\\webapi-angular\\webapi\\webapi\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|c:\\users\\user1\\downloads\\webapi-angular\\webapi\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|c:\\users\\user1\\downloads\\webapi-angular\\webapi\\webapi\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|c:\\users\\user1\\downloads\\webapi-angular\\webapi\\webapi\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|c:\\users\\user1\\downloads\\webapi-angular\\webapi\\webapi\\models\\purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\models\\purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|c:\\users\\user1\\downloads\\webapi-angular\\webapi\\webapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|c:\\users\\user1\\downloads\\webapi-angular\\webapi\\webapi\\service\\giftservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\service\\giftservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|c:\\users\\user1\\downloads\\webapi-angular\\webapi\\webapi\\controllers\\giftcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\giftcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|c:\\users\\user1\\downloads\\webapi-angular\\webapi\\webapi\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|c:\\users\\user1\\downloads\\webapi-angular\\webapi\\webapi\\dtos\\giftdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\dtos\\giftdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|c:\\users\\user1\\downloads\\webapi-angular\\webapi\\webapi\\migrations\\20260211061028_initialcreate12.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\migrations\\20260211061028_initialcreate12.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|c:\\users\\user1\\downloads\\webapi-angular\\webapi\\webapi\\data\\webapicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\data\\webapicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|c:\\users\\user1\\downloads\\webapi-angular\\webapi\\webapi\\models\\gift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\models\\gift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|c:\\users\\user1\\downloads\\webapi-angular\\webapi\\webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|c:\\users\\user1\\downloads\\webapi-angular\\webapi\\webapi\\repository\\giftrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CC60521-D3F8-4A65-AC29-891CCE3DF6E7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\repository\\giftrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Interface\\IUserService.cs",
+              "RelativeDocumentMoniker": "WebApi\\Interface\\IUserService.cs",
+              "ToolTip": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Interface\\IUserService.cs",
+              "RelativeToolTip": "WebApi\\Interface\\IUserService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAgwA0AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T14:40:21.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Models\\User.cs",
+              "RelativeDocumentMoniker": "WebApi\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Models\\User.cs",
+              "RelativeToolTip": "WebApi\\Models\\User.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T14:31:20.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Purchase.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Models\\Purchase.cs",
+              "RelativeDocumentMoniker": "WebApi\\Models\\Purchase.cs",
+              "ToolTip": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Models\\Purchase.cs",
+              "RelativeToolTip": "WebApi\\Models\\Purchase.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAswBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T14:31:01.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Service\\UserService.cs",
+              "RelativeDocumentMoniker": "WebApi\\Service\\UserService.cs",
+              "ToolTip": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Service\\UserService.cs",
+              "RelativeToolTip": "WebApi\\Service\\UserService.cs",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAiwMkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T14:27:37.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "WebApi\\Repository\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "WebApi\\Repository\\UserRepository.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T14:26:06.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Controllers\\UserController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\UserController.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T14:25:22.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserDTO.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\DTOs\\UserDTO.cs",
+              "RelativeDocumentMoniker": "WebApi\\DTOs\\UserDTO.cs",
+              "ToolTip": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\DTOs\\UserDTO.cs",
+              "RelativeToolTip": "WebApi\\DTOs\\UserDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T05:36:18.131Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T05:36:13.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "WebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Program.cs",
+              "RelativeToolTip": "WebApi\\Program.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAiwIoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T22:31:03.031Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20260211061028_InitialCreate12.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Migrations\\20260211061028_InitialCreate12.cs",
+              "RelativeDocumentMoniker": "WebApi\\Migrations\\20260211061028_InitialCreate12.cs",
+              "ToolTip": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Migrations\\20260211061028_InitialCreate12.cs",
+              "RelativeToolTip": "WebApi\\Migrations\\20260211061028_InitialCreate12.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T06:13:22.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GiftService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Service\\GiftService.cs",
+              "RelativeDocumentMoniker": "WebApi\\Service\\GiftService.cs",
+              "ToolTip": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Service\\GiftService.cs",
+              "RelativeToolTip": "WebApi\\Service\\GiftService.cs",
+              "ViewState": "AgIAANcAAAAAAAAAAAAgwPMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T02:10:00.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "WebApiContext.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Data\\WebApiContext.cs",
+              "RelativeDocumentMoniker": "WebApi\\Data\\WebApiContext.cs",
+              "ToolTip": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Data\\WebApiContext.cs",
+              "RelativeToolTip": "WebApi\\Data\\WebApiContext.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAwwCAAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T22:18:28.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GiftController.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Controllers\\GiftController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\GiftController.cs",
+              "ToolTip": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Controllers\\GiftController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\GiftController.cs",
+              "ViewState": "AgIAALsAAAAAAAAAAAAUwNsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T21:49:19.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GiftRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Repository\\GiftRepository.cs",
+              "RelativeDocumentMoniker": "WebApi\\Repository\\GiftRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Repository\\GiftRepository.cs",
+              "RelativeToolTip": "WebApi\\Repository\\GiftRepository.cs",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAowK8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T21:45:37.905Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GiftDTO.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\DTOs\\GiftDTO.cs",
+              "RelativeDocumentMoniker": "WebApi\\DTOs\\GiftDTO.cs",
+              "ToolTip": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\DTOs\\GiftDTO.cs",
+              "RelativeToolTip": "WebApi\\DTOs\\GiftDTO.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAA6wC4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T21:13:45.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Gift.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Models\\Gift.cs",
+              "RelativeDocumentMoniker": "WebApi\\Models\\Gift.cs",
+              "ToolTip": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\Models\\Gift.cs",
+              "RelativeToolTip": "WebApi\\Models\\Gift.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAcwBIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T21:13:36.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAFAbAAAAAAAAAAAQwFgbAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-02-10T22:45:40.435Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

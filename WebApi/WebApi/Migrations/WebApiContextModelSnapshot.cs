@@ -49,6 +49,30 @@ namespace WebApi.Migrations
                     b.ToTable("PurchaseBasketUserDto");
                 });
 
+            modelBuilder.Entity("WebApi.Models.Basket", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Baskets");
+                });
+
             modelBuilder.Entity("WebApi.Models.Category", b =>
                 {
                     b.Property<int>("Id")
@@ -126,6 +150,9 @@ namespace WebApi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<int>("PictureId")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("PriceCard")
                         .HasColumnType("decimal(18,2)");
 
@@ -153,6 +180,9 @@ namespace WebApi.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("BasketId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
@@ -162,7 +192,12 @@ namespace WebApi.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
+                    b.Property<int>("basketStatus")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("BasketId");
 
                     b.HasIndex("GiftId");
 
@@ -203,8 +238,8 @@ namespace WebApi.Migrations
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("Phone")
                         .IsRequired()
@@ -241,6 +276,17 @@ namespace WebApi.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("WebApi.Models.Basket", b =>
+                {
+                    b.HasOne("WebApi.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("WebApi.Models.Gift", b =>
                 {
                     b.HasOne("WebApi.Models.Category", "Category")
@@ -262,6 +308,10 @@ namespace WebApi.Migrations
 
             modelBuilder.Entity("WebApi.Models.Purchase", b =>
                 {
+                    b.HasOne("WebApi.Models.Basket", null)
+                        .WithMany("Purchases")
+                        .HasForeignKey("BasketId");
+
                     b.HasOne("WebApi.Models.Gift", "Gift")
                         .WithMany("Purchases")
                         .HasForeignKey("GiftId")
@@ -277,6 +327,11 @@ namespace WebApi.Migrations
                     b.Navigation("Gift");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("WebApi.Models.Basket", b =>
+                {
+                    b.Navigation("Purchases");
                 });
 
             modelBuilder.Entity("WebApi.Models.Donor", b =>

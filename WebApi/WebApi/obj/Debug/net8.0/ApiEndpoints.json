@@ -266,7 +266,7 @@
   {
     "ContainingType": "WebApi.Controllers.GiftController",
     "Method": "Update",
-    "RelativePath": "api/Gift",
+    "RelativePath": "api/Gift/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -274,7 +274,7 @@
       {
         "Name": "Id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       },
       {
         "Name": "giftForm",
@@ -297,7 +297,7 @@
   {
     "ContainingType": "WebApi.Controllers.GiftController",
     "Method": "Delete",
-    "RelativePath": "api/Gift",
+    "RelativePath": "api/Gift/{Id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -305,7 +305,7 @@
       {
         "Name": "Id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -575,6 +575,16 @@
   },
   {
     "ContainingType": "WebApi.Controllers.UserController",
+    "Method": "ConfirmBasket",
+    "RelativePath": "api/User/ConfirmBasket",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UserController",
     "Method": "TicketPurchase",
     "RelativePath": "api/User/TicketPurchase",
     "HttpMethod": "POST",
@@ -598,6 +608,16 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UserController",
+    "Method": "GetWinners",
+    "RelativePath": "api/User/Winners",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "WebApi.Controllers.WeatherForecastController",

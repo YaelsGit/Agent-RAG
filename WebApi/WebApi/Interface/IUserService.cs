@@ -10,5 +10,8 @@ namespace WebApi.Interface
         Task<LoginResponseDto?> UserLogin(UserLoginedDto userLogin);
         Task<PurchaseBasketUserDto?> AddToBasket(PurchaseBasketDto Purchase, int userId);
         Task<List<PurchaseWithUserDto?>> TicketPurchase(PurchaseBasketDto purchase, int userId);
+        Task<bool> ConfirmBasket(int userId);                 // bool
+        Task<List<UserResponseDto>> GetWinners();
+
     }
 }

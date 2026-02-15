@@ -1,0 +1,25 @@
+<header>
+  <nav aria-label="Main navigation">
+    <ul class="header-menubar" role="menubar">
+      <li *ngFor="let item of items" role="none">
+        <button 
+          pButton 
+          type="button" 
+          [label]="item.label" 
+          [icon]="item.icon"
+          [routerLink]="item.routerLink ? item.routerLink : null" 
+          (click)="item.command ? item.command() : null"
+          routerLinkActive="active-link"
+          class="p-button-link"
+          role="menuitem"
+          [attr.aria-label]="item.label"
+        >
+        </button>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>

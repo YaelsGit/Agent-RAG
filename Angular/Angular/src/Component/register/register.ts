@@ -7,6 +7,7 @@ import { AuthService } from '../../Service/auth-service';
 import { routes } from '../../app/app.routes';
 import { Router } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { Status } from '../../Model/User';
 
 
 @Component({
@@ -24,14 +25,14 @@ export class Register {
   userName: string = '';
   email: string = '';
   password: string = '';
-  role: string = 'User';
+  role: Status = Status.User;
   city: string = '';
   street: string = '';
   buildingNumber: number = 0;
   phone: string = '';
 
   constructor(private http: HttpClient, private router: Router) { }
-
+AuthService= inject(AuthService)
   register() {
     if (!this.id || !this.firstName || !this.lastName || !this.userName || !this.email || !this.password || !this.city || !this.street || !this.buildingNumber || !this.phone) {
       alert("Please fill all the fields");
@@ -51,17 +52,17 @@ export class Register {
       buildingNumber: Number(this.buildingNumber),
       phone: this.phone
     };
-
-    console.log('SENDING TO SERVER:', userData);
-    this.authService.register(userData).subscribe({
-      next: (res) => {
-        console.log('Registration successful', res);
-        this.router.navigate(['/']);
-      },
-      error: (err) => {
-        console.error('Registration failed', err);
-        alert('Registration failed: ' + (err.error?.errors || 'Check fields'));
+this.AuthService.register(userData).subscribe({
+    next: (res) => {
+      console.log('Success!', res);
+      this.router.navigate(['']);
+    },
+    error: (err) => {
+      console.log('Detailed Server Error:', err.error); // כאן תראי את הפירוט של ה-400
+      if (err.error.errors) {
+         console.table(err.error.errors); // מציג טבלה של שגיאות הוולידציה
       }
-    });
+    }
+  });
   }
 }

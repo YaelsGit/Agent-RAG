@@ -29,6 +29,7 @@ namespace WebApi.Service
         }
         private static DonorDto ResponseDto(Donor donor)
         {
+            if (donor == null) throw new ArgumentNullException(nameof(donor));
             return new DonorDto
             {
                 Id = donor.Id, 
@@ -63,7 +64,7 @@ namespace WebApi.Service
             {
                 return null;
             }
-            return donors.Select(ResponseDto);
+            return donors.Where(d => d != null).Select(d => ResponseDto(d!));
         }
         public async Task<IEnumerable<DonorDto?>> GetDonorByName(string firstName, string lastName)
         {
@@ -72,7 +73,7 @@ namespace WebApi.Service
             {
                 return null;
             }
-            return donors.Select(ResponseDto);
+            return donors.Where(d => d != null).Select(d => ResponseDto(d!));
         }
         public async Task<IEnumerable<DonorDto?>> GetDonorByEmail(string email)
         {
@@ -81,7 +82,7 @@ namespace WebApi.Service
             {
                 return null;
             }
-            return donors.Select(ResponseDto);
+            return donors.Where(d => d != null).Select(d => ResponseDto(d!));
         }
         public async Task<IEnumerable<DonorDto?>> GetDonorByGift(string gift)
         {
@@ -90,7 +91,7 @@ namespace WebApi.Service
             {
                 return null;
             }
-            return donors.Select(ResponseDto);
+            return donors.Where(d => d != null).Select(d => ResponseDto(d!));
         }
 
     }

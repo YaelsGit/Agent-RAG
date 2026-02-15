@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Gift } from '../Model/Gift';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -11,10 +12,12 @@ export class GiftService {
   constructor(private http: HttpClient) { }
 
   private getHeaders() {
-    const token = localStorage.getItem('authToken');
+    const token = localStorage.getItem('authToken'); 
+   console.log("Auth Token:", token);
     return { 'Authorization': `Bearer ${token}` };
   }
   getallGifts(): Observable<Gift[]> {
+    
     return this.http.get<Gift[]>(this.Url, { headers: this.getHeaders() });
   }
   getGiftByGiftName(name: string): Observable<any[]> {
@@ -40,11 +43,11 @@ export class GiftService {
       headers: this.getHeaders()
     });
   }
-  deleteGift(id: number) {
-    return this.http.delete(`${this.Url}/${id}`, {
-      headers: this.getHeaders()
-    });
-  }
+deleteGift(id: number): Observable<void> {
+  return this.http.delete<void>(`${this.Url}/${id}`, {
+    headers: this.getHeaders()
+  });
+}
   GetGiftPurchases(giftId: number): Observable<any> {
     const params = new HttpParams().set('giftId', giftId.toString());
     return this.http.get<any>(`${this.Url}/Purchase&Gift`, { headers: this.getHeaders(), params });
@@ -56,13 +59,27 @@ export class GiftService {
       return this.http.get<any[]>(`${this.Url}/purchases/sort-by-most-purchased`, { headers: this.getHeaders() });
     }
   }
-  GetsPurchaseWithUser(giftId: number): Observable<any[]> {
-    const params = new HttpParams().set('giftId', giftId.toString());
-    return this.http.get<any[]>(`${this.Url}/purchases-with-users`, { headers: this.getHeaders(), params });
-  }
-  GiftRandom(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.Url}/Random`, { headers: this.getHeaders() });
-  }
+
+GetsPurchaseWithUser(giftId: number): Observable<any[]> {
+  const params = new HttpParams().set('giftId', giftId.toString());
+  return this.http.get<any[]>(`${this.Url}/purchases-with-users`, { headers: this.getHeaders(), params })
+    .pipe(
+      map(purchases => purchases.map((p: any) => ({
+        id: p.id ?? 0,
+        date: p.date ?? '',
+        giftId: p.giftId ?? 0,
+        userId: p.userId ?? 0,
+        firstName: p.firstName ?? '',
+        lastName: p.lastName ?? ''
+      })))
+    );
+}
+
+
+GiftRandom(): Observable<any[]> {
+  return this.http.get<any[]>(`${this.Url}/Random`, { headers: this.getHeaders() });
+}
+
   GetTotalSum(): Observable<any> {
     return this.http.get<any>(`${this.Url}/TotalSum`, { headers: this.getHeaders() });
   }
@@ -70,4 +87,14 @@ export class GiftService {
     const params = new HttpParams().set('sortedBy', sortedBy);
     return this.http.get<any[]>(`${this.Url}/GetBySorted`, { headers: this.getHeaders(), params });
 }
+DownloadGiftRandomFile() {
+  return this.http.get(`${this.Url}/RandomFile`, { 
+    headers: this.getHeaders(),
+    responseType: 'blob' // חשוב! כדי לקבל קובץ ולא JSON
+  });
+}
+  AddToBasket(PurchaseData: any) {
+    console.log('Adding to basket:', PurchaseData);
+    return this.http.post(`${this.Url}`, PurchaseData, { headers: this.getHeaders() });
+  }
 }

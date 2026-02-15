@@ -1,5 +1,18 @@
+/* במקום @import "tailwindcss"; */
 @use "tailwindcss";
+
+/* אם את משתמשת בפלאגינים של Tailwind 4 */
 @plugin "tailwindcss-primeui";
 
-@source "../src/**/*.{html,ts}";
-@import "primeflex/primeflex.css";
+/* ייבוא אייקונים */
+@import "primeicons/primeicons.css";
+
+/* הגדרות בסיס */
+@layer base {
+  body {
+    margin: 0;
+    font-family: var(--p-font-family);
+    background-color: var(--p-surface-50);
+    direction: rtl;
+  }
+}

@@ -1,0 +1,69 @@
+.login-container {
+    background-color: #fcf9f6 !important; // רקע קרם בהיר
+    max-width: 900px;
+    margin: 2rem auto;
+    border: none !important;
+    border-radius: 20px !important; // פינות מעוגלות לכרטיס
+    direction: rtl;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
+
+    .login-title {
+        text-align: center;
+        color: #1a1a1a;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 800;
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .custom-input {
+        background-color: white !important;
+        border: 1px solid #e0d7d0 !important; // גבול עדין
+        border-radius: 12px !important; // פינות מעוגלות לאינפוט
+        padding: 14px !important;
+        font-size: 1rem;
+
+        &:focus {
+            border-color: #a1887f !important; // צבע כהה יותר בפוקוס
+            box-shadow: none !important;
+        }
+
+        &::placeholder {
+            color: #b5a499;
+        }
+    }
+
+    .custom-divider {
+        &::before, &::after {
+            border-color: #e0d7d0 !important;
+        }
+        b {
+            color: #8d6e63;
+            background-color: #fcf9f6;
+            padding: 0 10px;
+        }
+    }
+
+    .custom-btn {
+        border-radius: 25px !important; // כפתור מעוגל "כמו גלולה"
+        padding: 12px 24px !important;
+        border: none !important;
+        font-weight: bold !important;
+        font-size: 1rem;
+        transition: all 0.2s;
+
+        &:hover {
+            filter: brightness(0.95);
+        }
+
+        &.signup-btn {
+            background-color: #4a3427 !important; // חום כהה
+            color: white !important;
+        }
+
+        &.login-btn {
+            background-color: #d3c5b8 !important; // מוקה בהיר
+            color: #4a3427 !important;
+        }
+    }
+}

@@ -51,6 +51,22 @@ namespace WebApi.Controllers
             }
             return Ok(Purchase);
         }
+        [HttpPost("ConfirmBasket")]
+        public async Task<IActionResult> ConfirmBasket()
+        {
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
+            var result = await _userService.ConfirmBasket(userId);
+            if (!result)
+                return BadRequest("לא ניתן לאשר סל: ייתכן שכבר אושר או שההגרלה הסתיימה.");
+            return Ok();
+        }
 
+        [HttpGet("Winners")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetWinners()
+        {
+            var winners = await _userService.GetWinners();
+            return Ok(winners);
+        }
     }
 }

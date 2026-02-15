@@ -1,1 +1,64 @@
-<p>user works!</p>
+<!-- <div class="card">
+  <p-table
+    [value]="products()"
+    [tableStyle]="{ 'min-width': '50rem' }"
+    [paginator]="true"
+    [rows]="5">
+
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Id</th>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Image</th>
+        <th>Details</th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-product>
+      <tr>
+        <td>{{ product.id }}</td>
+        <td>{{ product.code }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>
+          <img
+            [src]="product.image"
+            class="w-16 shadow-sm" />
+        </td>
+        <td>
+          <p-button
+            icon="pi pi-search"
+            rounded
+            severity="secondary"
+            (onClick)="displayProduct($event, product)">
+          </p-button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+  <p-popover #op (onHide)="selectedProduct.set(null)">
+    <ng-template pTemplate="content">
+      <div *ngIf="selectedProduct()" class="flex flex-col gap-3">
+        <img [src]="selectedProduct().image" class="w-64 rounded" />
+
+        <div class="text-lg font-bold">
+          {{ selectedProduct().name }}
+        </div>
+
+        <p-tag
+          [value]="selectedProduct().inventoryStatus"
+          [severity]="getSeverity(selectedProduct())">
+        </p-tag>
+
+        <p-button
+          label="Add to Basket"
+          icon="pi pi-shopping-cart"
+          (onClick)="AddToBasket()">
+        </p-button>
+      </div>
+    </ng-template>
+  </p-popover>
+</div> -->

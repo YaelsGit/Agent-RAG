@@ -29,6 +29,8 @@ namespace WebApi.Repository
         }
         public async Task<bool> Delete(int Id)
         {
+            Console.WriteLine($"Trying to delete Gift Id: {Id}");
+
             var gift = await _context.Gifts.FindAsync(Id);
             if (gift == null)
             {
@@ -54,15 +56,25 @@ namespace WebApi.Repository
         }
         public async Task<ICollection<GiftCategoryDto?>> GetAll()
         {
-            return await _context.Gifts.Select(g => new GiftCategoryDto
+            Console.WriteLine(">>> GetAll() Repository CALLED");
+            var count = await _context.Gifts.CountAsync();
+            Console.WriteLine($"GIFTS COUNT = {count}");
+            var gifts = await _context.Gifts.Include(g => g.Category).Include(g => g.Donor).ToListAsync();
+            foreach (var gift in gifts)
             {
+                Console.WriteLine($"Gift: Id={gift.Id}, Name={gift.Name}, CategoryId={gift.CategoryId}, DonorId={gift.DonorId}, Category={(gift.Category != null ? gift.Category.Name : "null")}, Donor={(gift.Donor != null ? gift.Donor.FirstName + " " + gift.Donor.LastName : "null")}");
+            }
+            return gifts.Select(g => new GiftCategoryDto
+            {
+                Id = g.Id,
                 Name = g.Name,
                 Description = g.Description,
-                CategoryName = g.Category!.Name,
-                PriceCard= g.PriceCard
-
-            }).ToListAsync();
+                CategoryName = g.Category != null ? g.Category.Name : string.Empty,
+                PriceCard = g.PriceCard,
+                PictureId = g.Id // Use correct property if available
+            }).ToList();
         }
+
         public async Task<Gift?> GetByName(string name)
         {
             return await _context.Gifts
@@ -122,12 +134,13 @@ namespace WebApi.Repository
             {
                 if (!gift.Purchases.Any())
                 {
+                    // אם אין רכישות, מחזיר זוכה "דיפולטי"
                     winners.Add(new GiftWinnerDto
                     {
                         GiftId = gift.Id,
                         GiftName = gift.Name,
-                        WinnerId = 0,
-                        WinnerName = ""
+                        WinnerId = -1, // מזהה דיפולטי
+                        WinnerName = "אין זוכה"
                     });
                 }
                 else
@@ -140,11 +153,12 @@ namespace WebApi.Repository
                         GiftId = gift.Id,
                         GiftName = gift.Name,
                         WinnerId = purchase.UserId,
-                        WinnerName = purchase.User.FirstName + " " + purchase.User.LastName
+                        WinnerName = $"{purchase.User.FirstName} {purchase.User.LastName}"
                     });
                 }
             }
 
+            // שמירה לקובץ JSON
             var json = JsonSerializer.Serialize(
                 winners,
                 new JsonSerializerOptions { WriteIndented = true }
@@ -159,19 +173,18 @@ namespace WebApi.Repository
 
             return winners;
         }
+
         public async Task<IEnumerable<Gift?>> SortedGiftByPriceOrCategory(string sorteBy)
         {
-            var query = _context.Gifts
-                            .AsQueryable();
-            if (query == null)
-            {
-                return null;
-            }
+            var query = _context.Gifts.Include(g => g.Category).AsQueryable();
+
             if (sorteBy == "price")
-                query = query.OrderByDescending(q => q.PriceCard);
-            else if(sorteBy =="category")
-                query = query.OrderByDescending(q => q.Category.Name);
-         return query;
+                query = query.OrderByDescending(g => g.PriceCard);
+            else if (sorteBy == "category")
+                query = query.OrderByDescending(g => g.Category != null ? g.Category.Name : "");
+
+            return await query.ToListAsync();
         }
+
     }
 }

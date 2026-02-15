@@ -118,47 +118,47 @@
     </tr>
   </ng-template>
 </p-table> -->
-<div class="card p-4">
-    <h2 class="mb-4 text-2xl font-bold">ניהול תורמים</h2>
+<div class="card p-5 shadow-3 border-round-xl bg-white max-w-full mx-auto" style="max-width: 1100px;">
+    <h2 class="mb-5 text-3xl font-bold text-primary text-center">ניהול תורמים</h2>
 
-    <div class="flex flex-wrap gap-3 mb-4 p-3 bg-gray-50 border-round shadow-1">
-        <div class="flex flex-column gap-2">
+    <div class="flex flex-wrap gap-4 mb-5 p-4 bg-gray-100 border-round-lg shadow-1 align-items-end justify-content-between">
+        <div class="flex flex-column gap-2 min-w-16rem">
             <span class="p-input-icon-left">
                 <i class="pi pi-user"></i>
-                <input pInputText type="text" [(ngModel)]="firstName" placeholder="שם פרטי" class="p-inputtext-sm">
+                <input pInputText type="text" [(ngModel)]="firstName" placeholder="שם פרטי" class="p-inputtext-sm w-full">
             </span>
-            <input pInputText type="text" [(ngModel)]="lastName" placeholder="שם משפחה" class="p-inputtext-sm">
-            <button pButton label="חפש לפי שם" icon="pi pi-search" (click)="searchByName(firstName, lastName)" class="p-button-sm"></button>
+            <input pInputText type="text" [(ngModel)]="lastName" placeholder="שם משפחה" class="p-inputtext-sm w-full">
+            <button pButton label="חפש לפי שם" icon="pi pi-search" (click)="searchByName(firstName, lastName)" class="p-button-sm w-full"></button>
         </div>
 
-        <div class="border-left-1 border-gray-300 mx-2"></div>
+        <div class="border-left-1 border-gray-300 mx-3 h-7rem hidden md:block"></div>
 
-        <div class="flex flex-column gap-2">
+        <div class="flex flex-column gap-2 min-w-16rem">
             <span class="p-input-icon-left">
                 <i class="pi pi-envelope"></i>
-                <input pInputText type="text" #emailSearch placeholder="אימייל" class="p-inputtext-sm">
+                <input pInputText type="text" #emailSearch placeholder="אימייל" class="p-inputtext-sm w-full">
             </span>
-            <button pButton label="חפש אימייל" icon="pi pi-at" (click)="searchByEmail(emailSearch.value)" class="p-button-sm p-button-info"></button>
+            <button pButton label="חפש אימייל" icon="pi pi-at" (click)="searchByEmail(emailSearch.value)" class="p-button-sm p-button-info w-full"></button>
         </div>
 
-        <div class="border-left-1 border-gray-300 mx-2"></div>
+        <div class="border-left-1 border-gray-300 mx-3 h-7rem hidden md:block"></div>
 
-        <div class="flex flex-column gap-2">
+        <div class="flex flex-column gap-2 min-w-16rem">
             <span class="p-input-icon-left">
                 <i class="pi pi-gift"></i>
-                <input pInputText type="text" #giftSearch placeholder="שם מתנה" class="p-inputtext-sm">
+                <input pInputText type="text" #giftSearch placeholder="שם מתנה" class="p-inputtext-sm w-full">
             </span>
-            <button pButton label="חפש מתנה" icon="pi pi-search" (click)="searchByGift(giftSearch.value)" class="p-button-sm p-button-help"></button>
+            <button pButton label="חפש מתנה" icon="pi pi-search" (click)="searchByGift(giftSearch.value)" class="p-button-sm p-button-help w-full"></button>
         </div>
 
-        <div class="flex align-items-end">
-            <button pButton icon="pi pi-refresh" label="נקה הכל" (click)="getAllDonors(); resetForm()" class="p-button-sm p-button-secondary p-button-outlined"></button>
+        <div class="flex align-items-end min-w-10rem">
+            <button pButton icon="pi pi-refresh" label="נקה הכל" (click)="getAllDonors(); resetForm()" class="p-button-sm p-button-secondary p-button-outlined w-full"></button>
         </div>
     </div>
 
-    <p-table [value]="sourceDonors()" [paginator]="true" [rows]="10" 
-             [tableStyle]="{ 'min-width': '50rem' }" 
-             styleClass="p-datatable-striped p-datatable-gridlines">
+    <p-table [value]="sourceDonors()" [paginator]="true" [rows]="10"
+             [tableStyle]="{ 'min-width': '50rem' }"
+             styleClass="p-datatable-striped p-datatable-gridlines border-round-lg shadow-1">
         <ng-template pTemplate="header">
             <tr>
                 <th>מזהה</th>
@@ -176,11 +176,9 @@
                 <td>{{ donor.lastName }}</td>
                 <td>{{ donor.email }}</td>
                 <td>{{ donor.phone }}</td>
-                <td class="flex gap-2">
-                    <button pButton icon="pi pi-pencil" class="p-button-rounded p-button-text p-button-warning" 
-                            (click)="editDonor(donor)"></button>
-                    <button pButton icon="pi pi-trash" class="p-button-rounded p-button-text p-button-danger" 
-        (click)="deleteDonor(donor)"></button>
+                <td class="flex gap-2 justify-content-center">
+                    <button pButton icon="pi pi-pencil" class="p-button-rounded p-button-text p-button-warning" (click)="editDonor(donor)"></button>
+                    <button pButton icon="pi pi-trash" class="p-button-rounded p-button-text p-button-danger" (click)="deleteDonor(donor)"></button>
                 </td>
             </tr>
         </ng-template>
@@ -192,7 +190,7 @@
     </p-table>
 </div>
 
-<p-dialog header="עדכון פרטי תורם" [(visible)]="displayModal" [modal]="true" [style]="{ width: '25vw' }" [draggable]="false" [resizable]="false">
+<p-dialog header="עדכון פרטי תורם" [(visible)]="displayModal" [modal]="true" [style]="{ width: '25vw' }" [draggable]="false" [resizable]="false" class="p-fluid">
     <div class="flex flex-column gap-3 mt-2">
         <div class="flex flex-column gap-1">
             <label for="fname">שם פרטי</label>

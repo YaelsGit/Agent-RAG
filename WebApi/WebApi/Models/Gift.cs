@@ -13,7 +13,7 @@
         public Decimal PriceCard { get; set; }
         public int Quantity { get; set; }
         public static bool IsRandom { get; set; } = false;
-
+        public int PictureId { get; set; }
 
     }
 }

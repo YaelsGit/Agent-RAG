@@ -1,0 +1,26 @@
+<div class="basket-container">
+  <h2>הסל שלי</h2>
+  <div *ngIf="isRaffleComplete" class="raffle-complete-msg">
+    <strong>ההגרלה הסתיימה! לא ניתן לבצע רכישות.</strong>
+  </div>
+  <div *ngIf="basketItems.length === 0">הסל ריק</div>
+  <ul *ngIf="basketItems.length > 0">
+    <li *ngFor="let item of basketItems; let i = index">
+      <span>{{item.Name}} ({{item.Quentity}}) - {{item.priceCard || 0}} ₪</span>
+      <button pButton type="button" icon="pi pi-trash" (click)="removeItem(i)" [disabled]="isRaffleComplete"></button>
+    </li>
+  </ul>
+  <div *ngIf="basketItems.length > 0" class="basket-total">
+    <strong>סה"כ: {{getTotal()}} ₪</strong>
+  </div>
+  <button *ngIf="basketItems.length > 0 && !isRaffleComplete" pButton type="button" label="אישור רכישה" (click)="confirmPurchase()"></button>
+
+  <div *ngIf="isRaffleComplete && winners.length > 0" class="winners-list">
+    <h3>זוכים בהגרלה:</h3>
+    <ul>
+      <li *ngFor="let winner of winners">
+        {{winner.giftName}} - {{winner.userName}}
+      </li>
+    </ul>
+  </div>
+</div>

@@ -44,6 +44,7 @@ namespace WebApi.DTOs
             public string Description { get; set; } = string.Empty;
             public string CategoryName { get; set; }=string.Empty;
             public Decimal PriceCard { get; set; }
+            public int PictureId { get; set; }
         }
         public class GiftDonorDto
         {

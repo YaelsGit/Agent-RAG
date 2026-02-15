@@ -1,0 +1,39 @@
+/* וודאי שהקובץ הזה משתמש באותם ערכים מה-Login */
+.login-container {
+    background-color: #fcf9f6 !important; 
+    direction: rtl;
+
+    .login-title {
+        text-align: center;
+        color: #1a1a1a;
+        font-weight: 800;
+        font-size: 2.2rem;
+        border-bottom: 2px solid #e0d7d0;
+        padding-bottom: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .custom-label {
+        color: #4a3427;
+        font-size: 0.95rem;
+    }
+
+    .custom-input {
+        background-color: white !important;
+        border: 1px solid #e0d7d0 !important;
+        border-radius: 12px !important;
+        padding: 12px !important;
+
+        &:focus {
+            border-color: #4a3427 !important;
+        }
+    }
+
+    .custom-btn.signup-btn {
+        background-color: #4a3427 !important;
+        color: white !important;
+        border-radius: 25px !important;
+        font-weight: bold !important;
+        height: 3.5rem;
+    }
+}

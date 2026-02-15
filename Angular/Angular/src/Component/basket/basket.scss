@@ -1,0 +1,149 @@
+// Inspired by https://sale.ami.org.il/ - modern, bold, and playful
+.basket-container {
+  max-width: 600px;
+  margin: 2.5rem auto;
+  background: linear-gradient(135deg, #fff8e1 0%, #ffe0b2 100%);
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(141, 110, 99, 0.13), 0 1.5px 8px #ffe0b2;
+  padding: 2.5rem 2rem 2rem 2rem;
+  direction: rtl;
+  border: 2.5px solid #ffb300;
+  position: relative;
+  overflow: hidden;
+  animation: basketFadeIn 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+@keyframes basketFadeIn {
+  from { opacity: 0; transform: translateY(40px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+
+.basket-container h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #ff9800;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #ffe0b2;
+  text-align: center;
+}
+
+.basket-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.basket-container li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.1rem;
+  background: #fff3e0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(255, 193, 7, 0.07);
+  padding: 1.1rem 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #6d4c41;
+  transition: box-shadow 0.2s;
+  border: 1.5px solid #ffe0b2;
+}
+.basket-container li:hover {
+  box-shadow: 0 4px 16px #ffd54f44;
+  background: #fffde7;
+}
+
+.basket-total {
+  margin-top: 2.2rem;
+  font-size: 1.4rem;
+  text-align: left;
+  color: #ff9800;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: #fffde7;
+  border-radius: 10px;
+  padding: 0.7rem 1.2rem;
+  box-shadow: 0 1px 4px #ffe0b2;
+}
+
+button[pButton] {
+  background: linear-gradient(90deg, #ffb300 0%, #ff9800 100%) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 18px !important;
+  font-weight: bold !important;
+  font-size: 1.1rem !important;
+  box-shadow: 0 2px 8px #ffe0b2;
+  transition: background 0.2s, box-shadow 0.2s;
+  padding: 0.6rem 1.5rem !important;
+}
+button[pButton]:hover:not(:disabled) {
+  background: linear-gradient(90deg, #ffa726 0%, #ffb300 100%) !important;
+  box-shadow: 0 4px 16px #ffd54f99;
+}
+button[pButton]:disabled {
+  background: #ffe0b2 !important;
+  color: #bdbdbd !important;
+  cursor: not-allowed !important;
+}
+
+.raffle-complete-msg {
+  background: #ffecb3;
+  color: #ff6f00;
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 1.1rem 1.2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  border: 2px solid #ffb300;
+  box-shadow: 0 2px 8px #ffe0b2;
+}
+
+.winners-list {
+  margin-top: 2.5rem;
+  background: #fffde7;
+  border-radius: 16px;
+  padding: 1.5rem 1.2rem;
+  box-shadow: 0 2px 8px #ffe0b2;
+  border: 2px solid #ffb300;
+}
+.winners-list h3 {
+  color: #ff9800;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+.winners-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.winners-list li {
+  font-size: 1.1rem;
+  color: #6d4c41;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #ffe0b2;
+}
+.winners-list li:last-child {
+  border-bottom: none;
+}
+
+// Fun animated confetti for lottery win
+@keyframes confetti {
+  0% { transform: translateY(-100px) rotateZ(0deg); }
+  100% { transform: translateY(600px) rotateZ(360deg); }
+}
+.confetti {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 0; pointer-events: none;
+  z-index: 10;
+}
+.confetti-piece {
+  width: 12px; height: 18px; border-radius: 3px;
+  position: absolute;
+  animation: confetti 2.5s cubic-bezier(.68,-0.55,.27,1.55) forwards;
+}
+// Add confetti pieces in your component for a crazy effect!

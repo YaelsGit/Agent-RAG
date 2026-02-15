@@ -1,9 +1,10 @@
-import { EmailValidator } from "../../node_modules/@angular/forms/index";
+import { EmailValidator } from "@angular/forms";
 
-enum Role{
-    Admin="Admin",
-    User="User",
-}
+    export enum Status
+    {
+        User=0,
+        Admin=1
+    }
  export class User {
     public id: number=0;
     public firstName: string='';
@@ -11,7 +12,7 @@ enum Role{
     public userName: string='';
     public email: EmailValidator=new EmailValidator();
     public password: string='';
-    public role: Role=Role.User;
+    public role: Status=Status.User;
     public city: string='';
     public street: string='';
     public biuldingNumber: number=0;

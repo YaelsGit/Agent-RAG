@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
+﻿using WebApi.Data;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using System;
 using System.Data;
 using WebApi.Data;
 using WebApi.DTOs;
@@ -17,12 +19,15 @@ namespace WebApi.Service
         private readonly IUserRepository _userRepository;
         private readonly IConfiguration _configuration;
         private readonly ITokenService _tokenService;
+        private readonly WebApiContext _db;
 
-        public UserService(IUserRepository userRepository, IConfiguration configuration, ITokenService tokenService)
+        public UserService(IUserRepository userRepository, IConfiguration configuration, ITokenService tokenService, WebApiContext db )
         {
             _userRepository = userRepository;
             _configuration = configuration;
             _tokenService = tokenService;
+            _db = db;
+
         }
         public async Task<UserResponseDto> UserRegister(UserRegisterDto userRegister)
         {
@@ -94,15 +99,15 @@ namespace WebApi.Service
         {
             return Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(password));
         }
-        public async Task<PurchaseBasketUserDto?> AddToBasket(PurchaseBasketDto purchase,int userId)
+        public async Task<PurchaseBasketUserDto?> AddToBasket(PurchaseBasketDto purchase, int userId)
         {
-        
+
             var purchases = new PurchaseBasketUserDto
             {
                 UserId = userId,
                 GiftId = purchase.GiftId,
                 Date = purchase.Date,
-                Quentity=purchase.Quentity,
+                Quentity = purchase.Quentity,
             };
             var user = await _userRepository.GetByUserId(purchases.UserId);
 
@@ -121,13 +126,13 @@ namespace WebApi.Service
             user.PurchaseDto.Add(purchases);
             return purchases;
         }
-        public async Task<List<PurchaseWithUserDto?>> TicketPurchase(PurchaseBasketDto purchase,int userId)
+        public async Task<List<PurchaseWithUserDto?>> TicketPurchase(PurchaseBasketDto purchase, int userId)
 
         {
-            List<PurchaseWithUserDto> lp=new List<PurchaseWithUserDto>();
+            List<PurchaseWithUserDto> lp = new List<PurchaseWithUserDto>();
             if (purchase == null)
                 return null;
-            for(int i = 0; i < purchase.Quentity; i++)
+            for (int i = 0; i < purchase.Quentity; i++)
             {
                 var purch = new Purchase()
                 {
@@ -150,6 +155,45 @@ namespace WebApi.Service
             return lp;
 
 
+        }
+
+
+        public async Task<bool> ConfirmBasket(int userId)
+        {
+            // בדיקה ישירה מה־DB
+            var raffleDone = await _db.Baskets.AnyAsync(b => b.Status == BasketStatus.Confirmed);
+            if (raffleDone)
+                return false;
+
+            var basket = await _db.Baskets
+                .FirstOrDefaultAsync(b => b.UserId == userId && b.Status == BasketStatus.Draft);
+
+            if (basket == null)
+                return false;
+
+            basket.Status = BasketStatus.Confirmed;
+            await _db.SaveChangesAsync();
+            return true;
+        }
+        public async Task<List<UserResponseDto>> GetWinners()
+        {
+            var users = await _db.Purchases
+                .Include(p => p.User)
+                .GroupBy(p => p.UserId)
+                .Select(g => g.First().User)
+                .ToListAsync();
+
+            return users.Select(u => new UserResponseDto
+            {
+                Id = u.Id,
+                FirstName = u.FirstName,
+                LastName = u.LastName,
+                Email = u.Email,
+                Phone = u.Phone,
+                City = u.City,
+                Street = u.Street,
+                BuildingNumber = u.BuildingNumber
+            }).ToList();
         }
 
     }

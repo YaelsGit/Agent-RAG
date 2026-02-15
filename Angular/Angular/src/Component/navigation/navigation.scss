@@ -1,0 +1,60 @@
+// Navigation bar styles
+header {
+  background: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.header-menubar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0 2rem 0 0;
+}
+
+.header-menubar li {
+  margin-left: 1rem;
+}
+
+.p-button-link {
+  font-size: 1.1rem;
+  color: #333;
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.2s;
+}
+
+.p-button-link:hover, .active-link {
+  color: #1976d2;
+  font-weight: bold;
+  text-decoration: underline;
+  background: #e3f2fd;
+  border-radius: 4px;
+}
+
+.p-button-link:focus {
+  outline: 2px solid #1976d2;
+  outline-offset: 2px;
+  background: #e3f2fd;
+}
+
+main {
+  padding: 2rem;
+}
+
+// Responsive design for mobile
+@media (max-width: 600px) {
+  .header-menubar {
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0 1rem 0 0;
+  }
+  .header-menubar li {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+  }
+}

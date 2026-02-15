@@ -47,8 +47,12 @@ export class Login {
         console.log('Login successful', res);
         this.messageService.add({ severity: 'success', summary: 'כניסה', detail: 'התחברת בהצלחה' });
         
-        // this.router.navigate(['/home']);
-      },
+        if (res.Token) {
+          localStorage.setItem('authToken', res.Token);
+          sessionStorage.setItem('user', JSON.stringify(res.User));
+          this.router.navigate(['/gifts']);
+      }
+    },
       error: (err) => {
         console.error('Login failed', err);
         this.messageService.add({ 
@@ -56,10 +60,13 @@ export class Login {
           summary: 'שגיאה', 
           detail: 'משתמש לא קיים או פרטים שגויים' 
         });
-        
+      },
+      complete: () => {
+        this.router.navigate(['/gifts']);
       }
     });
-}
+  }
+
   signup() {
     this.router.navigate(['/register']);
   }

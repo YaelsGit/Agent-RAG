@@ -1,15 +1,16 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.OpenApi.Models;
-using WebApi.Data;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using Serilog;
+using System;
 using System.Text;
+using WebApi.Data;
 using WebApi.Interface;
+using WebApi.Middelewere;
 using WebApi.Repository;
 using WebApi.Service;
-using WebApi.Middelewere;
-using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +26,8 @@ builder.Services.AddScoped<IUserService,UserService>();
 builder.Services.AddScoped<IDonorService,DonorService>();
 builder.Services.AddScoped<IGiftService, GiftService>();
 
+builder.Services.AddDbContext<WebApiContext>(options =>
+   options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
 builder.Services.AddControllers();

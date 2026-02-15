@@ -44,11 +44,24 @@ namespace WebApi.Service
         }
         public async Task<bool> DeleteGift(int Id)
         {
-            var gift=await _GiftRepository.FindById(Id);
-            if (gift == null) return false;
-            if (gift.Purchases.Count() > 0) return false;
+            var gift = await _GiftRepository.FindById(Id);
+            if (gift == null)
+            {
+                Console.WriteLine("Gift not found in repository");
+                return false;
+            }
+
+            Console.WriteLine($"Gift Purchases Count: {gift.Purchases.Count()}");
+
+            if (gift.Purchases.Count() > 0)
+            {
+                Console.WriteLine("Cannot delete gift with purchases");
+                return false;
+            }
+
             return await _GiftRepository.Delete(Id);
         }
+
         public async Task<GiftResponseDto?> UpdateGift(int Id, [FromBody] GiftResponseDto giftForm)
         {
             var gift = await _GiftRepository.FindById(Id);
@@ -240,10 +253,12 @@ namespace WebApi.Service
             {
                 Name = arr.Name,
                 Description = arr.Description,
-                CategoryName = arr.Category.Name,
+                CategoryName = arr.Category != null ? arr.Category.Name : "",
                 PriceCard = arr.PriceCard,
             });
+
+
         }
-        
+
     }
 }
