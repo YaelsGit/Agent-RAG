@@ -1,26 +1,88 @@
-<div class="basket-container">
-  <h2>הסל שלי</h2>
-  <div *ngIf="isRaffleComplete" class="raffle-complete-msg">
-    <strong>ההגרלה הסתיימה! לא ניתן לבצע רכישות.</strong>
+<div class="basket-page-wrapper">
+  <!-- Empty Basket State -->
+  <div class="empty-basket" *ngIf="basketItems.length === 0">
+    <div class="empty-basket-content">
+      <div class="empty-basket-icon">🛒</div>
+      <h2 class="empty-basket-title">הסל שלך ריק</h2>
+      <p class="empty-basket-text">לא בחרת עדיין מתנות. בואו נתחיל!</p>
+      <button class="btn btn-primary" (click)="goToGifts()">
+        <i class="pi pi-gift"></i>
+        <span>לבחירת מתנות</span>
+      </button>
+    </div>
   </div>
-  <div *ngIf="basketItems.length === 0">הסל ריק</div>
-  <ul *ngIf="basketItems.length > 0">
-    <li *ngFor="let item of basketItems; let i = index">
-      <span>{{item.Name}} ({{item.Quentity}}) - {{item.priceCard || 0}} ₪</span>
-      <button pButton type="button" icon="pi pi-trash" (click)="removeItem(i)" [disabled]="isRaffleComplete"></button>
-    </li>
-  </ul>
-  <div *ngIf="basketItems.length > 0" class="basket-total">
-    <strong>סה"כ: {{getTotal()}} ₪</strong>
-  </div>
-  <button *ngIf="basketItems.length > 0 && !isRaffleComplete" pButton type="button" label="אישור רכישה" (click)="confirmPurchase()"></button>
 
-  <div *ngIf="isRaffleComplete && winners.length > 0" class="winners-list">
-    <h3>זוכים בהגרלה:</h3>
-    <ul>
-      <li *ngFor="let winner of winners">
-        {{winner.giftName}} - {{winner.userName}}
-      </li>
-    </ul>
+  <!-- Cart Items -->
+  <div class="basket-items-section" *ngIf="basketItems.length > 0">
+    <div class="cart-item" *ngFor="let item of basketItems; let i = index">
+      <div class="item-left">
+        <button class="delete-btn" (click)="removeItem(item)">
+          <i class="pi pi-trash"></i>
+        </button>
+      </div>
+      
+      <div class="item-center">
+        <h3 class="item-name">{{ item.Name }}</h3>
+        <p class="item-price">₪{{ item.priceCard | number }}</p>
+      </div>
+
+      <div class="item-right">
+        <div class="qty-controls">
+          <button class="qty-btn minus" (click)="updateQty(item.id, -1)">−</button>
+          <input type="text" class="qty-input" [value]="item.Quentity" readonly />
+          <button class="qty-btn plus" (click)="updateQty(item.id, 1)">+</button>
+        </div>
+        <span class="item-total">₪{{ (item.priceCard * item.Quentity) | number }}</span>      </div>
+    </div>
+  </div>
+
+  <!-- Summary Section (only show if items exist) -->
+  <div class="basket-summary-section" *ngIf="basketItems.length > 0">
+    <div class="summary-box">
+      <div class="summary-row">
+        <span class="summary-label">סה"כ פריטים:</span>
+        <span class="summary-value">{{ basketItems.length }}</span>
+      </div>
+      <div class="summary-row total-row">
+        <span class="summary-label">סה"כ לתשלום:</span>
+        <span class="summary-value">₪{{ getTotal() | number }}</span>
+      </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-section">
+      <div class="progress-bar">
+        <div class="progress-fill" [style.width.%]="(basketItems.length / 10) * 100"></div>
+      </div>
+      <div class="progress-label">
+        <span>{{ basketItems.length }} / 10</span>
+        <i class="pi pi-gift"></i>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+      <button class="btn btn-confirm" (click)="confirmPurchase()" [disabled]="basketItems.length === 0">
+        <span class="btn-text">אישור והמשך</span>
+        <i class="pi pi-arrow-left"></i>
+      </button>
+      <button class="btn btn-secondary" (click)="goToGifts()">
+        <span class="btn-text">בחזרה לבחירה</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Winners Section (after raffle) -->
+  <div class="winners-section" *ngIf="isRaffleComplete && winners.length > 0">
+    <h2 class="winners-title">🎉 הזוכים 🎉</h2>
+    <div class="winners-list">
+      <div class="winner-item" *ngFor="let winner of winners">
+        <div class="winner-badge">👑</div>
+        <div class="winner-info">
+          <p class="winner-gift">{{ winner.giftName }}</p>
+          <p class="winner-name">{{ winner.userName }}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

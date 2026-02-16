@@ -1,95 +1,37 @@
-<div class="flex flex-column align-items-center justify-content-center p-4 w-full">
-
-    <h1 class="text-4xl font-bold text-900 mb-6 mt-2 border-bottom-1 pb-3 w-full text-center surface-border">
-        Register
-    </h1>
-    <div class="flex flex-column gap-3 w-full md:w-30rem">
-
-        <div class="card p-3 border-round shadow-1 bg-white">
-            <div class="flex flex-column gap-2">
-                <label for="id" class="font-bold text-700">ID</label>
-                <input pInputText id="id" aria-describedby="id-help" [(ngModel)]="id" class="w-full" />
-                <small id="id-help" class="text-500">Enter your ID.</small>
-            </div>
-        </div>
-
-        <div class="card p-3 border-round shadow-1 bg-white">
-            <div class="flex flex-column gap-2">
-                <label for="firstName" class="font-bold text-700">First Name</label>
-                <input pInputText id="firstName" aria-describedby="firstName-help" [(ngModel)]="firstName"
-                    class="w-full" />
-                <small id="firstName-help" class="text-500">Enter your FirstName.</small>
-            </div>
-        </div>
-
-        <div class="card p-3 border-round shadow-1 bg-white">
-            <div class="flex flex-column gap-2">
-                <label for="lastName" class="font-bold text-700">Last Name</label>
-                <input pInputText id="lastName" aria-describedby="lastName-help" [(ngModel)]="lastName"
-                    class="w-full" />
-                <small id="lastName-help" class="text-500">Enter your LastName.</small>
-            </div>
-        </div>
-
-        <div class="card p-3 border-round shadow-1 bg-white">
-            <div class="flex flex-column gap-2">
-                <label for="userName" class="font-bold text-700">Username</label>
-                <input pInputText id="userName" aria-describedby="userName-help" [(ngModel)]="userName"
-                    class="w-full" />
-                <small id="userName-help" class="text-500">Enter your userName.</small>
-            </div>
-        </div>
-
-        <div class="flex flex-column gap-2">
-            <label for="email" class="font-bold text-700">Email</label>
-            <input pInputText id="email" [(ngModel)]="email" #emailValidation="ngModel" name="email" class="w-full"
-                required />
-            <small id="email-help" class="text-500">Enter your email.</small>
-        </div>
-        <div class="card p-3 border-round shadow-1 bg-white">
-            <div class="flex flex-column gap-2">
-                <label for="buildingNumber" class="font-bold text-700">Phone</label>
-                <input type="text" pInputText [(ngModel)]="phone" placeholder="Phone Number" name="phone" />
-                <small id="buildingNumber-help" class="text-500">Enter your phone.</small>
-            </div>
-        </div>
-        <div class="card p-3 border-round shadow-1 bg-white">
-            <div class="flex flex-column gap-2">
-                <label for="password" class="font-bold text-700">Password</label>
-                <input pInputText id="password" type="password" aria-describedby="password-help" [(ngModel)]="password"
-                    class="w-full" />
-                <small id="password-help" class="text-500">Enter your password.</small>
-            </div>
-        </div>
-
-        <div class="card p-3 border-round shadow-1 bg-white">
-            <div class="flex flex-column gap-2">
-                <label for="city" class="font-bold text-700">City</label>
-                <input pInputText id="city" aria-describedby="city-help" [(ngModel)]="city" class="w-full" />
-                <small id="city-help" class="text-500">Enter your city.</small>
-            </div>
-        </div>
-
-        <div class="card p-3 border-round shadow-1 bg-white">
-            <div class="flex flex-column gap-2">
-                <label for="street" class="font-bold text-700">Street</label>
-                <input pInputText id="street" aria-describedby="street-help" [(ngModel)]="street" class="w-full" />
-                <small id="street-help" class="text-500">Enter your street.</small>
-            </div>
-        </div>
-
-        <div class="card p-3 border-round shadow-1 bg-white">
-            <div class="flex flex-column gap-2">
-                <label for="buildingNumber" class="font-bold text-700">Building Number</label>
-                <input pInputText id="buildingNumber" aria-describedby="buildingNumber-help"
-                    [(ngModel)]="buildingNumber" class="w-full" />
-                <small id="buildingNumber-help" class="text-500">Enter your buildingNumber.</small>
-            </div>
-        </div>
-
-        <div class="flex justify-content-center mt-3">
-            <button pButton type="button" label="Register" class="w-full p-button-lg" (click)="register()"></button>
-        </div>
-
+<div class="register-container card shadow-2 border-round-xl p-6">
+  <h2 class="register-title">הרשמה</h2>
+  <div class="flex flex-column align-items-center justify-content-center gap-4 py-5">
+    <div class="w-full max-w-15rem flex flex-column gap-2">
+      <input pInputText id="id" type="text" [(ngModel)]="id" class="w-full custom-input" placeholder="תעודת זהות" />
     </div>
+    <div class="w-full max-w-15rem flex flex-column gap-2">
+      <input pInputText id="firstName" type="text" [(ngModel)]="firstName" class="w-full custom-input" placeholder="שם פרטי" />
+    </div>
+    <div class="w-full max-w-15rem flex flex-column gap-2">
+      <input pInputText id="lastName" type="text" [(ngModel)]="lastName" class="w-full custom-input" placeholder="שם משפחה" />
+    </div>
+    <div class="w-full max-w-15rem flex flex-column gap-2">
+      <input pInputText id="userName" type="text" [(ngModel)]="userName" class="w-full custom-input" placeholder="שם משתמש" />
+    </div>
+    <div class="w-full max-w-15rem flex flex-column gap-2">
+      <input pInputText id="email" type="email" [(ngModel)]="email" class="w-full custom-input" placeholder="אימייל" />
+    </div>
+    <div class="w-full max-w-15rem flex flex-column gap-2">
+      <input pInputText id="phone" type="text" [(ngModel)]="phone" class="w-full custom-input" placeholder="טלפון" />
+    </div>
+    <div class="w-full max-w-15rem flex flex-column gap-2">
+      <input pInputText id="city" type="text" [(ngModel)]="city" class="w-full custom-input" placeholder="עיר" />
+    </div>
+    <div class="w-full max-w-15rem flex flex-column gap-2">
+      <input pInputText id="street" type="text" [(ngModel)]="street" class="w-full custom-input" placeholder="רחוב" />
+    </div>
+    <div class="w-full max-w-15rem flex flex-column gap-2">
+      <input pInputText id="buildingNumber" type="text" [(ngModel)]="buildingNumber" class="w-full custom-input" placeholder="מספר בית" />
+    </div>
+    <div class="w-full max-w-15rem flex flex-column gap-2">
+      <input pInputText id="password" type="password" [(ngModel)]="password" class="w-full custom-input" placeholder="סיסמה" />
+    </div>
+    <p-button label="הרשמה" icon="pi pi-user-plus" styleClass="custom-btn signup-btn w-full max-w-15rem" (click)="register()"></p-button>
+    <p-button label="יש לך חשבון? התחבר" icon="pi pi-sign-in" styleClass="custom-btn register-btn w-full max-w-15rem mt-2" (click)="goToLogin()"></p-button>
+  </div>
 </div>

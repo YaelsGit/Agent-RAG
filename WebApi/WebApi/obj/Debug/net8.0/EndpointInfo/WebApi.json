@@ -771,7 +771,7 @@
         }
       }
     },
-    "/api/Gift/purchases/sort-by-price": {
+    "/api/Gift/sort-by-price": {
       "get": {
         "tags": [
           "Gift"
@@ -809,7 +809,7 @@
         }
       }
     },
-    "/api/Gift/purchases/sort-by-most-purchased": {
+    "/api/Gift/sort-by-most-purchased": {
       "get": {
         "tags": [
           "Gift"
@@ -886,30 +886,6 @@
         }
       }
     },
-    "/api/Gift/Random": {
-      "get": {
-        "tags": [
-          "Gift"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Gift/TotalSum": {
-      "get": {
-        "tags": [
-          "Gift"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/Gift/GetBySorted": {
       "get": {
         "tags": [
@@ -957,7 +933,43 @@
         }
       }
     },
-    "/api/User": {
+    "/api/Gift/drawAllWinners": {
+      "post": {
+        "tags": [
+          "Gift"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Gift/generateWinnersFile": {
+      "get": {
+        "tags": [
+          "Gift"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Gift/generateTotalSumFile": {
+      "get": {
+        "tags": [
+          "Gift"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/User/AddToBasket": {
       "post": {
         "tags": [
           "User"
@@ -987,17 +999,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/PurchaseBasketDto"
+                  "$ref": "#/components/schemas/Purchase"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PurchaseBasketDto"
+                  "$ref": "#/components/schemas/Purchase"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PurchaseBasketDto"
+                  "$ref": "#/components/schemas/Purchase"
                 }
               }
             }
@@ -1035,17 +1047,26 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/PurchaseWithUserDto"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PurchaseWithUserDto"
+                  }
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PurchaseWithUserDto"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PurchaseWithUserDto"
+                  }
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PurchaseWithUserDto"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PurchaseWithUserDto"
+                  }
                 }
               }
             }
@@ -1065,7 +1086,30 @@
         }
       }
     },
-    "/api/User/Winners": {
+    "/api/User/RemoveFromBasket/{purchaseId}": {
+      "delete": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "purchaseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/User/GiftsWithWinners": {
       "get": {
         "tags": [
           "User"
@@ -1119,6 +1163,14 @@
   },
   "components": {
     "schemas": {
+      "BasketStatus": {
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
       "Category": {
         "type": "object",
         "properties": {
@@ -1143,6 +1195,39 @@
             "maxLength": 30,
             "minLength": 1,
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Donor": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "gifts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Gift"
+            },
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1198,6 +1283,61 @@
             "maxLength": 10,
             "minLength": 9,
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Gift": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "purchases": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Purchase"
+            },
+            "nullable": true
+          },
+          "categoryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "category": {
+            "$ref": "#/components/schemas/Category"
+          },
+          "donorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "donor": {
+            "$ref": "#/components/schemas/Donor"
+          },
+          "priceCard": {
+            "type": "number",
+            "format": "double"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pictureId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "winnerName": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1378,9 +1518,81 @@
         },
         "additionalProperties": false
       },
+      "Purchase": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "giftId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "gift": {
+            "$ref": "#/components/schemas/Gift"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          },
+          "basketStatus": {
+            "$ref": "#/components/schemas/BasketStatus"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "busketId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "PurchaseBasketDto": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "giftId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "quentity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "busketId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isRandom": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PurchaseBasketUserDto": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
           "id": {
             "type": "integer",
             "format": "int32"
@@ -1455,6 +1667,70 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "role": {
+            "$ref": "#/components/schemas/Status"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "street": {
+            "type": "string",
+            "nullable": true
+          },
+          "buildingNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "purchases": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Purchase"
+            },
+            "nullable": true
+          },
+          "purchaseDto": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PurchaseBasketUserDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       },
       "UserRegisterDto": {
         "required": [

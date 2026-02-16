@@ -338,7 +338,6 @@ AddToBasket(): void {
     this.messageService.add({ severity: 'warn', summary: 'שגיאה', detail: 'כמות לא תקינה' });
     return;
   }
-  // No upper limit on qty, server will validate
   const purchaseData = {
     id: product.id,
     Name: product.name,
@@ -346,7 +345,6 @@ AddToBasket(): void {
     priceCard: product.priceCard,
     Quentity: qty
   };
-  // Store in sessionStorage for basket page
   const basket = JSON.parse(sessionStorage.getItem('basket') || '[]');
   basket.push(purchaseData);
   sessionStorage.setItem('basket', JSON.stringify(basket));
@@ -354,17 +352,16 @@ AddToBasket(): void {
   this.hidePopover();
   this.router.navigate(['/basket']);
 }
-  // פונקציית עזר להוספה
-  selectAndAddToBasket(gift: any) {
-    this.selectedProduct.set(gift);
-    this.AddToBasket();
-  }
 
-  // פונקציית hidePopover (שגיאה 4)
-  hidePopover(): void {
-    this.displayModal = false; 
-    this.selectedProduct.set(null);
-  }
+selectAndAddToBasket(gift: any) {
+  this.selectedProduct.set(gift);
+  this.AddToBasket();
+}
+
+hidePopover(): void {
+  this.displayModal = false;
+  this.selectedProduct.set(null);
+}
 
   buildImageSrc(pictureId: number | string | null | undefined): string {
     const isValid = !(pictureId === null || pictureId === undefined || pictureId === '' || pictureId === 0);
@@ -388,7 +385,6 @@ AddToBasket(): void {
     if (!img.src.endsWith('placeholder.png') && !img.src.endsWith('placeholder.jpg')) {
       img.src = '/assets/Image/placeholder.png';
     }
-    // Set noImage flag for template fallback
     if (gift && typeof gift === 'object') {
       (gift as any).noImage = true;
     }

@@ -29,21 +29,28 @@ namespace WebApi.Repository
             return await _context.Users
                 .FirstOrDefaultAsync(u => u.UserName == userName);
         }
-        public async Task<User?> GetByUserId(int Id)
+        public async Task<User?> GetByUserId(int userId)
         {
             return await _context.Users
-                .FirstOrDefaultAsync(u => u.Id == Id);
+                .Include(u => u.Purchases)
+                .Include(u => u.PurchaseDto)
+                .FirstOrDefaultAsync(u => u.Id == userId);
         }
-        public async Task<Purchase?> TicketPurchase(Purchase purchase)
+
+        public async Task AddPurchase(int userId, Purchase purchase)
         {
-            if(purchase == null) return null;
-            var gift= await _context.Gifts.FirstOrDefaultAsync(u => u.Id==purchase.GiftId);
-            if(gift == null) return null;
-            gift.Quantity += 1;
+            var user = await GetByUserId(userId);
+            if (user != null)
+            {
+                user.Purchases.Add(purchase);
+                await _context.SaveChangesAsync();
+            }
+ 
+        }
+
+        public async Task SaveChangesAsync()
+        {
             await _context.SaveChangesAsync();
-            purchase.User.Purchases.Add(purchase);
-            await _context.SaveChangesAsync();
-            return purchase; 
         }
 
     }

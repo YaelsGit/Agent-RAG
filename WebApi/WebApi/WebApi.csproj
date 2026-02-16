@@ -8,9 +8,13 @@
 
   <ItemGroup>
     <Compile Remove="DTOs\DonorDTO.cs\**" />
+    <Compile Remove="NewFolder\**" />
     <Content Remove="DTOs\DonorDTO.cs\**" />
+    <Content Remove="NewFolder\**" />
     <EmbeddedResource Remove="DTOs\DonorDTO.cs\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
     <None Remove="DTOs\DonorDTO.cs\**" />
+    <None Remove="NewFolder\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,7 +32,6 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="NewFolder\" />
   </ItemGroup>
 
 </Project>

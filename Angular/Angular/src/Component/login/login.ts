@@ -46,13 +46,12 @@ export class Login {
       next: (res) => {
         console.log('Login successful', res);
         this.messageService.add({ severity: 'success', summary: 'כניסה', detail: 'התחברת בהצלחה' });
-        
         if (res.Token) {
           localStorage.setItem('authToken', res.Token);
           sessionStorage.setItem('user', JSON.stringify(res.User));
           this.router.navigate(['/gifts']);
-      }
-    },
+        }
+      },
       error: (err) => {
         console.error('Login failed', err);
         this.messageService.add({ 

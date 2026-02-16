@@ -395,6 +395,36 @@
   },
   {
     "ContainingType": "WebApi.Controllers.GiftController",
+    "Method": "DrawAllWinners",
+    "RelativePath": "api/Gift/drawAllWinners",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.GiftController",
+    "Method": "GenerateRevenueFile",
+    "RelativePath": "api/Gift/generateTotalSumFile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.GiftController",
+    "Method": "GenerateWinnersFile",
+    "RelativePath": "api/Gift/generateWinnersFile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.GiftController",
     "Method": "SortedGiftByPriceOrCategory",
     "RelativePath": "api/Gift/GetBySorted",
     "HttpMethod": "GET",
@@ -490,7 +520,7 @@
   {
     "ContainingType": "WebApi.Controllers.GiftController",
     "Method": "GetGiftsByMostPurchased",
-    "RelativePath": "api/Gift/purchases/sort-by-most-purchased",
+    "RelativePath": "api/Gift/sort-by-most-purchased",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -510,7 +540,7 @@
   {
     "ContainingType": "WebApi.Controllers.GiftController",
     "Method": "GetGiftsByPrice",
-    "RelativePath": "api/Gift/purchases/sort-by-price",
+    "RelativePath": "api/Gift/sort-by-price",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -528,42 +558,22 @@
     ]
   },
   {
-    "ContainingType": "WebApi.Controllers.GiftController",
-    "Method": "GiftRandom",
-    "RelativePath": "api/Gift/Random",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "WebApi.Controllers.GiftController",
-    "Method": "GetTotalSum",
-    "RelativePath": "api/Gift/TotalSum",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "WebApi.Controllers.UserController",
     "Method": "AddToBasket",
-    "RelativePath": "api/User",
+    "RelativePath": "api/User/AddToBasket",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Purchase",
+        "Name": "purchase",
         "Type": "WebApi.DTOs.PurchaseDTO\u002BPurchaseBasketDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "WebApi.DTOs.PurchaseDTO\u002BPurchaseBasketDto",
+        "Type": "WebApi.Models.Purchase",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -585,6 +595,32 @@
   },
   {
     "ContainingType": "WebApi.Controllers.UserController",
+    "Method": "GetGiftsWithWinners",
+    "RelativePath": "api/User/GiftsWithWinners",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UserController",
+    "Method": "RemoveFromBasket",
+    "RelativePath": "api/User/RemoveFromBasket/{purchaseId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "purchaseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UserController",
     "Method": "TicketPurchase",
     "RelativePath": "api/User/TicketPurchase",
     "HttpMethod": "POST",
@@ -599,7 +635,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "WebApi.DTOs.PurchaseDTO\u002BPurchaseWithUserDto",
+        "Type": "System.Collections.Generic.List\u00601[[WebApi.DTOs.PurchaseDTO\u002BPurchaseWithUserDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -608,16 +644,6 @@
         "StatusCode": 200
       }
     ]
-  },
-  {
-    "ContainingType": "WebApi.Controllers.UserController",
-    "Method": "GetWinners",
-    "RelativePath": "api/User/Winners",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
   },
   {
     "ContainingType": "WebApi.Controllers.WeatherForecastController",

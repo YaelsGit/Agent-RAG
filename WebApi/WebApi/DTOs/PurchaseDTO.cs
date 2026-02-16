@@ -26,6 +26,9 @@ namespace WebApi.DTOs
             public DateTime Date { get; set; }
             public int GiftId { get; set; }
             public int Quentity { get; set; } = 1;
+            public int BusketId { get; set; }
+            public  bool IsRandom { get; set; } = false;
+
         }
         public class PurchaseBasketUserDto
         {

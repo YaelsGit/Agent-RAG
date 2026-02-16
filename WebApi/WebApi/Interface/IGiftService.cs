@@ -11,7 +11,6 @@ namespace WebApi.Interface
         Task<GiftResponseDto> CreateGift(GiftFormDto GiftForm);
         Task<bool> DeleteGift(int Id);
         Task<GiftResponseDto?> UpdateGift(int Id, [FromBody] GiftResponseDto giftForm);
-
         Task<IEnumerable<GiftCategoryDto?>> GetAllGift();
         Task<GiftResponseDto?> GetGiftByName(string name);
         Task<IEnumerable<GiftResponseDto?>> GetGiftByDonor(string firstName, string lastName);
@@ -20,9 +19,9 @@ namespace WebApi.Interface
         Task<List<GiftPurchasesDto>> GetGiftsSortedByPrice();
         Task<List<GiftPurchasesDto>> GetGiftsSortedByMostPurchased();
         Task<GiftPurchasesWithUsersDto?> GetGiftPurchasesWithUsers(int giftId);
-        Task<IEnumerable<GiftWinnerDto?>> GiftRandom();
-        Task<TotalSumDto> GetTotalSum();
        Task<IEnumerable<GiftCategoryDto?>> SortedGiftByPriceOrCategory(string sorteBy);
-
+        Task<IEnumerable<GiftWinnerDto>> GenerateWinnersReport();
+        Task<decimal> GetTotalRevenue();
+        Task<GiftWinnerDto?> DrawWinnerForGift(int giftId);
     }
 }

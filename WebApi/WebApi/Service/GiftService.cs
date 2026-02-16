@@ -214,33 +214,31 @@ namespace WebApi.Service
                 }).ToList()
             };
         }
-        public async Task<IEnumerable<GiftWinnerDto?>> GiftRandom()
+        public async Task<GiftWinnerDto?> DrawWinnerForGift(int giftId)
         {
-            var gifts = await _GiftRepository.GiftRandom();
-            if (gifts == null)
-                return null;
-            return gifts;
-        }
-        public async Task<TotalSumDto> GetTotalSum()
-        {
-            var dto = new TotalSumDto
+            var gift = await _GiftRepository.GetGiftWithPurchasesIncludingUsers(giftId);
+
+            if (gift == null || !gift.Purchases.Any()) return null;
+
+            var ticketPool = new List<User>();
+            foreach (var purchase in gift.Purchases.Where(p => p.basketStatus == BasketStatus.Confirmed))
             {
-                TotalSum = Purchase.TotalSum
+                for (int i = 0; i < purchase.Quantity; i++)
+                {
+                    ticketPool.Add(purchase.User);
+                }
+            }
+
+            if (!ticketPool.Any()) return null;
+
+            var random = new Random();
+            var winner = ticketPool[random.Next(ticketPool.Count)];
+
+            return new GiftWinnerDto
+            {
+                GiftName = gift.Name,
+                WinnerName = $"{winner.FirstName} {winner.LastName}",
             };
-
-            var json = JsonSerializer.Serialize(
-                dto,
-                new JsonSerializerOptions { WriteIndented = true }
-            );
-
-            var path = Path.Combine(
-                Directory.GetCurrentDirectory(),
-                "totalSum.json"
-            );
-
-            await File.WriteAllTextAsync(path, json);
-
-            return dto;
         }
 
 
@@ -259,6 +257,47 @@ namespace WebApi.Service
 
 
         }
+        public async Task<IEnumerable<GiftWinnerDto>> GenerateWinnersReport()
+        {
+            var allGifts = await _GiftRepository.GetAll();
+            var winnersReport = new List<GiftWinnerDto>();
 
+            foreach (var gift in allGifts)
+            {
+                var winner = await DrawWinnerForGift(gift.Id);
+
+                if (winner != null)
+                {
+                    winnersReport.Add(winner);
+                }
+                else
+                {
+                    winnersReport.Add(new GiftWinnerDto
+                    {
+                        GiftName = gift.Name,
+                        WinnerName = "אין רוכשים למתנה זו",
+                    });
+                }
+            }
+
+            return winnersReport;
+        }
+        public async Task<decimal> GetTotalRevenue()
+        {
+            var gifts = await _GiftRepository.GetGiftsWithPurchases("all");
+
+            decimal totalRevenue = 0;
+
+            foreach (var gift in gifts)
+            {
+                var confirmedTickets = gift.Purchases
+                    .Where(p => p.basketStatus == BasketStatus.Confirmed)
+                    .Sum(p => p.Quantity);
+
+                totalRevenue += (confirmedTickets * gift.PriceCard);
+            }
+
+            return totalRevenue;
+        }
     }
 }

@@ -8,12 +8,12 @@ import { routes } from '../../app/app.routes';
 import { Router } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { Status } from '../../Model/User';
-
+import { DividerModule } from 'primeng/divider';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [FormsModule, InputTextModule, ButtonModule, HttpClientModule],
+  imports: [FormsModule, InputTextModule, ButtonModule, HttpClientModule, DividerModule],
   templateUrl: './register.html',
   styleUrls: ['./register.scss'],
 })
@@ -64,5 +64,9 @@ this.AuthService.register(userData).subscribe({
       }
     }
   });
+  }
+
+  goToLogin() {
+    this.router.navigate(['/login']);
   }
 }

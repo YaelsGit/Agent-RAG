@@ -7,7 +7,9 @@ namespace WebApi.Interface
     {
         Task<User>CreateUser(User user);
         Task<User?>GetByUserNameAsync(string userName);
-        Task<User?> GetByUserId(int Id);
-        Task<Purchase?> TicketPurchase(Purchase purchase);
+        Task<User?> GetByUserId(int userId);
+        Task AddPurchase(int userId, Purchase purchase);
+        Task SaveChangesAsync();
+
     }
 }

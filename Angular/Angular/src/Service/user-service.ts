@@ -13,7 +13,6 @@ export class UserService {
     return { 'Authorization': `Bearer ${token}` };
   }
   AddToBasket(PurchaseData: Purchase) {
-    // Validation: Ensure required fields are present
     if (!PurchaseData || !PurchaseData.giftId || !PurchaseData.userId) {
       return {
         subscribe: (cb: any, errCb: any) => errCb({ userMessage: 'יש למלא את כל השדות הנדרשים בסל.' })
@@ -23,7 +22,6 @@ export class UserService {
     return this.http.post(`${this.Url}`, PurchaseData, { headers: this.getHeaders() });
   }
   TicketPurchase(TicketData: Purchase) {
-    // Validation: Ensure required fields are present
     if (!TicketData || !TicketData.giftId || !TicketData.userId) {
       return {
         subscribe: (cb: any, errCb: any) => errCb({ userMessage: 'יש למלא את כל השדות הנדרשים לרכישת כרטיס.' })

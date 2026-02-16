@@ -185,6 +185,11 @@ namespace WebApi.Repository
 
             return await query.ToListAsync();
         }
-
+        public async Task<Gift?> GetById(int giftId)
+        {
+            return await _context.Gifts
+                .Include(g => g.Purchases)
+                .FirstOrDefaultAsync(g => g.Id == giftId);
+        }
     }
 }

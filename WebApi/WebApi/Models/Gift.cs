@@ -7,13 +7,13 @@
         public string Description { get; set; }=string.Empty;
         public List<Purchase> Purchases { get; set; } = new List<Purchase>();
         public int CategoryId { get; set; }
-        public Category Category { get; set; }
+        public Category? Category { get; set; }
         public int DonorId { get; set; }
-        public Donor Donor { get; set; }
+        public Donor? Donor { get; set; }
         public Decimal PriceCard { get; set; }
         public int Quantity { get; set; }
         public static bool IsRandom { get; set; } = false;
         public int PictureId { get; set; }
-
+        public string? WinnerName { get; set; }
     }
 }

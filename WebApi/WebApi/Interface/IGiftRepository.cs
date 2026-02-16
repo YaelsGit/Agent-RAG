@@ -19,6 +19,7 @@ namespace WebApi.Interface
         Task<Gift?> GetGiftWithPurchasesIncludingUsers(int giftId);
         Task<List<GiftWinnerDto?>> GiftRandom();
         Task<IEnumerable<Gift?>> SortedGiftByPriceOrCategory(string sorteBy);
+        Task<Gift?> GetById(int giftId);
 
     }
 }

@@ -20,5 +20,8 @@
         public static decimal TotalSum { get; set; } = 0;
 
         public BasketStatus basketStatus { get; set; } = BasketStatus.Draft;
+        public int Quantity { get; set; }
+        public int BusketId { get; set; }
+
     }
 }
