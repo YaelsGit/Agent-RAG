@@ -1,32 +1,62 @@
-# 🤖 Agentic RAG Assistant - Project 3
+# 🤖 Master Agentic Coding RAG Assistant
 
-מערכת RAG (Retrieval-Augmented Generation) מתקדמת המבוססת על ארכיטקטורת **Event-Driven Workflows**. המערכת מסוגלת לסרוק תיעוד טכני, לאנדקס אותו ולספק תשובות מדויקות תוך ביצוע ולידציה עצמית ותיקון שגיאות בזמן אמת.
+מערכת RAG מתקדמת לניהול ותשאול תיעוד פרויקטים המיוצרים על ידי כלי Agentic Coding (כמו Cursor, Claude Code וכו'). 
+הפרויקט נבנה כחלק ממטלת קורס ומתמקד בארכיטקטורת **Event-Driven Workflow** וניתוב חכם.
 
-## 🚀 תכונות מרכזיות
-- **Agentic Workflow**: שימוש ב-LlamaIndex Workflows לניהול זרימת מידע מבוססת אירועים.
-- **Self-Correction**: מנגנון תיקון עצמי המבצע חיפוש חוזר אם רמת הביטחון (Confidence Score) של המידע נמוכה.
-- **Hybrid Indexing**: אינדוקס וקטורי ב-Pinecone עם העשרה של Metadata לשמירת הקשר (Tool, File, Project).
-- **Semantic Search**: שימוש ב-Embeddings רב-לשוניים של Cohere לתמיכה מלאה בעברית ואנגלית.
-- **Professional UI**: ממשק צ'אט מודרני ונקי המבוסס על Gradio.
+## 🎯 מטרת הפרויקט
+המערכת מאגדת קבצי תיעוד (`.md`) ממקורות שונים לשכבת ידע אחת, ומאפשרת למתכנתים להפיק תובנות, לעקוב אחר החלטות טכניות ולוודא עקביות בפיתוח.
 
-## 🏗️ ארכיטקטורה
-הפרויקט בנוי משלושה שלבים אבולוציוניים:
-1. **שלב א' (MVP)**: הקמת ה-Pipeline הבסיסי, חיבור ל-Pinecone וביצוע חיפוש סמנטי.
-2. **שלב ב' (Event-Driven)**: שכתוב המערכת למבנה של Steps ו-Events לניהול לוגיקה מורכבת.
-3. **שלב ג' (Reflection)**: הוספת לולאות משוב (Feedback Loops) המאפשרות לסוכן "לחשוב" ולתקן את עצמו לפני הצגת התשובה.
+---
 
+## 🛠️ טכנולוגיות (Tech Stack)
+*   **Framework:** LlamaIndex & LlamaAgents
+*   **Vector DB:** Pinecone
+*   **Embeddings:** Cohere (multilingual-v3.0)
+*   **UI:** Gradio
+*   **Language:** Python
 
+---
 
-## 🛠️ טכנולוגיות
-- **Framework**: [LlamaIndex](https://www.llamaindex.ai/)
-- **Vector DB**: [Pinecone](https://www.pinecone.io/)
-- **Embedding Model**: `cohere.embed-multilingual-v3.0`
-- **UI Framework**: [Gradio](https://gradio.app/)
-- **Language**: Python 3.x
+## 🧩 ארכיטקטורה ויכולות (שלבי הפיתוח)
 
-## 📋 התקנה והרצה
+### 1️⃣ שלב א' - Semantic Search (MVP)
+מימוש חיפוש סמנטי מלא המבוסס על וקטורים. המערכת מסוגלת להבין את ההקשר של השאלה ולשלוף את קטעי המידע הרלוונטיים ביותר מתוך מסמכי ה-Markdown.
 
-1. שכפלי את המאגר:
-   ```bash
-   git clone [https://github.com/YOUR_USERNAME/coding-agent-rag.git](https://github.com/YOUR_USERNAME/coding-agent-rag.git)
-   cd coding-agent-rag
+### 2️⃣ שלב ב' - Event-Driven Workflow
+הקוד בנוי כ-Workflow מנוהל אירועים:
+*   **Router Step:** החלטה על נתיב השליפה.
+*   **Retrieve Step:** שליפה מה-Vector Store.
+*   **Validation Step:** בדיקת רמת ביטחון (Confidence Score) למניעת תשובות שגויות.
+*   **Synthesis Step:** ניסוח תשובה סופית על ידי LLM.
+
+### 3️⃣ שלב ג' - Structured Data Extraction & Routing
+המערכת כוללת מנגנון ניתוב (Router) המזהה מתי המשתמש מבקש מידע מובנה (כמו רשימת החלטות או חוקי מערכת) ושולפת אותו מתוך בסיס נתונים מובנה (JSON) לקבלת דיוק מקסימלי.
+
+---
+
+## 🚀 הוראות הרצה
+
+1.  **התקנת דרישות:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+2.  **הגדרת משתני סביבה:**
+    צרו קובץ `.env` עם המפתחות הבאים:
+    *   `COHERE_API_KEY`
+    *   `PINECONE_API_KEY`
+3.  **טעינת נתונים:**
+    הניחו קבצי `.md` בתיקיית `data` והריצו:
+    ```bash
+    python ingest.py
+    ```
+4.  **הרצת האפליקציה:**
+    ```bash
+    python app.py
+    ```
+
+---
+
+## 📊 דוגמאות לשאלות שהמערכת יודעת לענות עליהן
+*   "מהן הנחיות ה-UI לגבי RTL?" (שליפה סמנטית)
+*   "תן לי רשימה של כל ההחלטות הטכניות שהתקבלו" (ניתוב לנתונים מובנים)
+*   "האם יש אזהרות לגבי רכיב ה-Auth?" (חילוץ מידע ממוקד)
