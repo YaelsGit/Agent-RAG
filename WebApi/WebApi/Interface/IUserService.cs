@@ -16,5 +16,6 @@ namespace WebApi.Interface
         Task<bool> ConfirmBasket(int userId);
         Task<bool> DeleteFromBasket(int purchaseId, int userId);
         Task<List<GiftWithWinnerDto>> GetGiftsWithWinners();
+        Task<List<object>> GetUserBasket(int userId); // הפונקציה החדשה
     }
 }

@@ -10,7 +10,7 @@ namespace WebApi.Interface
         Task<bool> Delete(int Id);
         Task<Gift?> FindById(int Id);
         Task<Gift?> Update(Gift gift);
-        Task<ICollection<GiftCategoryDto?>> GetAll();
+        Task<ICollection<GiftResponseDto?>> GetAll();
         Task<Gift?> GetByName(string name);
         Task<IEnumerable<Gift?>> GetByDonor(string firstName, string lastName);
         Task<IEnumerable<Gift?>> GetByNumPurchase(int num);

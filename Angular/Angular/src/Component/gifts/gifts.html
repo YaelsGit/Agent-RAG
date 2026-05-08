@@ -11,27 +11,28 @@
         <option value="price">מחיר</option>
         <option value="category">קטגוריה</option>
       </select>
-      
+
       <input #donorFirst type="text" pInputText placeholder="שם תורם" class="small-input">
       <input #donorLast type="text" pInputText placeholder="משפחה" class="small-input">
       <button pButton icon="pi pi-user" (click)="searchByDonorName(donorFirst.value, donorLast.value)"></button>
     </div>
 
-    <div class="admin-btns">
+    <div class="admin-btns" *ngIf="isAdmin()">
       <button pButton label="הגרלה" icon="pi pi-gift" class="p-button-help" (click)="GiftRandom()"></button>
-      <button pButton label="הוספה" icon="pi pi-plus" (click)="displayModal = true; resetForm()"></button>
+      <button pButton label="הוספה" icon="pi pi-plus" (click)="resetForm(); id = 0; displayModal = true"></button>
     </div>
   </div>
 
   <div class="gifts-grid">
     <div *ngFor="let gift of sourceGifts(); trackBy: trackByGiftId" class="gift-card">
+      
+      <div class="winner-overlay" *ngIf="gift.winnerName">
+        <i class="pi pi-trophy"></i>
+        <span>הזוכה: {{ gift.winnerName }}</span>
+      </div>
+
       <div class="gift-image-wrapper">
-        <img
-          *ngIf="!gift.noImage"
-          [src]="buildImageSrc(gift.pictureId)"
-          (error)="onImgError($event, gift)"
-          [alt]="gift.name"
-          class="gift-image" />
+        <img [src]="buildImageSrc(gift.pictureId)" (error)="onImgError($event, gift)" />
         <div *ngIf="gift.noImage" class="no-image-fallback">
           <span class="icon-gift"></span>
           <span class="no-image-text">אין תמונה</span>
@@ -46,14 +47,14 @@
       <div class="gift-actions">
         <div class="qty-selector">
           <button class="qty-btn" (click)="updateQty(gift.id, 1)">+</button>
-          <div class="qty-val">{{ giftQuantities[gift.id] || 0 }}</div>
+          <div class="qty-val">{{ giftQuantities[gift.id] || 1 }}</div>
           <button class="qty-btn" (click)="updateQty(gift.id, -1)">-</button>
         </div>
 
-        <button pButton label="הוספה לסל" class="add-basket-btn"
-                (click)="selectAndAddToBasket(gift)"></button>
+        <button pButton label="הוספה לסל" class="add-basket-btn" (click)="selectAndAddToBasket(gift)"></button>
+        <button pButton label="רכוש כרטיס" icon="pi pi-ticket" class="buy-ticket-btn" (click)="ticketPurchase(gift)"></button>
 
-        <div class="admin-footer">
+        <div class="admin-footer" *ngIf="isAdmin()">
           <i class="pi pi-pencil" (click)="openEdit(gift)" title="ערוך"></i>
           <i class="pi pi-trash" (click)="deleteGift(gift)" title="מחק"></i>
           <i class="pi pi-chart-line" (click)="GetGiftPurchases(gift.id)" title="סטטיסטיקה"></i>
@@ -61,43 +62,4 @@
       </div>
     </div>
   </div>
-
-<p-dialog [(visible)]="displayModal" [header]="id ? 'עדכון מתנה' : 'הוספת מתנה חדשה'" [modal]="true" class="p-fluid" [style]="{width: '500px'}">
-  <div class="p-grid p-fluid">
-    
-    <div class="p-field p-col-12">
-      <label for="name">שם המתנה</label>
-      <input id="name" type="text" pInputText [(ngModel)]="name">
-    </div>
-
-    <div class="p-field p-col-12">
-      <label for="description">תיאור</label>
-      <textarea id="description" pInputTextarea [(ngModel)]="description" rows="3"></textarea>
-    </div>
-
-    <div class="p-field p-col-6">
-      <label for="price">מחיר כרטיס</label>
-      <input id="price" type="number" pInputText [(ngModel)]="priceCard">
-    </div>
-    <div class="p-field p-col-6">
-      <label for="category">מזהה קטגוריה</label>
-      <input id="category" type="number" pInputText [(ngModel)]="categoryId">
-    </div>
-
-    <div class="p-field p-col-6">
-      <label for="donor">מזהה תורם</label>
-      <input id="donor" type="number" pInputText [(ngModel)]="donorId">
-    </div>
-    <div class="p-field p-col-6">
-      <label for="picture">מזהה תמונה</label>
-      <input id="picture" type="number" pInputText [(ngModel)]="pictureId">
-    </div>
-
-  </div>
-
-  <ng-template pTemplate="footer">
-    <button pButton label="ביטול" icon="pi pi-times" class="p-button-text" (click)="displayModal = false"></button>
-    <button pButton [label]="id ? 'עדכן' : 'שמור'" icon="pi pi-check" (click)="id ? updateGift() : createGift()"></button>
-  </ng-template>
-</p-dialog>
 </div>

@@ -1,37 +1,57 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
-using System;
 using System.Text;
+using System.Security.Claims;
 using WebApi.Data;
 using WebApi.Interface;
 using WebApi.Middelewere;
 using WebApi.Repository;
 using WebApi.Service;
+using WebApi.Validation;
+
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information() 
+    .WriteTo.Console()
+    .WriteTo.File(
+        path: "Logs/log-.txt",  
+        rollingInterval: RollingInterval.Day,
+        outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level}] {Message}{NewLine}{Exception}"
+    )
+    .CreateLogger();
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<WebApiContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-//repositories
+builder.Host.UseSerilog();
+
+builder.Services.AddDbContext<WebApiContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+);
+
+// Repositories
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IDonorRepository, DonorRepository>();
 builder.Services.AddScoped<IGiftRepository, GiftRepository>();
 
-//services
+// Services
 builder.Services.AddScoped<ITokenService, TokenService>();
-builder.Services.AddScoped<IUserService,UserService>();
-builder.Services.AddScoped<IDonorService,DonorService>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IDonorService, DonorService>();
 builder.Services.AddScoped<IGiftService, GiftService>();
+builder.Services.AddScoped<RandomValidationAttribute>();
+builder.Services.AddScoped<RandomValidationAttribute>();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+        options.JsonSerializerOptions.Converters.Add(new System.Text.Json.Serialization.JsonStringEnumConverter());
+        // Ensure server serializes C# PascalCase properties to camelCase JSON (e.g., PictureId -> pictureId)
+        options.JsonSerializerOptions.PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase;
+    });
 
-builder.Services.AddDbContext<WebApiContext>(options =>
-   options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
@@ -60,6 +80,7 @@ builder.Services.AddSwaggerGen(options =>
         }
     });
 });
+
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
 var secretKey = jwtSettings["SecretKey"] ?? throw new InvalidOperationException("JWT SecretKey is not configured");
 
@@ -79,60 +100,38 @@ builder.Services.AddAuthentication(options =>
         ValidIssuer = jwtSettings["Issuer"],
         ValidAudience = jwtSettings["Audience"],
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey)),
-        ClockSkew = TimeSpan.Zero
-    };
-
-    options.Events = new JwtBearerEvents
-    {
-        OnAuthenticationFailed = context =>
-        {
-            return Task.CompletedTask;
-        },
-        OnTokenValidated = context =>
-        {
-            var userId = context.Principal?.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
-            return Task.CompletedTask;
-        }
+        ClockSkew = TimeSpan.Zero,
+        RoleClaimType = ClaimTypes.Role // Ensure role claim is read correctly from token
     };
 });
 
 builder.Services.AddAuthorization();
-
-// Configure JSON options to handle circular references
-builder.Services.AddControllers()
-    .AddJsonOptions(options =>
-    {
-        options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
-    });
 
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll",
         policy =>
         {
-            policy.AllowAnyOrigin() // מאפשר לכל כתובת (גם אם הפורט משתנה) להיכנס
+            policy.AllowAnyOrigin()
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
 });
 
-// למטה, אחרי ה-Build:
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.UseMiddleware<RequestLoggingMiddleware>();
 
+app.UseMiddleware<RequestLoggingMiddleware>();
 app.UseHttpsRedirection();
 app.UseCors("AllowAll");
-
 app.UseAuthentication();
-
 app.UseAuthorization();
 
 app.MapControllers();
+
 app.Run();

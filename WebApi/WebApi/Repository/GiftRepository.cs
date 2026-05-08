@@ -54,27 +54,31 @@ namespace WebApi.Repository
             await _context.SaveChangesAsync();
             return giftObj;
         }
-        public async Task<ICollection<GiftCategoryDto?>> GetAll()
+
+
+        public async Task<ICollection<GiftResponseDto?>> GetAll()
         {
-            Console.WriteLine(">>> GetAll() Repository CALLED");
-            var count = await _context.Gifts.CountAsync();
-            Console.WriteLine($"GIFTS COUNT = {count}");
-            var gifts = await _context.Gifts.Include(g => g.Category).Include(g => g.Donor).ToListAsync();
-            foreach (var gift in gifts)
-            {
-                Console.WriteLine($"Gift: Id={gift.Id}, Name={gift.Name}, CategoryId={gift.CategoryId}, DonorId={gift.DonorId}, Category={(gift.Category != null ? gift.Category.Name : "null")}, Donor={(gift.Donor != null ? gift.Donor.FirstName + " " + gift.Donor.LastName : "null")}");
-            }
-            return gifts.Select(g => new GiftCategoryDto
+            // טעינת הנתונים כולל קטגוריה, תורם ורכישות (כדי לדעת אם יש זוכים)
+            var gifts = await _context.Gifts
+                .Include(g => g.Category)
+                .Include(g => g.Donor)
+                .ToListAsync();
+
+            var validGifts = gifts.Where(g => g.Category != null && g.Donor != null).ToList();
+
+            return validGifts.Select(g => new GiftResponseDto
             {
                 Id = g.Id,
                 Name = g.Name,
                 Description = g.Description,
-                CategoryName = g.Category != null ? g.Category.Name : string.Empty,
+                CategoryId = g.Category.Id,
+                DonorId = g.DonorId,
                 PriceCard = g.PriceCard,
-                PictureId = g.Id // Use correct property if available
+                PictureId = g.PictureId,
+                // השורה הקריטית שהייתה חסרה:
+                WinnerName = g.WinnerName
             }).ToList();
         }
-
         public async Task<Gift?> GetByName(string name)
         {
             return await _context.Gifts
@@ -134,12 +138,11 @@ namespace WebApi.Repository
             {
                 if (!gift.Purchases.Any())
                 {
-                    // אם אין רכישות, מחזיר זוכה "דיפולטי"
                     winners.Add(new GiftWinnerDto
                     {
                         GiftId = gift.Id,
                         GiftName = gift.Name,
-                        WinnerId = -1, // מזהה דיפולטי
+                        WinnerId = -1, 
                         WinnerName = "אין זוכה"
                     });
                 }
@@ -178,9 +181,9 @@ namespace WebApi.Repository
         {
             var query = _context.Gifts.Include(g => g.Category).AsQueryable();
 
-            if (sorteBy == "price")
+            if (sorteBy == "מחיר")
                 query = query.OrderByDescending(g => g.PriceCard);
-            else if (sorteBy == "category")
+            else if (sorteBy == "קטגוריה")
                 query = query.OrderByDescending(g => g.Category != null ? g.Category.Name : "");
 
             return await query.ToListAsync();

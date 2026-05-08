@@ -27,7 +27,6 @@ namespace WebApi.DTOs
             public int GiftId { get; set; }
             public int Quentity { get; set; } = 1;
             public int BusketId { get; set; }
-            public  bool IsRandom { get; set; } = false;
 
         }
         public class PurchaseBasketUserDto

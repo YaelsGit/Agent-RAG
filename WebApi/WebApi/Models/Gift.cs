@@ -1,4 +1,6 @@
-﻿namespace WebApi.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace WebApi.Models
 {
     public class Gift
     {
@@ -12,7 +14,8 @@
         public Donor? Donor { get; set; }
         public Decimal PriceCard { get; set; }
         public int Quantity { get; set; }
-        public static bool IsRandom { get; set; } = false;
+        public  bool IsRandom { get; set; } = false;
+        [NotMapped]
         public int PictureId { get; set; }
         public string? WinnerName { get; set; }
     }

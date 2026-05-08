@@ -50,6 +50,7 @@ namespace WebApi.Data
                 entity.Property(e => e.Description).IsRequired();
                 entity.Property(g => g.PriceCard)
         .HasColumnType("decimal(18,2)"); entity.Property(e => e.Quantity).IsRequired().HasMaxLength(10);
+                entity.Property(e=>e.PictureId).IsRequired();
 
             });
             modelBuilder.Entity<Purchase>(entity =>

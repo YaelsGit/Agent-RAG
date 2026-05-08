@@ -1,0 +1,31 @@
+2026-02-16 10:50:11 [Information] User profile is available. Using '"C:\Users\user1\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-16 10:50:12 [Information] Now listening on: "https://localhost:7036"
+2026-02-16 10:50:12 [Information] Now listening on: "http://localhost:5090"
+2026-02-16 10:50:12 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-16 10:50:12 [Information] Hosting environment: "Development"
+2026-02-16 10:50:12 [Information] Content root path: "C:\Users\user1\Downloads\WebApi-Angular\WebApi\WebApi"
+2026-02-16 10:50:12 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/index.html""" - null null
+2026-02-16 10:50:12 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 196.4289ms
+2026-02-16 10:50:12 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-02-16 10:50:12 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/_vs/browserLink""" - null null
+2026-02-16 10:50:15 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/_framework/aspnetcore-browser-refresh.js""" - 200 16497 "application/javascript; charset=utf-8" 2824.0541ms
+2026-02-16 10:50:15 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 3114.6593ms
+2026-02-16 10:50:16 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/v1/swagger.json""" - null null
+2026-02-16 10:50:16 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 146.709ms
+2026-02-16 10:50:40 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - "application/json" 48
+2026-02-16 10:50:40 [Information] Incoming Request: "POST" "/api/Auth/Login"
+2026-02-16 10:50:40 [Information] CORS policy execution successful.
+2026-02-16 10:50:41 [Information] Executing endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-02-16 10:50:41 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginRequestDto)" on controller "WebApi.Controllers.AuthController" ("WebApi").
+2026-02-16 10:50:41 [Information] Login called for user "יי"
+2026-02-16 10:50:41 [Information] User login attempt: "יי"
+2026-02-16 10:50:43 [Information] Executed DbCommand ("72"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__userName_0"
+2026-02-16 10:50:43 [Warning] Login failed: user not found "יי"
+2026-02-16 10:50:43 [Information] Executing "UnauthorizedObjectResult", writing value of type '"<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-02-16 10:50:43 [Information] Executed action "WebApi.Controllers.AuthController.Login (WebApi)" in 2220.7431ms
+2026-02-16 10:50:43 [Information] Executed endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-02-16 10:50:43 [Information] Completed "POST" "/api/Auth/Login" responded 401 in 2452ms
+2026-02-16 10:50:43 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - 401 null "application/json; charset=utf-8" 2484.3649ms

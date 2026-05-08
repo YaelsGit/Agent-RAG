@@ -13,9 +13,8 @@ namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [RandomValidation]
+    [ServiceFilter(typeof(RandomValidationAttribute))]
     [Authorize(Roles = "Admin")]
-
     public class DonorController : ControllerBase
     {
         private readonly IDonorService _donorService;

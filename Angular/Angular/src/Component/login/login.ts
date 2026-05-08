@@ -7,8 +7,11 @@ import { ToolbarModule } from 'primeng/toolbar';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { AuthService } from '../../Service/auth-service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { Router } from '@angular/router'; 
+import { bootstrapApplication } from '@angular/platform-browser';
+
+
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -21,9 +24,11 @@ import { Router } from '@angular/router';
     ToastModule,
     HttpClientModule
   ],
-  providers: [MessageService, AuthService],
+  providers: [MessageService],
   templateUrl: './login.html',
   styleUrls: ['./login.scss'],
+  
+
 })
 export class Login {
   username = '';
@@ -32,7 +37,8 @@ export class Login {
 
   constructor(
     private messageService: MessageService,
-    private router: Router 
+    private http: HttpClient,
+    private router: Router
   ) {}
 
  login() {
@@ -44,24 +50,28 @@ export class Login {
   this.authService.login({ username: this.username, password: this.password })
     .subscribe({
       next: (res) => {
-        console.log('Login successful', res);
-        this.messageService.add({ severity: 'success', summary: 'כניסה', detail: 'התחברת בהצלחה' });
-        if (res.Token) {
-          localStorage.setItem('authToken', res.Token);
-          sessionStorage.setItem('user', JSON.stringify(res.User));
-          this.router.navigate(['/gifts']);
+        const token = res?.Token ?? res?.token ?? null;
+        if (token) {
+          localStorage.setItem('authToken', token);
+
+          const payload = JSON.parse(atob(token.split('.')[1]));
+          const roleClaim = payload["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
+          
+          const userRaw = res?.User ?? res?.user ?? {};
+          
+          const finalRole = (roleClaim === 'Admin') ? 1 : 0;
+          
+          const normalizedUser = { ...userRaw, role: finalRole };
+          sessionStorage.setItem('user', JSON.stringify(normalizedUser));
+          
+          console.log('Login successful. Role detected from JWT:', finalRole);
         }
+
+        this.messageService.add({ severity: 'success', summary: 'כניסה', detail: 'התחברת בהצלחה' });
+        this.router.navigate(['/gifts']);
       },
       error: (err) => {
-        console.error('Login failed', err);
-        this.messageService.add({ 
-          severity: 'error', 
-          summary: 'שגיאה', 
-          detail: 'משתמש לא קיים או פרטים שגויים' 
-        });
-      },
-      complete: () => {
-        this.router.navigate(['/gifts']);
+        this.messageService.add({ severity: 'error', summary: 'שגיאה', detail: 'פרטים שגויים' });
       }
     });
   }

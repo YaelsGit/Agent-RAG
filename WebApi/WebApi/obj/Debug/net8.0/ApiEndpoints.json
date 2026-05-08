@@ -595,6 +595,16 @@
   },
   {
     "ContainingType": "WebApi.Controllers.UserController",
+    "Method": "GetBasket",
+    "RelativePath": "api/User/GetBasket",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UserController",
     "Method": "GetGiftsWithWinners",
     "RelativePath": "api/User/GiftsWithWinners",
     "HttpMethod": "GET",

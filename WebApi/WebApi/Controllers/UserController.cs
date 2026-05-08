@@ -16,7 +16,7 @@ namespace WebApi.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
-    [RandomValidation]
+    [ServiceFilter(typeof(RandomValidationAttribute))]
 
     public class UserController : ControllerBase
     {
@@ -30,7 +30,7 @@ namespace WebApi.Controllers
         }
 
 
-        [RandomValidation]
+        [ServiceFilter(typeof(RandomValidationAttribute))]
         [HttpPost("AddToBasket")]
         public async Task<ActionResult<Purchase?>> AddToBasket([FromBody] PurchaseBasketDto purchase)
         {
@@ -49,7 +49,7 @@ namespace WebApi.Controllers
             }
         }
 
-        [RandomValidation]
+        [ServiceFilter(typeof(RandomValidationAttribute))]
         [HttpPost("TicketPurchase")]
         public async Task<ActionResult<List<PurchaseWithUserDto>>> TicketPurchase([FromBody] PurchaseBasketDto purchase)
         {
@@ -61,7 +61,7 @@ namespace WebApi.Controllers
 
             return Ok(result);
         }
-        [RandomValidation]
+        [ServiceFilter(typeof(RandomValidationAttribute))]
         [HttpPost("ConfirmBasket")]
         public async Task<IActionResult> ConfirmBasket()
         {
@@ -93,13 +93,28 @@ namespace WebApi.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
         [HttpGet("GiftsWithWinners")]
-        [AllowAnonymous]
         public async Task<IActionResult> GetGiftsWithWinners()
         {
             _logger.LogInformation("Fetching gifts with their winners");
             var results = await _userService.GetGiftsWithWinners();
             return Ok(results);
+        }
+        [HttpGet("GetBasket")]
+        public async Task<IActionResult> GetBasket()
+        {
+            try
+            {
+                var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
+                var basket = await _userService.GetUserBasket(userId);
+                return Ok(basket);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error getting basket for user");
+                return BadRequest(new { message = "שגיאה בטעינת הסל" });
+            }
         }
     }
 }

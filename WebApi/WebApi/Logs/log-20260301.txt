@@ -1,0 +1,569 @@
+2026-03-01 14:34:38 [Information] User profile is available. Using '"C:\Users\user1\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-01 14:34:41 [Information] Now listening on: "https://localhost:7036"
+2026-03-01 14:34:41 [Information] Now listening on: "http://localhost:5090"
+2026-03-01 14:34:42 [Information] Application started. Press Ctrl+C to shut down.
+2026-03-01 14:34:42 [Information] Hosting environment: "Development"
+2026-03-01 14:34:42 [Information] Content root path: "C:\Users\user1\Downloads\Web-Api-Angular\WebApi\WebApi"
+2026-03-01 14:34:49 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/index.html""" - null null
+2026-03-01 14:34:55 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/_vs/browserLink""" - null null
+2026-03-01 14:34:56 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-01 14:34:56 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 6715.6887ms
+2026-03-01 14:34:56 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/_framework/aspnetcore-browser-refresh.js""" - 200 16497 "application/javascript; charset=utf-8" 765.3065ms
+2026-03-01 14:34:57 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 1194.8973ms
+2026-03-01 14:34:57 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/v1/swagger.json""" - null null
+2026-03-01 14:34:57 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 326.1873ms
+2026-03-01 14:35:20 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Auth/Login""" - null null
+2026-03-01 14:35:21 [Information] Incoming Request: "OPTIONS" "/api/Auth/Login"
+2026-03-01 14:35:21 [Information] CORS policy execution successful.
+2026-03-01 14:35:21 [Information] Completed "OPTIONS" "/api/Auth/Login" responded 204 in 83ms
+2026-03-01 14:35:21 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Auth/Login""" - 204 null null 267.669ms
+2026-03-01 14:35:21 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - "application/json" 45
+2026-03-01 14:35:21 [Information] Incoming Request: "POST" "/api/Auth/Login"
+2026-03-01 14:35:21 [Information] CORS policy execution successful.
+2026-03-01 14:35:22 [Information] Executing endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-01 14:35:23 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginRequestDto)" on controller "WebApi.Controllers.AuthController" ("WebApi").
+2026-03-01 14:35:29 [Information] Executing action method "WebApi.Controllers.AuthController.Login (WebApi)" - Validation state: Valid
+2026-03-01 14:35:29 [Information] Login called for user "יעלי"
+2026-03-01 14:35:30 [Information] User login attempt: "יעלי"
+2026-03-01 14:35:32 [Information] Executed DbCommand ("291"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__userName_0"
+2026-03-01 14:35:32 [Information] User "יעלי" logged in successfully
+2026-03-01 14:35:32 [Information] Executed action method "WebApi.Controllers.AuthController.Login (WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 3127.3039ms.
+2026-03-01 14:35:32 [Information] Executing "OkObjectResult", writing value of type '"WebApi.DTOs.UserDTO+LoginResponseDto"'.
+2026-03-01 14:35:32 [Information] Executed action "WebApi.Controllers.AuthController.Login (WebApi)" in 7412.2853ms
+2026-03-01 14:35:32 [Information] Executed endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-01 14:35:32 [Information] Completed "POST" "/api/Auth/Login" responded 200 in 11775ms
+2026-03-01 14:35:32 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - 200 null "application/json; charset=utf-8" 11840.8376ms
+2026-03-01 14:35:32 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-01 14:35:32 [Information] Incoming Request: "OPTIONS" "/api/Gift"
+2026-03-01 14:35:32 [Information] CORS policy execution successful.
+2026-03-01 14:35:33 [Information] Completed "OPTIONS" "/api/Gift" responded 204 in 3ms
+2026-03-01 14:35:33 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - 204 null null 10.2226ms
+2026-03-01 14:35:33 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-01 14:35:33 [Information] Incoming Request: "GET" "/api/Gift"
+2026-03-01 14:35:33 [Information] CORS policy execution successful.
+2026-03-01 14:35:33 [Information] Executing endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-01 14:35:33 [Information] Route matched with "{action = \"GetAllGift\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.GiftDTO+GiftCategoryDto]]] GetAllGift()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-01 14:35:33 [Information] Executing action method "WebApi.Controllers.GiftController.GetAllGift (WebApi)" - Validation state: Valid
+2026-03-01 14:35:33 [Information] GetAllGift called
+2026-03-01 14:35:33 [Information] Getting all gifts
+2026-03-01 14:35:34 [Information] Executed DbCommand ("50"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Gifts] AS [g]"
+2026-03-01 14:35:34 [Information] Executed DbCommand ("28"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-01 14:35:35 [Information] Executed action method "WebApi.Controllers.GiftController.GetAllGift (WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 1609.7602ms.
+2026-03-01 14:35:35 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftResponseDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-01 14:35:35 [Information] Executed action "WebApi.Controllers.GiftController.GetAllGift (WebApi)" in 1818.5632ms
+2026-03-01 14:35:35 [Information] Executed endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-01 14:35:35 [Information] Completed "GET" "/api/Gift" responded 200 in 2135ms
+2026-03-01 14:35:35 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - 200 null "application/json; charset=utf-8" 2150.2499ms
+2026-03-01 14:35:39 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/AddToBasket""" - null null
+2026-03-01 14:35:39 [Information] Incoming Request: "OPTIONS" "/api/User/AddToBasket"
+2026-03-01 14:35:39 [Information] CORS policy execution successful.
+2026-03-01 14:35:39 [Information] Completed "OPTIONS" "/api/User/AddToBasket" responded 204 in 21ms
+2026-03-01 14:35:39 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/AddToBasket""" - 204 null null 139.8838ms
+2026-03-01 14:35:39 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - "application/json" 26
+2026-03-01 14:35:39 [Information] Incoming Request: "POST" "/api/User/AddToBasket"
+2026-03-01 14:35:39 [Information] CORS policy execution successful.
+2026-03-01 14:35:39 [Information] Executing endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-01 14:35:39 [Information] Route matched with "{action = \"AddToBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WebApi.Models.Purchase]] AddToBasket(PurchaseBasketDto)" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-01 14:35:40 [Information] Executing action method "WebApi.Controllers.UserController.AddToBasket (WebApi)" - Validation state: Valid
+2026-03-01 14:35:40 [Information] AddToBasket called for userId 7 and giftId 23
+2026-03-01 14:35:40 [Information] Executed DbCommand ("17"ms) [Parameters=["@__dto_GiftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+FROM [Gifts] AS [g]
+WHERE [g].[Id] = @__dto_GiftId_0"
+2026-03-01 14:35:40 [Information] Executed DbCommand ("79"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Purchases] ([BasketId], [BusketId], [Date], [GiftId], [Quantity], [UserId], [basketStatus])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);"
+2026-03-01 14:35:41 [Information] Purchase added to basket for userId 7 and giftId 23
+2026-03-01 14:35:41 [Information] Executed action method "WebApi.Controllers.UserController.AddToBasket (WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 1050.5421ms.
+2026-03-01 14:35:41 [Information] Executing "OkObjectResult", writing value of type '"WebApi.Models.Purchase"'.
+2026-03-01 14:35:41 [Information] Executed action "WebApi.Controllers.UserController.AddToBasket (WebApi)" in 1260.8277ms
+2026-03-01 14:35:41 [Information] Executed endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-01 14:35:41 [Information] Completed "POST" "/api/User/AddToBasket" responded 200 in 1348ms
+2026-03-01 14:35:41 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - 200 null "application/json; charset=utf-8" 1388.8426ms
+2026-03-01 14:35:53 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Auth/Login""" - null null
+2026-03-01 14:35:53 [Information] Incoming Request: "OPTIONS" "/api/Auth/Login"
+2026-03-01 14:35:53 [Information] CORS policy execution successful.
+2026-03-01 14:35:53 [Information] Completed "OPTIONS" "/api/Auth/Login" responded 204 in 351ms
+2026-03-01 14:35:54 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Auth/Login""" - 204 null null 842.8531ms
+2026-03-01 14:35:54 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - "application/json" 37
+2026-03-01 14:35:54 [Information] Incoming Request: "POST" "/api/Auth/Login"
+2026-03-01 14:35:54 [Information] CORS policy execution successful.
+2026-03-01 14:35:54 [Information] Executing endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-01 14:35:54 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginRequestDto)" on controller "WebApi.Controllers.AuthController" ("WebApi").
+2026-03-01 14:35:54 [Information] Executing action method "WebApi.Controllers.AuthController.Login (WebApi)" - Validation state: Valid
+2026-03-01 14:35:54 [Information] Login called for user "יי"
+2026-03-01 14:35:54 [Information] User login attempt: "יי"
+2026-03-01 14:35:54 [Information] Executed DbCommand ("50"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__userName_0"
+2026-03-01 14:35:54 [Information] User "יי" logged in successfully
+2026-03-01 14:35:54 [Information] Executed action method "WebApi.Controllers.AuthController.Login (WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 122.8561ms.
+2026-03-01 14:35:54 [Information] Executing "OkObjectResult", writing value of type '"WebApi.DTOs.UserDTO+LoginResponseDto"'.
+2026-03-01 14:35:54 [Information] Executed action "WebApi.Controllers.AuthController.Login (WebApi)" in 219.0201ms
+2026-03-01 14:35:54 [Information] Executed endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-01 14:35:54 [Information] Completed "POST" "/api/Auth/Login" responded 200 in 290ms
+2026-03-01 14:35:54 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - 200 null "application/json; charset=utf-8" 567.0522ms
+2026-03-01 14:35:54 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-01 14:35:54 [Information] Incoming Request: "OPTIONS" "/api/Gift"
+2026-03-01 14:35:54 [Information] CORS policy execution successful.
+2026-03-01 14:35:54 [Information] Completed "OPTIONS" "/api/Gift" responded 204 in 10ms
+2026-03-01 14:35:54 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - 204 null null 183.8156ms
+2026-03-01 14:35:55 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-01 14:35:55 [Information] Incoming Request: "GET" "/api/Gift"
+2026-03-01 14:35:55 [Information] CORS policy execution successful.
+2026-03-01 14:35:55 [Information] Executing endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-01 14:35:55 [Information] Route matched with "{action = \"GetAllGift\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.GiftDTO+GiftCategoryDto]]] GetAllGift()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-01 14:35:55 [Information] Executing action method "WebApi.Controllers.GiftController.GetAllGift (WebApi)" - Validation state: Valid
+2026-03-01 14:35:55 [Information] GetAllGift called
+2026-03-01 14:35:55 [Information] Getting all gifts
+2026-03-01 14:35:55 [Information] Executed DbCommand ("85"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Gifts] AS [g]"
+2026-03-01 14:35:56 [Information] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-01 14:35:56 [Information] Executed action method "WebApi.Controllers.GiftController.GetAllGift (WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 591.8703ms.
+2026-03-01 14:35:56 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftResponseDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-01 14:35:56 [Information] Executed action "WebApi.Controllers.GiftController.GetAllGift (WebApi)" in 975.0654ms
+2026-03-01 14:35:56 [Information] Executed endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-01 14:35:56 [Information] Completed "GET" "/api/Gift" responded 200 in 1445ms
+2026-03-01 14:35:56 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - 200 null "application/json; charset=utf-8" 1763.1172ms
+2026-03-01 14:35:59 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/AddToBasket""" - null null
+2026-03-01 14:35:59 [Information] Incoming Request: "OPTIONS" "/api/User/AddToBasket"
+2026-03-01 14:35:59 [Information] CORS policy execution successful.
+2026-03-01 14:35:59 [Information] Completed "OPTIONS" "/api/User/AddToBasket" responded 204 in 19ms
+2026-03-01 14:35:59 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/AddToBasket""" - 204 null null 294.0779ms
+2026-03-01 14:35:59 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - "application/json" 26
+2026-03-01 14:35:59 [Information] Incoming Request: "POST" "/api/User/AddToBasket"
+2026-03-01 14:35:59 [Information] CORS policy execution successful.
+2026-03-01 14:35:59 [Information] Executing endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-01 14:35:59 [Information] Route matched with "{action = \"AddToBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WebApi.Models.Purchase]] AddToBasket(PurchaseBasketDto)" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-01 14:35:59 [Information] Executing action method "WebApi.Controllers.UserController.AddToBasket (WebApi)" - Validation state: Valid
+2026-03-01 14:36:00 [Information] AddToBasket called for userId 1018 and giftId 26
+2026-03-01 14:36:01 [Information] Executed DbCommand ("227"ms) [Parameters=["@__dto_GiftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+FROM [Gifts] AS [g]
+WHERE [g].[Id] = @__dto_GiftId_0"
+2026-03-01 14:36:01 [Information] Executed DbCommand ("34"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Purchases] ([BasketId], [BusketId], [Date], [GiftId], [Quantity], [UserId], [basketStatus])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);"
+2026-03-01 14:36:01 [Information] Purchase added to basket for userId 1018 and giftId 26
+2026-03-01 14:36:01 [Information] Executed action method "WebApi.Controllers.UserController.AddToBasket (WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 1238.1075ms.
+2026-03-01 14:36:01 [Information] Executing "OkObjectResult", writing value of type '"WebApi.Models.Purchase"'.
+2026-03-01 14:36:01 [Information] Executed action "WebApi.Controllers.UserController.AddToBasket (WebApi)" in 2156.5059ms
+2026-03-01 14:36:01 [Information] Executed endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-01 14:36:01 [Information] Completed "POST" "/api/User/AddToBasket" responded 200 in 2459ms
+2026-03-01 14:36:02 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - 200 null "application/json; charset=utf-8" 2639.1061ms
+2026-03-01 14:36:03 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/GetBasket""" - null null
+2026-03-01 14:36:03 [Information] Incoming Request: "OPTIONS" "/api/User/GetBasket"
+2026-03-01 14:36:03 [Information] CORS policy execution successful.
+2026-03-01 14:36:03 [Information] Completed "OPTIONS" "/api/User/GetBasket" responded 204 in 10ms
+2026-03-01 14:36:03 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/GetBasket""" - 204 null null 39.407ms
+2026-03-01 14:36:03 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/User/GetBasket""" - null null
+2026-03-01 14:36:03 [Information] Incoming Request: "GET" "/api/User/GetBasket"
+2026-03-01 14:36:03 [Information] CORS policy execution successful.
+2026-03-01 14:36:03 [Information] Executing endpoint '"WebApi.Controllers.UserController.GetBasket (WebApi)"'
+2026-03-01 14:36:03 [Information] Route matched with "{action = \"GetBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBasket()" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-01 14:36:03 [Information] Executing action method "WebApi.Controllers.UserController.GetBasket (WebApi)" - Validation state: Valid
+2026-03-01 14:36:03 [Information] Fetching basket for userId 1018
+2026-03-01 14:36:04 [Information] Executed DbCommand ("84"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[GiftId], [g].[Name] AS [GiftName], [g].[PriceCard] AS [Price], [p].[Quantity], [p].[Date]
+FROM [Purchases] AS [p]
+INNER JOIN [Gifts] AS [g] ON [p].[GiftId] = [g].[Id]
+WHERE [p].[UserId] = @__userId_0 AND [p].[basketStatus] = 0"
+2026-03-01 14:36:04 [Information] Executed action method "WebApi.Controllers.UserController.GetBasket (WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 194.4469ms.
+2026-03-01 14:36:04 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-03-01 14:36:04 [Information] Executed action "WebApi.Controllers.UserController.GetBasket (WebApi)" in 405.1848ms
+2026-03-01 14:36:04 [Information] Executed endpoint '"WebApi.Controllers.UserController.GetBasket (WebApi)"'
+2026-03-01 14:36:04 [Information] Completed "GET" "/api/User/GetBasket" responded 200 in 585ms
+2026-03-01 14:36:04 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/User/GetBasket""" - 200 null "application/json; charset=utf-8" 625.4036ms
+2026-03-01 14:36:08 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-01 14:36:08 [Information] Incoming Request: "OPTIONS" "/api/Gift"
+2026-03-01 14:36:08 [Information] CORS policy execution successful.
+2026-03-01 14:36:08 [Information] Completed "OPTIONS" "/api/Gift" responded 204 in 23ms
+2026-03-01 14:36:09 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - 204 null null 300.0968ms
+2026-03-01 14:36:09 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-01 14:36:09 [Information] Incoming Request: "GET" "/api/Gift"
+2026-03-01 14:36:09 [Information] CORS policy execution successful.
+2026-03-01 14:36:09 [Information] Executing endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-01 14:36:09 [Information] Route matched with "{action = \"GetAllGift\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.GiftDTO+GiftCategoryDto]]] GetAllGift()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-01 14:36:09 [Information] Executing action method "WebApi.Controllers.GiftController.GetAllGift (WebApi)" - Validation state: Valid
+2026-03-01 14:36:09 [Information] GetAllGift called
+2026-03-01 14:36:09 [Information] Getting all gifts
+2026-03-01 14:36:09 [Information] Executed DbCommand ("37"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Gifts] AS [g]"
+2026-03-01 14:36:09 [Information] Executed DbCommand ("22"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-01 14:36:09 [Information] Executed action method "WebApi.Controllers.GiftController.GetAllGift (WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 285.0977ms.
+2026-03-01 14:36:10 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftResponseDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-01 14:36:10 [Information] Executed action "WebApi.Controllers.GiftController.GetAllGift (WebApi)" in 585.6925ms
+2026-03-01 14:36:10 [Information] Executed endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-01 14:36:10 [Information] Completed "GET" "/api/Gift" responded 200 in 878ms
+2026-03-01 14:36:10 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - 200 null "application/json; charset=utf-8" 1139.7025ms
+2026-03-01 14:36:13 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/AddToBasket""" - null null
+2026-03-01 14:36:13 [Information] Incoming Request: "OPTIONS" "/api/User/AddToBasket"
+2026-03-01 14:36:13 [Information] CORS policy execution successful.
+2026-03-01 14:36:13 [Information] Completed "OPTIONS" "/api/User/AddToBasket" responded 204 in 45ms
+2026-03-01 14:36:13 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/AddToBasket""" - 204 null null 344.1273ms
+2026-03-01 14:36:13 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - "application/json" 26
+2026-03-01 14:36:14 [Information] Incoming Request: "POST" "/api/User/AddToBasket"
+2026-03-01 14:36:14 [Information] CORS policy execution successful.
+2026-03-01 14:36:14 [Information] Executing endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-01 14:36:14 [Information] Route matched with "{action = \"AddToBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WebApi.Models.Purchase]] AddToBasket(PurchaseBasketDto)" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-01 14:36:14 [Information] Executing action method "WebApi.Controllers.UserController.AddToBasket (WebApi)" - Validation state: Valid
+2026-03-01 14:36:14 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/GetBasket""" - null null
+2026-03-01 14:36:14 [Information] AddToBasket called for userId 1018 and giftId 30
+2026-03-01 14:36:14 [Information] Incoming Request: "OPTIONS" "/api/User/GetBasket"
+2026-03-01 14:36:14 [Information] Executed DbCommand ("125"ms) [Parameters=["@__dto_GiftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+FROM [Gifts] AS [g]
+WHERE [g].[Id] = @__dto_GiftId_0"
+2026-03-01 14:36:15 [Information] CORS policy execution successful.
+2026-03-01 14:36:15 [Information] Completed "OPTIONS" "/api/User/GetBasket" responded 204 in 505ms
+2026-03-01 14:36:15 [Information] Executed DbCommand ("163"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Purchases] ([BasketId], [BusketId], [Date], [GiftId], [Quantity], [UserId], [basketStatus])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);"
+2026-03-01 14:36:15 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/GetBasket""" - 204 null null 883.4824ms
+2026-03-01 14:36:15 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/User/GetBasket""" - null null
+2026-03-01 14:36:15 [Information] Purchase added to basket for userId 1018 and giftId 30
+2026-03-01 14:36:15 [Information] Incoming Request: "GET" "/api/User/GetBasket"
+2026-03-01 14:36:16 [Information] Executed action method "WebApi.Controllers.UserController.AddToBasket (WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 1241.4768ms.
+2026-03-01 14:36:16 [Information] CORS policy execution successful.
+2026-03-01 14:36:16 [Information] Executing "OkObjectResult", writing value of type '"WebApi.Models.Purchase"'.
+2026-03-01 14:36:16 [Information] Executing endpoint '"WebApi.Controllers.UserController.GetBasket (WebApi)"'
+2026-03-01 14:36:16 [Information] Executed action "WebApi.Controllers.UserController.AddToBasket (WebApi)" in 1665.5468ms
+2026-03-01 14:36:16 [Information] Executed endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-01 14:36:16 [Information] Route matched with "{action = \"GetBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBasket()" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-01 14:36:16 [Information] Completed "POST" "/api/User/AddToBasket" responded 200 in 2242ms
+2026-03-01 14:36:16 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-01 14:36:16 [Information] Executing action method "WebApi.Controllers.UserController.GetBasket (WebApi)" - Validation state: Valid
+2026-03-01 14:36:16 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - 200 null "application/json; charset=utf-8" 3000.1382ms
+2026-03-01 14:36:16 [Information] Incoming Request: "OPTIONS" "/api/Gift"
+2026-03-01 14:36:16 [Information] Fetching basket for userId 1018
+2026-03-01 14:36:17 [Information] CORS policy execution successful.
+2026-03-01 14:36:17 [Information] Executed DbCommand ("104"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[GiftId], [g].[Name] AS [GiftName], [g].[PriceCard] AS [Price], [p].[Quantity], [p].[Date]
+FROM [Purchases] AS [p]
+INNER JOIN [Gifts] AS [g] ON [p].[GiftId] = [g].[Id]
+WHERE [p].[UserId] = @__userId_0 AND [p].[basketStatus] = 0"
+2026-03-01 14:36:17 [Information] Completed "OPTIONS" "/api/Gift" responded 204 in 461ms
+2026-03-01 14:36:17 [Information] Executed action method "WebApi.Controllers.UserController.GetBasket (WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 545.296ms.
+2026-03-01 14:36:17 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - 204 null null 987.3951ms
+2026-03-01 14:36:17 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-01 14:36:17 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-03-01 14:36:17 [Information] Incoming Request: "GET" "/api/Gift"
+2026-03-01 14:36:17 [Information] CORS policy execution successful.
+2026-03-01 14:36:17 [Information] Executed action "WebApi.Controllers.UserController.GetBasket (WebApi)" in 1514.5459ms
+2026-03-01 14:36:18 [Information] Executing endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-01 14:36:18 [Information] Executed endpoint '"WebApi.Controllers.UserController.GetBasket (WebApi)"'
+2026-03-01 14:36:18 [Information] Route matched with "{action = \"GetAllGift\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.GiftDTO+GiftCategoryDto]]] GetAllGift()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-01 14:36:18 [Information] Completed "GET" "/api/User/GetBasket" responded 200 in 2278ms
+2026-03-01 14:36:18 [Information] Executing action method "WebApi.Controllers.GiftController.GetAllGift (WebApi)" - Validation state: Valid
+2026-03-01 14:36:18 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/User/GetBasket""" - 200 null "application/json; charset=utf-8" 3128.2058ms
+2026-03-01 14:36:18 [Information] GetAllGift called
+2026-03-01 14:36:18 [Information] Getting all gifts
+2026-03-01 14:36:18 [Information] Executed DbCommand ("97"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Gifts] AS [g]"
+2026-03-01 14:36:19 [Information] Executed DbCommand ("30"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-01 14:36:19 [Information] Executed action method "WebApi.Controllers.GiftController.GetAllGift (WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 499.4011ms.
+2026-03-01 14:36:19 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftResponseDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-01 14:36:19 [Information] Executed action "WebApi.Controllers.GiftController.GetAllGift (WebApi)" in 815.3158ms
+2026-03-01 14:36:19 [Information] Executed endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-01 14:36:19 [Information] Completed "GET" "/api/Gift" responded 200 in 1478ms
+2026-03-01 14:36:19 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - 200 null "application/json; charset=utf-8" 1982.9332ms
+2026-03-01 14:36:25 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/AddToBasket""" - null null
+2026-03-01 14:36:25 [Information] Incoming Request: "OPTIONS" "/api/User/AddToBasket"
+2026-03-01 14:36:25 [Information] CORS policy execution successful.
+2026-03-01 14:36:25 [Information] Completed "OPTIONS" "/api/User/AddToBasket" responded 204 in 15ms
+2026-03-01 14:36:25 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/AddToBasket""" - 204 null null 106.8992ms
+2026-03-01 14:36:25 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - "application/json" 26
+2026-03-01 14:36:25 [Information] Incoming Request: "POST" "/api/User/AddToBasket"
+2026-03-01 14:36:25 [Information] CORS policy execution successful.
+2026-03-01 14:36:25 [Information] Executing endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-01 14:36:25 [Information] Route matched with "{action = \"AddToBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WebApi.Models.Purchase]] AddToBasket(PurchaseBasketDto)" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-01 14:36:25 [Information] Executing action method "WebApi.Controllers.UserController.AddToBasket (WebApi)" - Validation state: Valid
+2026-03-01 14:36:25 [Information] AddToBasket called for userId 1018 and giftId 29
+2026-03-01 14:36:26 [Information] Executed DbCommand ("80"ms) [Parameters=["@__dto_GiftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+FROM [Gifts] AS [g]
+WHERE [g].[Id] = @__dto_GiftId_0"
+2026-03-01 14:36:26 [Information] Executed DbCommand ("38"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Purchases] ([BasketId], [BusketId], [Date], [GiftId], [Quantity], [UserId], [basketStatus])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);"
+2026-03-01 14:36:26 [Information] Purchase added to basket for userId 1018 and giftId 29
+2026-03-01 14:36:26 [Information] Executed action method "WebApi.Controllers.UserController.AddToBasket (WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 218.696ms.
+2026-03-01 14:36:26 [Information] Executing "OkObjectResult", writing value of type '"WebApi.Models.Purchase"'.
+2026-03-01 14:36:26 [Information] Executed action "WebApi.Controllers.UserController.AddToBasket (WebApi)" in 329.234ms
+2026-03-01 14:36:26 [Information] Executed endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-01 14:36:26 [Information] Completed "POST" "/api/User/AddToBasket" responded 200 in 428ms
+2026-03-01 14:36:26 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - 200 null "application/json; charset=utf-8" 551.8533ms
+2026-03-01 14:36:30 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - "application/json" 26
+2026-03-01 14:36:30 [Information] Incoming Request: "POST" "/api/User/AddToBasket"
+2026-03-01 14:36:30 [Information] CORS policy execution successful.
+2026-03-01 14:36:30 [Information] Executing endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-01 14:36:30 [Information] Route matched with "{action = \"AddToBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WebApi.Models.Purchase]] AddToBasket(PurchaseBasketDto)" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-01 14:36:30 [Information] Executing action method "WebApi.Controllers.UserController.AddToBasket (WebApi)" - Validation state: Valid
+2026-03-01 14:36:30 [Information] AddToBasket called for userId 1018 and giftId 30
+2026-03-01 14:36:30 [Information] Executed DbCommand ("12"ms) [Parameters=["@__dto_GiftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+FROM [Gifts] AS [g]
+WHERE [g].[Id] = @__dto_GiftId_0"
+2026-03-01 14:36:30 [Information] Executed DbCommand ("11"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Purchases] ([BasketId], [BusketId], [Date], [GiftId], [Quantity], [UserId], [basketStatus])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);"
+2026-03-01 14:36:30 [Information] Purchase added to basket for userId 1018 and giftId 30
+2026-03-01 14:36:30 [Information] Executed action method "WebApi.Controllers.UserController.AddToBasket (WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 61.4233ms.
+2026-03-01 14:36:30 [Information] Executing "OkObjectResult", writing value of type '"WebApi.Models.Purchase"'.
+2026-03-01 14:36:30 [Information] Executed action "WebApi.Controllers.UserController.AddToBasket (WebApi)" in 139.5684ms
+2026-03-01 14:36:30 [Information] Executed endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-01 14:36:30 [Information] Completed "POST" "/api/User/AddToBasket" responded 200 in 207ms
+2026-03-01 14:36:30 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - 200 null "application/json; charset=utf-8" 278.5803ms
+2026-03-01 14:36:32 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/GetBasket""" - null null
+2026-03-01 14:36:32 [Information] Incoming Request: "OPTIONS" "/api/User/GetBasket"
+2026-03-01 14:36:32 [Information] CORS policy execution successful.
+2026-03-01 14:36:32 [Information] Completed "OPTIONS" "/api/User/GetBasket" responded 204 in 9ms
+2026-03-01 14:36:32 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/GetBasket""" - 204 null null 29.2035ms
+2026-03-01 14:36:32 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/User/GetBasket""" - null null
+2026-03-01 14:36:33 [Information] Incoming Request: "GET" "/api/User/GetBasket"
+2026-03-01 14:36:33 [Information] CORS policy execution successful.
+2026-03-01 14:36:33 [Information] Executing endpoint '"WebApi.Controllers.UserController.GetBasket (WebApi)"'
+2026-03-01 14:36:33 [Information] Route matched with "{action = \"GetBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBasket()" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-01 14:36:33 [Information] Executing action method "WebApi.Controllers.UserController.GetBasket (WebApi)" - Validation state: Valid
+2026-03-01 14:36:33 [Information] Fetching basket for userId 1018
+2026-03-01 14:36:33 [Information] Executed DbCommand ("28"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[GiftId], [g].[Name] AS [GiftName], [g].[PriceCard] AS [Price], [p].[Quantity], [p].[Date]
+FROM [Purchases] AS [p]
+INNER JOIN [Gifts] AS [g] ON [p].[GiftId] = [g].[Id]
+WHERE [p].[UserId] = @__userId_0 AND [p].[basketStatus] = 0"
+2026-03-01 14:36:33 [Information] Executed action method "WebApi.Controllers.UserController.GetBasket (WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 119.7792ms.
+2026-03-01 14:36:33 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-03-01 14:36:33 [Information] Executed action "WebApi.Controllers.UserController.GetBasket (WebApi)" in 185.4413ms
+2026-03-01 14:36:33 [Information] Executed endpoint '"WebApi.Controllers.UserController.GetBasket (WebApi)"'
+2026-03-01 14:36:33 [Information] Completed "GET" "/api/User/GetBasket" responded 200 in 634ms
+2026-03-01 14:36:33 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/User/GetBasket""" - 200 null "application/json; charset=utf-8" 672.7092ms
+2026-03-01 14:36:36 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/ConfirmBasket""" - null null
+2026-03-01 14:36:36 [Information] Incoming Request: "OPTIONS" "/api/User/ConfirmBasket"
+2026-03-01 14:36:36 [Information] CORS policy execution successful.
+2026-03-01 14:36:36 [Information] Completed "OPTIONS" "/api/User/ConfirmBasket" responded 204 in 22ms
+2026-03-01 14:36:36 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/ConfirmBasket""" - 204 null null 47.7052ms
+2026-03-01 14:36:36 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/ConfirmBasket""" - "application/json" 0
+2026-03-01 14:36:36 [Information] Incoming Request: "POST" "/api/User/ConfirmBasket"
+2026-03-01 14:36:36 [Information] CORS policy execution successful.
+2026-03-01 14:36:36 [Information] Executing endpoint '"WebApi.Controllers.UserController.ConfirmBasket (WebApi)"'
+2026-03-01 14:36:36 [Information] Route matched with "{action = \"ConfirmBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ConfirmBasket()" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-01 14:36:37 [Information] Executing action method "WebApi.Controllers.UserController.ConfirmBasket (WebApi)" - Validation state: Valid
+2026-03-01 14:36:37 [Information] ConfirmBasket called for userId 1018
+2026-03-01 14:36:37 [Information] Executed DbCommand ("37"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[BasketId], [p].[BusketId], [p].[Date], [p].[GiftId], [p].[Quantity], [p].[UserId], [p].[basketStatus]
+FROM [Purchases] AS [p]
+WHERE [p].[UserId] = @__userId_0 AND [p].[basketStatus] = 0"
+2026-03-01 14:36:37 [Information] Executed DbCommand ("351"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = Int32), @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?' (DbType = Int32), @p13='?' (DbType = DateTime2), @p14='?' (DbType = Int32), @p15='?' (DbType = Int32), @p16='?' (DbType = Int32), @p17='?' (DbType = Int32), @p18='?' (DbType = Int32), @p19='?' (DbType = Int32), @p20='?' (DbType = DateTime2), @p21='?' (DbType = Int32), @p22='?' (DbType = Int32), @p23='?' (DbType = Int32), @p24='?' (DbType = Int32), @p25='?' (DbType = Int32), @p26='?' (DbType = Int32), @p27='?' (DbType = DateTime2), @p28='?' (DbType = Int32), @p29='?' (DbType = Int32), @p30='?' (DbType = Int32), @p31='?' (DbType = Int32), @p32='?' (DbType = Int32), @p33='?' (DbType = Int32), @p34='?' (DbType = DateTime2), @p35='?' (DbType = Int32), @p36='?' (DbType = Int32), @p37='?' (DbType = Int32), @p38='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+DELETE FROM [Purchases]
+OUTPUT 1
+WHERE [Id] = @p0;
+DELETE FROM [Purchases]
+OUTPUT 1
+WHERE [Id] = @p1;
+DELETE FROM [Purchases]
+OUTPUT 1
+WHERE [Id] = @p2;
+DELETE FROM [Purchases]
+OUTPUT 1
+WHERE [Id] = @p3;
+MERGE [Purchases] USING (
+VALUES (@p4, @p5, @p6, @p7, @p8, @p9, @p10, 0),
+(@p11, @p12, @p13, @p14, @p15, @p16, @p17, 1),
+(@p18, @p19, @p20, @p21, @p22, @p23, @p24, 2),
+(@p25, @p26, @p27, @p28, @p29, @p30, @p31, 3),
+(@p32, @p33, @p34, @p35, @p36, @p37, @p38, 4)) AS i ([BasketId], [BusketId], [Date], [GiftId], [Quantity], [UserId], [basketStatus], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([BasketId], [BusketId], [Date], [GiftId], [Quantity], [UserId], [basketStatus])
+VALUES (i.[BasketId], i.[BusketId], i.[Date], i.[GiftId], i.[Quantity], i.[UserId], i.[basketStatus])
+OUTPUT INSERTED.[Id], i._Position;"
+2026-03-01 14:36:37 [Information] Basket confirmed for userId 1018
+2026-03-01 14:36:37 [Information] Executed action method "WebApi.Controllers.UserController.ConfirmBasket (WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 682.9669ms.
+2026-03-01 14:36:37 [Information] Executing "OkObjectResult", writing value of type '"System.String"'.
+2026-03-01 14:36:37 [Information] Executed action "WebApi.Controllers.UserController.ConfirmBasket (WebApi)" in 813.2408ms
+2026-03-01 14:36:37 [Information] Executed endpoint '"WebApi.Controllers.UserController.ConfirmBasket (WebApi)"'
+2026-03-01 14:36:37 [Information] Completed "POST" "/api/User/ConfirmBasket" responded 200 in 853ms
+2026-03-01 14:36:37 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/ConfirmBasket""" - 200 null "text/plain; charset=utf-8" 929.6417ms
+2026-03-01 14:36:45 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-01 14:36:45 [Information] Incoming Request: "OPTIONS" "/api/Gift"
+2026-03-01 14:36:45 [Information] CORS policy execution successful.
+2026-03-01 14:36:45 [Information] Completed "OPTIONS" "/api/Gift" responded 204 in 10ms
+2026-03-01 14:36:45 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - 204 null null 43.2194ms
+2026-03-01 14:36:45 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-01 14:36:45 [Information] Incoming Request: "GET" "/api/Gift"
+2026-03-01 14:36:45 [Information] CORS policy execution successful.
+2026-03-01 14:36:45 [Information] Executing endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-01 14:36:45 [Information] Route matched with "{action = \"GetAllGift\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.GiftDTO+GiftCategoryDto]]] GetAllGift()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-01 14:36:45 [Information] Executing action method "WebApi.Controllers.GiftController.GetAllGift (WebApi)" - Validation state: Valid
+2026-03-01 14:36:45 [Information] GetAllGift called
+2026-03-01 14:36:45 [Information] Getting all gifts
+2026-03-01 14:36:45 [Information] Executed DbCommand ("54"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Gifts] AS [g]"
+2026-03-01 14:36:45 [Information] Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-01 14:36:45 [Information] Executed action method "WebApi.Controllers.GiftController.GetAllGift (WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 319.4785ms.
+2026-03-01 14:36:45 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftResponseDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-01 14:36:45 [Information] Executed action "WebApi.Controllers.GiftController.GetAllGift (WebApi)" in 533.673ms
+2026-03-01 14:36:45 [Information] Executed endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-01 14:36:45 [Information] Completed "GET" "/api/Gift" responded 200 in 654ms
+2026-03-01 14:36:45 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - 200 null "application/json; charset=utf-8" 689.6812ms
+2026-03-01 14:36:49 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/AddToBasket""" - null null
+2026-03-01 14:36:49 [Information] Incoming Request: "OPTIONS" "/api/User/AddToBasket"
+2026-03-01 14:36:49 [Information] CORS policy execution successful.
+2026-03-01 14:36:49 [Information] Completed "OPTIONS" "/api/User/AddToBasket" responded 204 in 21ms
+2026-03-01 14:36:49 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/AddToBasket""" - 204 null null 60.5263ms
+2026-03-01 14:36:49 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - "application/json" 26
+2026-03-01 14:36:49 [Information] Incoming Request: "POST" "/api/User/AddToBasket"
+2026-03-01 14:36:49 [Information] CORS policy execution successful.
+2026-03-01 14:36:49 [Information] Executing endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-01 14:36:49 [Information] Route matched with "{action = \"AddToBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WebApi.Models.Purchase]] AddToBasket(PurchaseBasketDto)" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-01 14:36:49 [Information] Executing action method "WebApi.Controllers.UserController.AddToBasket (WebApi)" - Validation state: Valid
+2026-03-01 14:36:49 [Information] AddToBasket called for userId 1018 and giftId 26
+2026-03-01 14:36:49 [Information] Executed DbCommand ("12"ms) [Parameters=["@__dto_GiftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+FROM [Gifts] AS [g]
+WHERE [g].[Id] = @__dto_GiftId_0"
+2026-03-01 14:36:49 [Information] Executed DbCommand ("8"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Purchases] ([BasketId], [BusketId], [Date], [GiftId], [Quantity], [UserId], [basketStatus])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);"
+2026-03-01 14:36:49 [Information] Purchase added to basket for userId 1018 and giftId 26
+2026-03-01 14:36:49 [Information] Executed action method "WebApi.Controllers.UserController.AddToBasket (WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 179.6699ms.
+2026-03-01 14:36:49 [Information] Executing "OkObjectResult", writing value of type '"WebApi.Models.Purchase"'.
+2026-03-01 14:36:49 [Information] Executed action "WebApi.Controllers.UserController.AddToBasket (WebApi)" in 295.281ms
+2026-03-01 14:36:49 [Information] Executed endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-01 14:36:49 [Information] Completed "POST" "/api/User/AddToBasket" responded 200 in 371ms
+2026-03-01 14:36:49 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - 200 null "application/json; charset=utf-8" 398.7324ms
+2026-03-01 14:36:51 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/GetBasket""" - null null
+2026-03-01 14:36:52 [Information] Incoming Request: "OPTIONS" "/api/User/GetBasket"
+2026-03-01 14:36:52 [Information] CORS policy execution successful.
+2026-03-01 14:36:52 [Information] Completed "OPTIONS" "/api/User/GetBasket" responded 204 in 5ms
+2026-03-01 14:36:52 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/GetBasket""" - 204 null null 82.0129ms
+2026-03-01 14:36:52 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/User/GetBasket""" - null null
+2026-03-01 14:36:52 [Information] Incoming Request: "GET" "/api/User/GetBasket"
+2026-03-01 14:36:52 [Information] CORS policy execution successful.
+2026-03-01 14:36:52 [Information] Executing endpoint '"WebApi.Controllers.UserController.GetBasket (WebApi)"'
+2026-03-01 14:36:52 [Information] Route matched with "{action = \"GetBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBasket()" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-01 14:36:52 [Information] Executing action method "WebApi.Controllers.UserController.GetBasket (WebApi)" - Validation state: Valid
+2026-03-01 14:36:52 [Information] Fetching basket for userId 1018
+2026-03-01 14:36:52 [Information] Executed DbCommand ("52"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[GiftId], [g].[Name] AS [GiftName], [g].[PriceCard] AS [Price], [p].[Quantity], [p].[Date]
+FROM [Purchases] AS [p]
+INNER JOIN [Gifts] AS [g] ON [p].[GiftId] = [g].[Id]
+WHERE [p].[UserId] = @__userId_0 AND [p].[basketStatus] = 0"
+2026-03-01 14:36:52 [Information] Executed action method "WebApi.Controllers.UserController.GetBasket (WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 104.0338ms.
+2026-03-01 14:36:52 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-03-01 14:36:52 [Information] Executed action "WebApi.Controllers.UserController.GetBasket (WebApi)" in 202.5856ms
+2026-03-01 14:36:52 [Information] Executed endpoint '"WebApi.Controllers.UserController.GetBasket (WebApi)"'
+2026-03-01 14:36:52 [Information] Completed "GET" "/api/User/GetBasket" responded 200 in 254ms
+2026-03-01 14:36:52 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/User/GetBasket""" - 200 null "application/json; charset=utf-8" 292.6537ms
+2026-03-01 14:36:54 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/ConfirmBasket""" - null null
+2026-03-01 14:36:54 [Information] Incoming Request: "OPTIONS" "/api/User/ConfirmBasket"
+2026-03-01 14:36:54 [Information] CORS policy execution successful.
+2026-03-01 14:36:54 [Information] Completed "OPTIONS" "/api/User/ConfirmBasket" responded 204 in 5ms
+2026-03-01 14:36:54 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/ConfirmBasket""" - 204 null null 35.1551ms
+2026-03-01 14:36:54 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/ConfirmBasket""" - "application/json" 0
+2026-03-01 14:36:54 [Information] Incoming Request: "POST" "/api/User/ConfirmBasket"
+2026-03-01 14:36:54 [Information] CORS policy execution successful.
+2026-03-01 14:36:54 [Information] Executing endpoint '"WebApi.Controllers.UserController.ConfirmBasket (WebApi)"'
+2026-03-01 14:36:54 [Information] Route matched with "{action = \"ConfirmBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ConfirmBasket()" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-01 14:36:54 [Information] Executing action method "WebApi.Controllers.UserController.ConfirmBasket (WebApi)" - Validation state: Valid
+2026-03-01 14:36:54 [Information] ConfirmBasket called for userId 1018
+2026-03-01 14:36:54 [Information] Executed DbCommand ("5"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[BasketId], [p].[BusketId], [p].[Date], [p].[GiftId], [p].[Quantity], [p].[UserId], [p].[basketStatus]
+FROM [Purchases] AS [p]
+WHERE [p].[UserId] = @__userId_0 AND [p].[basketStatus] = 0"
+2026-03-01 14:36:55 [Information] Executed DbCommand ("135"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = Int32), @p10='?' (DbType = DateTime2), @p11='?' (DbType = Int32), @p12='?' (DbType = Int32), @p13='?' (DbType = Int32), @p14='?' (DbType = Int32), @p15='?' (DbType = Int32), @p16='?' (DbType = Int32), @p17='?' (DbType = DateTime2), @p18='?' (DbType = Int32), @p19='?' (DbType = Int32), @p20='?' (DbType = Int32), @p21='?' (DbType = Int32), @p22='?' (DbType = Int32), @p23='?' (DbType = Int32), @p24='?' (DbType = DateTime2), @p25='?' (DbType = Int32), @p26='?' (DbType = Int32), @p27='?' (DbType = Int32), @p28='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+DELETE FROM [Purchases]
+OUTPUT 1
+WHERE [Id] = @p0;
+MERGE [Purchases] USING (
+VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, 0),
+(@p8, @p9, @p10, @p11, @p12, @p13, @p14, 1),
+(@p15, @p16, @p17, @p18, @p19, @p20, @p21, 2),
+(@p22, @p23, @p24, @p25, @p26, @p27, @p28, 3)) AS i ([BasketId], [BusketId], [Date], [GiftId], [Quantity], [UserId], [basketStatus], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([BasketId], [BusketId], [Date], [GiftId], [Quantity], [UserId], [basketStatus])
+VALUES (i.[BasketId], i.[BusketId], i.[Date], i.[GiftId], i.[Quantity], i.[UserId], i.[basketStatus])
+OUTPUT INSERTED.[Id], i._Position;"
+2026-03-01 14:36:55 [Information] Basket confirmed for userId 1018
+2026-03-01 14:36:55 [Information] Executed action method "WebApi.Controllers.UserController.ConfirmBasket (WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 220.9955ms.
+2026-03-01 14:36:55 [Information] Executing "OkObjectResult", writing value of type '"System.String"'.
+2026-03-01 14:36:55 [Information] Executed action "WebApi.Controllers.UserController.ConfirmBasket (WebApi)" in 329.1687ms
+2026-03-01 14:36:55 [Information] Executed endpoint '"WebApi.Controllers.UserController.ConfirmBasket (WebApi)"'
+2026-03-01 14:36:55 [Information] Completed "POST" "/api/User/ConfirmBasket" responded 200 in 491ms
+2026-03-01 14:36:55 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/ConfirmBasket""" - 200 null "text/plain; charset=utf-8" 527.8234ms
+2026-03-01 14:36:59 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-01 14:36:59 [Information] Incoming Request: "OPTIONS" "/api/Gift"
+2026-03-01 14:36:59 [Information] CORS policy execution successful.
+2026-03-01 14:36:59 [Information] Completed "OPTIONS" "/api/Gift" responded 204 in 5ms
+2026-03-01 14:36:59 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - 204 null null 19.3716ms
+2026-03-01 14:36:59 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-01 14:36:59 [Information] Incoming Request: "GET" "/api/Gift"
+2026-03-01 14:36:59 [Information] CORS policy execution successful.
+2026-03-01 14:36:59 [Information] Executing endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-01 14:36:59 [Information] Route matched with "{action = \"GetAllGift\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.GiftDTO+GiftCategoryDto]]] GetAllGift()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-01 14:36:59 [Information] Executing action method "WebApi.Controllers.GiftController.GetAllGift (WebApi)" - Validation state: Valid
+2026-03-01 14:36:59 [Information] GetAllGift called
+2026-03-01 14:36:59 [Information] Getting all gifts
+2026-03-01 14:36:59 [Information] Executed DbCommand ("16"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Gifts] AS [g]"
+2026-03-01 14:36:59 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-01 14:36:59 [Information] Executed action method "WebApi.Controllers.GiftController.GetAllGift (WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 57.6485ms.
+2026-03-01 14:36:59 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftResponseDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-01 14:36:59 [Information] Executed action "WebApi.Controllers.GiftController.GetAllGift (WebApi)" in 196.835ms
+2026-03-01 14:36:59 [Information] Executed endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-01 14:36:59 [Information] Completed "GET" "/api/Gift" responded 200 in 254ms
+2026-03-01 14:36:59 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - 200 null "application/json; charset=utf-8" 278.1398ms

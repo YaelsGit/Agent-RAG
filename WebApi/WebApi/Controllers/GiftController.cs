@@ -27,7 +27,8 @@ namespace WebApi.Controllers
             _logger = logger;
         }
 
-        [RandomValidation]
+        //[ServiceFilter(typeof(RandomValidationAttribute))]
+
         [HttpGet]
         public async Task<ActionResult<IEnumerable<GiftCategoryDto?>>> GetAllGift()
         {
@@ -37,7 +38,7 @@ namespace WebApi.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        [RandomValidation]
+        //[ServiceFilter(typeof(RandomValidationAttribute))]
         [HttpGet]
         [Route("Name")]
         public async Task<ActionResult<GiftResponseDto>> GetGiftByName(string name)
@@ -48,7 +49,7 @@ namespace WebApi.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        [RandomValidation]
+        //[ServiceFilter(typeof(RandomValidationAttribute))]
         [HttpGet]
         [Route("Donor")]
         public async Task<ActionResult<IEnumerable<GiftResponseDto>>> GetGiftByDonor(string firstName, string lastName)
@@ -59,7 +60,7 @@ namespace WebApi.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        [RandomValidation]
+        [ServiceFilter(typeof(RandomValidationAttribute))]
         [HttpGet]
         [Route("Count")]
         public async Task<ActionResult<IEnumerable<GiftResponseDto>>> GetGiftByNumPurchase(int num)
@@ -70,7 +71,7 @@ namespace WebApi.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        [RandomValidation]
+        //[ServiceFilter(typeof(RandomValidationAttribute))]
         [HttpPost]
         [Route("Category")]
         public async Task<ActionResult<Category>> CreateCategory([FromBody] CateroyFormDto CategoryForm)
@@ -89,7 +90,7 @@ namespace WebApi.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        [RandomValidation]
+        //[ServiceFilter(typeof(RandomValidationAttribute))]
         [HttpPost]
         public async Task<ActionResult<GiftResponseDto>> Create([FromBody] GiftFormDto GiftForm)
         {
@@ -107,7 +108,7 @@ namespace WebApi.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        [RandomValidation]
+        //[ServiceFilter(typeof(RandomValidationAttribute))]
         [HttpPut("{id}")]
         public async Task<ActionResult<GiftResponseDto>> Update(int Id, [FromBody] GiftResponseDto giftForm)
         {
@@ -130,7 +131,7 @@ namespace WebApi.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        [RandomValidation]
+        //[ServiceFilter(typeof(RandomValidationAttribute))]
         [HttpDelete("{Id:int}")]
         public async Task<ActionResult> Delete(int Id)
         {
@@ -145,7 +146,7 @@ namespace WebApi.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        [RandomValidation]
+        //[ServiceFilter(typeof(RandomValidationAttribute))]
         [HttpGet]
         [Route("Purchase&Gift")]
         public async Task<IActionResult> GetGiftPurchases(int giftId)
@@ -163,7 +164,7 @@ namespace WebApi.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        [RandomValidation]
+        //[ServiceFilter(typeof(RandomValidationAttribute))]
         [HttpGet]
         [Route(("sort-by-price"))]
         public async Task<ActionResult<List<GiftPurchasesDto>>> GetGiftsByPrice()
@@ -182,7 +183,7 @@ namespace WebApi.Controllers
             return Ok(result);
         }
         [Authorize(Roles = "Admin")]
-        [RandomValidation]
+        [ServiceFilter(typeof(RandomValidationAttribute))]
         [HttpGet("purchases-with-users")]
         public async Task<ActionResult<GiftPurchasesWithUsersDto>> GetGiftPurchasesWithUsers(int giftId)
         {
@@ -198,7 +199,7 @@ namespace WebApi.Controllers
             return Ok(result);
         }
 
-        [RandomValidation]
+        [ServiceFilter(typeof(RandomValidationAttribute))]
         [HttpGet]
         [Route("GetBySorted")]
         public async Task<ActionResult<IEnumerable<GiftCategoryDto?>>> SortedGiftByPriceOrCategory(string sortedBy)
@@ -215,7 +216,7 @@ namespace WebApi.Controllers
 
 //Draw
         [Authorize(Roles = "Admin")]
-        [RandomValidation]
+        [ServiceFilter(typeof(RandomValidationAttribute))]
         [HttpPost("drawAllWinners")]
         public async Task<IActionResult> DrawAllWinners()
         {
@@ -227,7 +228,7 @@ namespace WebApi.Controllers
             return Ok(allWinners); 
         }
         [Authorize(Roles = "Admin")]
-        [RandomValidation]
+        [ServiceFilter(typeof(RandomValidationAttribute))]
         [HttpGet("generateWinnersFile")]
         public async Task<IActionResult> GenerateWinnersFile()
         {
@@ -240,7 +241,7 @@ namespace WebApi.Controllers
             return File(fileBytes, "application/json", "WinnersReport.json");
         }
         [Authorize(Roles = "Admin")]
-        [RandomValidation]
+        [ServiceFilter(typeof(RandomValidationAttribute))]
         [HttpGet("generateTotalSumFile")]
         public async Task<IActionResult> GenerateRevenueFile()
         {

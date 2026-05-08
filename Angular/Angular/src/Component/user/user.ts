@@ -72,4 +72,75 @@ ngOnInit(): void {
     }
   }
 
+  // Add to basket
+  addToBasket(product: any) {
+    const purchase = {
+      giftId: product.id,
+      quentity: 1, // or this.Quantity if you want to use a user-selected value
+      busketId: 0 // or your logic for basket id
+    };
+    this.userService.AddToBasket(purchase).subscribe({
+      next: (res) => {
+        alert('המתנה נוספה לסל בהצלחה!');
+      },
+      error: (err) => {
+        alert('שגיאה בהוספה לסל: ' + (err?.error?.message || '')); 
+      }
+    });
+  }
+
+  // Ticket purchase
+  ticketPurchase(product: any) {
+    const purchase = {
+      giftId: product.id,
+      quentity: 1, // or this.Quantity
+      busketId: 0
+    };
+    this.userService.TicketPurchase(purchase).subscribe({
+      next: (res) => {
+        alert('רכישת כרטיס בוצעה בהצלחה!');
+      },
+      error: (err) => {
+        alert('שגיאה ברכישת כרטיס: ' + (err?.error?.message || ''));
+      }
+    });
+  }
+
+  // Confirm basket
+  confirmBasket() {
+    this.userService.ConfirmBasket().subscribe({
+      next: (res) => {
+        alert('הסל אושר בהצלחה!');
+      },
+      error: (err) => {
+        alert('שגיאה באישור הסל: ' + (err?.error?.message || ''));
+      }
+    });
+  }
+
+  // Remove from basket
+  removeFromBasket(purchaseId: number) {
+    this.userService.RemoveFromBasket(purchaseId).subscribe({
+      next: (res) => {
+        alert('הפריט הוסר מהסל בהצלחה!');
+      },
+      error: (err) => {
+        alert('שגיאה בהסרת פריט מהסל: ' + (err?.error?.message || ''));
+      }
+    });
+  }
+
+  // Get gifts with winners
+  getGiftsWithWinners() {
+    this.userService.GetGiftsWithWinners().subscribe({
+      next: (res) => {
+        console.log('Gifts with winners:', res);
+        alert('התקבלו מתנות עם זוכים. ראה קונסול');
+      },
+      error: (err) => {
+        alert('שגיאה בקבלת מתנות עם זוכים: ' + (err?.error?.message || ''));
+      }
+    });
+  }
+
 }

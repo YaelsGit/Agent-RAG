@@ -1,88 +1,68 @@
-<div class="basket-page-wrapper">
-  <!-- Empty Basket State -->
-  <div class="empty-basket" *ngIf="basketItems.length === 0">
-    <div class="empty-basket-content">
-      <div class="empty-basket-icon">🛒</div>
-      <h2 class="empty-basket-title">הסל שלך ריק</h2>
-      <p class="empty-basket-text">לא בחרת עדיין מתנות. בואו נתחיל!</p>
-      <button class="btn btn-primary" (click)="goToGifts()">
-        <i class="pi pi-gift"></i>
-        <span>לבחירת מתנות</span>
-      </button>
-    </div>
+<div class="basket-page" style="direction: rtl; padding: 20px;">
+  <h1 class="text-2xl font-bold mb-4">סל הקניות שלי</h1>
+
+  <div *ngIf="basketItems.length === 0" class="empty-basket-container text-center py-8">
+    <i class="pi pi-shopping-cart" style="font-size: 3rem; color: #ccc;"></i>
+    <p class="mt-4 text-xl">הסל שלך ריק כרגע</p>
+    <p-button label="לחזרה לבחירת מתנות" icon="pi pi-arrow-right" styleClass="p-button-text" (onClick)="goToGifts()"></p-button>
   </div>
 
-  <!-- Cart Items -->
-  <div class="basket-items-section" *ngIf="basketItems.length > 0">
-    <div class="cart-item" *ngFor="let item of basketItems; let i = index">
-      <div class="item-left">
-        <button class="delete-btn" (click)="removeItem(item)">
-          <i class="pi pi-trash"></i>
-        </button>
+  <div *ngIf="basketItems.length > 0" class="basket-content card shadow-1 p-4">
+    <div *ngFor="let item of basketItems" class="basket-row flex align-items-center justify-content-between p-3 border-bottom-1 border-200">
+      
+      <div class="gift-info flex-grow-1">
+        <h3 class="m-0 text-lg font-semibold">{{ item.giftName }}</h3>
+        <span class="text-600">מחיר ליחידה: {{ item.price || item.priceCard }} ₪</span>
+      </div>
+
+      <div class="quantity-manager flex align-items-center mx-4">
+        <p-button icon="pi pi-minus" 
+                  styleClass="p-button-rounded p-button-outlined p-button-sm" 
+                  (onClick)="updateQty(item.id, -1)"
+                  [disabled]="isRaffleComplete"></p-button>
+        
+        <span class="px-3 font-bold text-lg">{{ item.quantity || item.Quentity }}</span>
+        
+        <p-button icon="pi pi-plus" 
+                  styleClass="p-button-rounded p-button-outlined p-button-sm" 
+                  (onClick)="updateQty(item.id, 1)"
+                  [disabled]="isRaffleComplete"></p-button>
+      </div>
+
+      <div class="line-total text-xl font-bold mx-4" style="min-width: 100px;">
+        {{ (item.price || item.priceCard) * (item.quantity || item.Quentity) }} ₪
+      </div>
+
+      <div class="remove-action">
+        <p-button icon="pi pi-trash" 
+                  styleClass="p-button-rounded p-button-danger p-button-text" 
+                  (onClick)="removeItem(item)"
+                  [disabled]="isRaffleComplete"></p-button>
+      </div>
+    </div>
+
+    <div class="basket-footer flex flex-column align-items-end mt-4 p-3 bg-gray-50 border-round">
+      <div class="total-display mb-3 text-2xl">
+        <span>סה"כ לתשלום: </span>
+        <span class="text-primary font-bold">{{ totalPrice || getTotal() }} ₪</span>
       </div>
       
-      <div class="item-center">
-        <h3 class="item-name">{{ item.Name }}</h3>
-        <p class="item-price">₪{{ item.priceCard | number }}</p>
+      <div class="actions-buttons flex gap-3">
+        <p-button label="המשך בקניות" icon="pi pi-plus" styleClass="p-button-outlined" (onClick)="goToGifts()"></p-button>
+        
+        <p-button label="אישור סופי וביצוע רכישה" 
+                  icon="pi pi-check" 
+                  styleClass="p-button-success p-button-lg" 
+                  (onClick)="confirmPurchase()"
+                  [disabled]="isRaffleComplete || basketItems.length === 0"
+                  [loading]="false"></p-button>
       </div>
-
-      <div class="item-right">
-        <div class="qty-controls">
-          <button class="qty-btn minus" (click)="updateQty(item.id, -1)">−</button>
-          <input type="text" class="qty-input" [value]="item.Quentity" readonly />
-          <button class="qty-btn plus" (click)="updateQty(item.id, 1)">+</button>
-        </div>
-        <span class="item-total">₪{{ (item.priceCard * item.Quentity) | number }}</span>      </div>
     </div>
   </div>
 
-  <!-- Summary Section (only show if items exist) -->
-  <div class="basket-summary-section" *ngIf="basketItems.length > 0">
-    <div class="summary-box">
-      <div class="summary-row">
-        <span class="summary-label">סה"כ פריטים:</span>
-        <span class="summary-value">{{ basketItems.length }}</span>
-      </div>
-      <div class="summary-row total-row">
-        <span class="summary-label">סה"כ לתשלום:</span>
-        <span class="summary-value">₪{{ getTotal() | number }}</span>
-      </div>
-    </div>
-
-    <!-- Progress Bar -->
-    <div class="progress-section">
-      <div class="progress-bar">
-        <div class="progress-fill" [style.width.%]="(basketItems.length / 10) * 100"></div>
-      </div>
-      <div class="progress-label">
-        <span>{{ basketItems.length }} / 10</span>
-        <i class="pi pi-gift"></i>
-      </div>
-    </div>
-
-    <!-- Action Buttons -->
-    <div class="action-buttons">
-      <button class="btn btn-confirm" (click)="confirmPurchase()" [disabled]="basketItems.length === 0">
-        <span class="btn-text">אישור והמשך</span>
-        <i class="pi pi-arrow-left"></i>
-      </button>
-      <button class="btn btn-secondary" (click)="goToGifts()">
-        <span class="btn-text">בחזרה לבחירה</span>
-      </button>
-    </div>
-  </div>
-
-  <!-- Winners Section (after raffle) -->
-  <div class="winners-section" *ngIf="isRaffleComplete && winners.length > 0">
-    <h2 class="winners-title">🎉 הזוכים 🎉</h2>
-    <div class="winners-list">
-      <div class="winner-item" *ngFor="let winner of winners">
-        <div class="winner-badge">👑</div>
-        <div class="winner-info">
-          <p class="winner-gift">{{ winner.giftName }}</p>
-          <p class="winner-name">{{ winner.userName }}</p>
-        </div>
-      </div>
-    </div>
+  <div *ngIf="isRaffleComplete" class="mt-4 p-4 bg-green-100 border-round text-green-800 text-center">
+    <i class="pi pi-check-circle" style="font-size: 2rem;"></i>
+    <h3 class="m-2">הרכישה בוצעה בהצלחה!</h3>
+    <p>תודה על תרומתך. ניתן לראות את פרטי ההזמנה בדף ההזמנות.</p>
   </div>
 </div>

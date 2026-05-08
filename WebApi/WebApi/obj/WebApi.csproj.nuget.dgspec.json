@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\WebApi.csproj": {}
+    "C:\\Users\\user1\\Downloads\\Web-Api-Angular\\WebApi\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\WebApi.csproj": {
+    "C:\\Users\\user1\\Downloads\\Web-Api-Angular\\WebApi\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\user1\\Downloads\\Web-Api-Angular\\WebApi\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\WebApi.csproj",
+        "projectPath": "C:\\Users\\user1\\Downloads\\Web-Api-Angular\\WebApi\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user1\\Downloads\\WebApi-Angular\\WebApi\\WebApi\\obj\\",
+        "outputPath": "C:\\Users\\user1\\Downloads\\Web-Api-Angular\\WebApi\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

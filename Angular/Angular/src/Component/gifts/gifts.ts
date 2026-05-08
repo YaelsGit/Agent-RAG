@@ -10,18 +10,21 @@ import { FormsModule } from '@angular/forms';
 import { DialogModule } from 'primeng/dialog';
 import { Popover, PopoverModule } from 'primeng/popover';
 import { Router } from '@angular/router';
+import { UserService } from '../../Service/user-service';
+import { ApiService } from '../../Service/api.service';
 
 @Component({
   selector: 'app-gifts',
   standalone: true,
   imports: [
     CommonModule,
-    HttpClientModule,
     ButtonModule,
     DataViewModule,
     FormsModule,
     DialogModule,
-    PopoverModule
+    PopoverModule,
+    HttpClientModule
+
   ],
   templateUrl: './gifts.html',
   styleUrls: ['./gifts.scss'],
@@ -31,11 +34,12 @@ import { Router } from '@angular/router';
 export class Gifts implements OnInit {
 
   serviceGifts = inject(GiftService);
-  sourceGifts = signal<Gift[]>([]);  // מערך מתנות
+  userService = inject(UserService);
+  sourceGifts = signal<Gift[]>([]);
   layout: 'list' | 'grid' = 'list';
-selectedProduct = signal<any>(null);
-giftQuantities: { [key: number]: number } = {};
-
+  selectedProduct = signal<any>(null);
+  giftQuantities: { [key: number]: number } = {};
+  api=inject(ApiService);
   quantity = 1;
   name = '';
   description = '';
@@ -48,9 +52,9 @@ giftQuantities: { [key: number]: number } = {};
   pictureId = 0;
   userId = 0;
   date: Date = new Date();
-  
 
-  constructor(private http: HttpClient, private messageService: MessageService, private router: Router) {}
+
+  constructor(private http: HttpClient, private messageService: MessageService, private router: Router) { }
 
   ngOnInit() {
     this.getAllGifts();
@@ -60,58 +64,52 @@ giftQuantities: { [key: number]: number } = {};
     this.serviceGifts.getallGifts().subscribe({
       next: (res) => {
         console.log('DATA FROM API:', res);
-        this.sourceGifts.set([...res]); // יצירת array חדש כדי לטריגר רינדור
+        this.sourceGifts.set([...res]);
       },
       error: (err) => console.error('API ERROR:', err)
     });
   }
 
-searchByName(name: string) {
-  const fName = name || "";
-  this.serviceGifts.getGiftByGiftName(fName).subscribe({
-    next: (res: any) => {
-      // בדיקה: האם השרת החזיר מערך?
-      if (Array.isArray(res)) {
-        this.sourceGifts.set([...res]);
-      } else if (res) {
-        // אם זה אובייקט בודד, נכניס אותו למערך
-        this.sourceGifts.set([res]);
-      } else {
-        // אם חזר null או undefined
-        this.sourceGifts.set([]);
+  searchByName(name: string) {
+    const fName = name || "";
+    this.serviceGifts.getGiftByGiftName(fName).subscribe({
+      next: (res: any) => {
+        if (Array.isArray(res)) {
+          this.sourceGifts.set([...res]);
+        } else if (res) {
+          this.sourceGifts.set([res]);
+        } else {
+          this.sourceGifts.set([]);
+        }
+      },
+      error: (err) => {
+        console.error('Search by name failed', err);
+        this.messageService.add({
+          severity: 'error',
+          summary: 'שגיאה',
+          detail: 'לא נמצאו תוצאות'
+        });
       }
-    },
-    error: (err) => {
-      console.error('Search by name failed', err);
-      this.messageService.add({ 
-        severity: 'error', 
-        summary: 'שגיאה', 
-        detail: 'לא נמצאו תוצאות' 
-      });
-    }
-  });
-}
+    });
+  }
 
-searchByDonorName(first: string, last: string) {
-  this.serviceGifts.getGiftByDonorName(first || "", last || "").subscribe({
-    next: (res: any) => {
-      // בדיקה אם res הוא מערך או אובייקט בודד
-      if (Array.isArray(res)) {
-        this.sourceGifts.set([...res]);
-      } else if (res && typeof res === 'object') {
-        // אם זה אובייקט בודד, נשים אותו בתוך מערך כדי שה-HTML יוכל להציג אותו
-        this.sourceGifts.set([res]);
-      } else {
-        // אם לא חזר כלום, נרוקן את הרשימה
-        this.sourceGifts.set([]);
+  searchByDonorName(first: string, last: string) {
+    this.serviceGifts.getGiftByDonorName(first || "", last || "").subscribe({
+      next: (res: any) => {
+        if (Array.isArray(res)) {
+          this.sourceGifts.set([...res]);
+        } else if (res && typeof res === 'object') {
+          this.sourceGifts.set([res]);
+        } else {
+          this.sourceGifts.set([]);
+        }
+      },
+      error: (err) => {
+        console.error('Search by donorName failed', err);
+        if (err.error?.message) alert("שגיאת שרת: " + err.error.message);
       }
-    },
-    error: (err) => {
-      console.error('Search by donorName failed', err);
-      if (err.error?.message) alert("שגיאת שרת: " + err.error.message);
-    }
-  });
-}
+    });
+  }
 
   searchGiftByNumPurchase(num: number) {
     this.serviceGifts.GetGiftByNumPurchase(num || 0).subscribe({
@@ -123,69 +121,12 @@ searchByDonorName(first: string, last: string) {
     });
   }
 
- createGift() {
-  const newGift = { 
-    name: this.name, // שימי לב אם השרת מצפה ל-name או Name
-    description: this.description, 
-    priceCard: Number(this.priceCard), // לוודא שזה מספר
-    donorId: Number(this.donorId),     // לוודא שזה מספר ולא סטרינג
-    categoryId: Number(this.categoryId), 
-    pictureId: Number(this.pictureId) 
-  };
-
-  console.log('Sending to server:', newGift); // בדיקה חשובה!
-
-  this.serviceGifts.createGift(newGift).subscribe({
-    next: () => {
-      this.getAllGifts();
-      this.resetForm();
-      this.messageService.add({ severity: 'success', summary: 'הצלחה', detail: 'המתנה נוצרה בהצלחה' });
-    },
-    error: (err) => {
-      console.error('Full Error Object:', err); // כאן תראי את הפירוט
-      this.messageService.add({ severity: 'error', summary: 'שגיאה', detail: 'יצירת המתנה נכשלה' });
-    }
-  });
-}
-// הקודם
-// updateGift(gift: any) { ... }
-
-// חדש – ללא פרמטר
-updateGift() {
-  if (!this.id) {
-    alert('לא נבחרה מתנה לעדכון');
-    return;
-  }
-
-  const updatedGift = {
-    name: this.name,
-    description: this.description,
-    priceCard: this.priceCard,
-    donorId: this.donorId,
-    categoryId: this.categoryId,
-    pictureId: this.pictureId
-  };
-
-  this.serviceGifts.updateGift(this.id, updatedGift).subscribe({
-    next: () => {
-      this.getAllGifts();
-      this.displayModal = false;
-      this.resetForm();
-      this.messageService.add({ severity: 'success', summary: 'הצלחה', detail: 'המתנה עודכנה בהצלחה' });
-    },
-    error: (err) => {
-      console.error('Update failed:', err);
-      this.messageService.add({ severity: 'error', summary: 'שגיאה', detail: 'העדכון נכשל, בדקי את הנתונים' });
-    }
-  });
-}
-
 
   deleteGift(gift: any) {
     console.log('Gift to delete:', gift);
     const giftId = gift.id;
     console.log('Deleting gift with Id:', giftId);
-    
+
     if (!giftId) {
       this.messageService.add({ severity: 'warn', summary: 'שגיאה', detail: 'לא נבחר מתנה למחיקה' });
       return;
@@ -203,9 +144,62 @@ updateGift() {
         }
       });
     }
-}
+  }
 
+  createGift() {
+    // השתמש בשמות שדות התואמים בדיוק למחלקה (DTO) בשרת שלך
+    const newGift = {
+      Name: this.name,
+      Description: this.description,
+      PriceCard: Number(this.priceCard),
+      DonorId: Number(this.donorId),
+      CategoryId: Number(this.categoryId),
+      PictureId: Number(this.pictureId)
+    };
 
+    this.serviceGifts.createGift(newGift).subscribe({
+      next: () => {
+        this.getAllGifts();
+        this.resetForm();
+        this.displayModal = false; 
+        this.messageService.add({ severity: 'success', summary: 'הצלחה', detail: 'המתנה נוצרה בהצלחה' });
+      },
+      error: (err) => {
+        console.error('Creation failed:', err);
+        this.messageService.add({ severity: 'error', summary: 'שגיאה', detail: 'יצירת המתנה נכשלה' });
+      }
+    });
+  }
+
+  updateGift() {
+    if (!this.id) {
+      this.messageService.add({ severity: 'warn', summary: 'שגיאה', detail: 'לא נבחרה מתנה לעדכון' });
+      return;
+    }
+
+    const updatedGift = {
+      Id: this.id,
+      Name: this.name,
+      Description: this.description,
+      PriceCard: Number(this.priceCard),
+      DonorId: Number(this.donorId),
+      CategoryId: Number(this.categoryId),
+      PictureId: this.pictureId
+    };
+
+    this.serviceGifts.updateGift(this.id, updatedGift).subscribe({
+      next: () => {
+        this.getAllGifts();
+        this.displayModal = false;
+        this.resetForm();
+        this.messageService.add({ severity: 'success', summary: 'הצלחה', detail: 'המתנה עודכנה בהצלחה' });
+      },
+      error: (err) => {
+        console.error('Update failed:', err);
+        this.messageService.add({ severity: 'error', summary: 'שגיאה', detail: 'העדכון נכשל, בדוק את הנתונים' });
+      }
+    });
+  }
 
   createCategory() {
     this.serviceGifts.createCategory({ Name: this.categoryName }).subscribe({
@@ -221,19 +215,21 @@ updateGift() {
     });
   }
 
- openEdit(gift: any) {
-  if (!gift) return;
-
-  this.id = gift.id ?? gift.Id ?? 0;
-  this.name = gift.name ?? gift.Name ?? '';
-  this.description = gift.description ?? gift.Description ?? '';
-  this.priceCard = gift.priceCard ?? gift.PriceCard ?? 0;
-  this.donorId = gift.donorId ?? gift.DonorId ?? 0;
-  this.categoryId = gift.categoryId ?? gift.CategoryId ?? 0;
-  this.pictureId = gift.pictureId ?? gift.PictureId ?? 0;
-
-  this.displayModal = true;
-}
+  openEdit(gift: any) {
+    if (!gift) return;
+    if (!this.isAdmin()) {
+      this.messageService.add({ severity: 'error', summary: 'שגיאה', detail: 'אין לך הרשאה לערוך' });
+      return;
+    }
+    this.id = gift.id ?? gift.Id ?? 0;
+    this.name = gift.name ?? gift.Name ?? '';
+    this.description = gift.description ?? gift.Description ?? '';
+    this.priceCard = gift.priceCard ?? gift.PriceCard ?? 0;
+    this.donorId = gift.donorId ?? gift.DonorId ?? 0;
+    this.categoryId = gift.categoryId ?? gift.CategoryId ?? 0;
+    this.pictureId = gift.pictureId ?? gift.PictureId ?? 0;
+    this.displayModal = true;
+  }
 
 
   resetForm() {
@@ -246,34 +242,34 @@ updateGift() {
   }
 
   GetGiftPurchases(giftId: number) {
-  if (!giftId) {
-    console.error('Gift ID is undefined!');
-    return;
-  }
+    if (!giftId) {
+      console.error('Gift ID is undefined!');
+      return;
+    }
     this.serviceGifts.GetGiftPurchases(giftId).subscribe({
       next: (res) => alert(`מספר רכישות למתנה זו: ${res.length}`),
       error: (err) => alert('לא ניתן לקבל את הרכישות עבור מתנה זו')
     });
   }
 
-GetsPurchaseWithUser(giftId: number) {
-  if (!giftId) {
-    console.error('Gift ID is undefined!');
-    return;
+  GetsPurchaseWithUser(giftId: number) {
+    if (!giftId) {
+      console.error('Gift ID is undefined!');
+      return;
+    }
+
+    this.serviceGifts.GetsPurchaseWithUser(giftId).subscribe({
+      next: (res) => alert(`מספר רכישות עם משתמשים למתנה זו: ${res.length}`),
+      error: (err) => alert('לא ניתן לקבל את הרכישות עם משתמשים עבור מתנה זו')
+    });
   }
 
-  this.serviceGifts.GetsPurchaseWithUser(giftId).subscribe({
-    next: (res) => alert(`מספר רכישות עם משתמשים למתנה זו: ${res.length}`),
-    error: (err) => alert('לא ניתן לקבל את הרכישות עם משתמשים עבור מתנה זו')
-  });
-}
-
-GiftRandom() {
-  this.serviceGifts.GiftRandom().subscribe({
-    next: (res: any) => this.sourceGifts.set([...res]),
-    error: (err: any) => alert('לא ניתן לקבל מתנות אקראיות')
-  });
-}
+  GiftRandom() {
+    this.serviceGifts.GiftRandom().subscribe({
+      next: (res: any) => this.sourceGifts.set([...res]),
+      error: (err: any) => alert('לא ניתן לקבל מתנות אקראיות')
+    });
+  }
 
 
   GetTotalSum() {
@@ -284,16 +280,16 @@ GiftRandom() {
   }
 
   GetGiftBySordedCategoryOrPrice(sortedBy: string) {
-this.serviceGifts.GetGiftsBySorted(sortedBy).subscribe({
-  next: (res) => {
-    console.log('נתוני מיון:', res); // בדקי כאן אם ה-Name קיים ב-Console
-    this.sourceGifts.set([...res]);
-  },
-  error: (err) => alert('לא ניתן לקבל את המתנות ממוינות לפי קטגוריה או מחיר')
-});
+    this.serviceGifts.GetGiftsBySorted(sortedBy).subscribe({
+      next: (res) => {
+        console.log('נתונים ממוינים:', res); // בדקי כאן אם לכל מתנה יש pictureId תקין
+        this.sourceGifts.set([...res]);
+      },
+      error: (err) => alert('לא ניתן לקבל את המתנות ממוינות לפי קטגוריה או מחיר')
+    });
   }
 
-  GetBySorted(sorted:string) {
+  GetBySorted(sorted: string) {
     this.serviceGifts.GetGiftsBySorted(sorted).subscribe({
       next: (res) => this.sourceGifts.set([...res]),
       error: (err) => alert('לא ניתן לקבל את המתנות ממוינות')
@@ -303,18 +299,17 @@ this.serviceGifts.GetGiftsBySorted(sortedBy).subscribe({
   trackByGiftId(index: number, gift: Gift) {
     return gift.id;
   }
-downloadWinners() {
-  this.serviceGifts.DownloadGiftRandomFile().subscribe(blob => {
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'giftWinners.json';
-    a.click();
-    window.URL.revokeObjectURL(url);
-  }, err => alert('לא ניתן להוריד את הקובץ') );
+  downloadWinners() {
+    this.serviceGifts.DownloadGiftRandomFile().subscribe(blob => {
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'giftWinners.json';
+      a.click();
+      window.URL.revokeObjectURL(url);
+    }, err => alert('לא ניתן להוריד את הקובץ'));
   }
 
-  // פונקציות כמויות (שגיאה 3)
   updateQty(giftId: number, delta: number): void {
     if (this.giftQuantities[giftId] === undefined) {
       this.giftQuantities[giftId] = 0;
@@ -329,43 +324,44 @@ downloadWinners() {
 
 AddToBasket(): void {
   const product = this.selectedProduct();
-  if (!product) {
-    this.messageService.add({ severity: 'warn', summary: 'שגיאה', detail: 'לא נבחרה מתנה' });
-    return;
-  }
+  if (!product) return;
+
   const qty = Number(this.giftQuantities[product.id]) || 1;
-  if (qty < 1) {
-    this.messageService.add({ severity: 'warn', summary: 'שגיאה', detail: 'כמות לא תקינה' });
-    return;
-  }
+
   const purchaseData = {
-    id: product.id,
-    Name: product.name,
-    Description: product.description,
-    priceCard: product.priceCard,
-    Quentity: qty
+    giftId: product.id,
+    quantity: qty
   };
-  const basket = JSON.parse(sessionStorage.getItem('basket') || '[]');
-  basket.push(purchaseData);
-  sessionStorage.setItem('basket', JSON.stringify(basket));
-  this.messageService.add({ severity: 'success', summary: 'התווסף!', detail: 'המתנה הוספה לסל' });
-  this.hidePopover();
-  this.router.navigate(['/basket']);
-}
 
-selectAndAddToBasket(gift: any) {
-  this.selectedProduct.set(gift);
-  this.AddToBasket();
+  this.userService.AddToBasket(purchaseData).subscribe({
+    next: () => {
+      this.messageService.add({
+        severity: 'success',
+        summary: 'נוסף לסל',
+        detail: 'המוצר נוסף בהצלחה'
+      });
+    },
+    error: (err) => {
+      console.error('שגיאה:', err);
+      this.messageService.add({
+        severity: 'error',
+        summary: 'שגיאה',
+        detail: 'לא הצלחנו להוסיף לסל'
+      });
+    }
+  });
 }
+  selectAndAddToBasket(gift: any) {
+    this.selectedProduct.set(gift);
+    this.AddToBasket();
+  }
 
-hidePopover(): void {
-  this.displayModal = false;
-  this.selectedProduct.set(null);
-}
-
+  hidePopover(): void {
+    this.displayModal = false;
+    this.selectedProduct.set(null);
+  }
   buildImageSrc(pictureId: number | string | null | undefined): string {
-    const isValid = !(pictureId === null || pictureId === undefined || pictureId === '' || pictureId === 0);
-    return isValid ? `/assets/Image/${String(pictureId)}.png` : '/assets/Image/placeholder.png';
+    return pictureId ? `/Image/${pictureId}.png` : '/Image/placeholder.png';
   }
 
   onImgError(event: Event, gift?: any) {
@@ -378,15 +374,55 @@ hidePopover(): void {
         return;
       }
       if (url.pathname.endsWith('.jpg') && !url.pathname.endsWith('placeholder.jpg') && !url.pathname.endsWith('placeholder.png')) {
-        img.src = '/assets/Image/placeholder.png';
+        img.src = '/Image/placeholder.png';
         return;
       }
-    } catch {}
+    } catch { }
     if (!img.src.endsWith('placeholder.png') && !img.src.endsWith('placeholder.jpg')) {
-      img.src = '/assets/Image/placeholder.png';
+      img.src = '/Image/placeholder.png';
     }
     if (gift && typeof gift === 'object') {
       (gift as any).noImage = true;
+    }
+  }
+  ticketPurchase(gift: Gift) {
+    const addToBasketData = {
+      giftId: gift.id,
+      quentity: 1,
+      busketId: 0
+    };
+
+    this.userService.AddToBasket(addToBasketData).subscribe({
+      next: (basketRes) => {
+        const purchaseData = {
+          giftId: gift.id,
+          quentity: 1,
+          busketId: 0
+        };
+        this.userService.TicketPurchase(purchaseData).subscribe({
+          next: (res) => {
+                        this.router.navigate(['/basket']); // נווט לעמוד הסל לאחר הרכישה, אם תרצה
+
+            this.messageService.add({ severity: 'success', summary: 'הצלחה', detail: 'רכישת כרטיס בוצעה בהצלחה!' });
+          },
+          error: (err) => {
+            this.messageService.add({ severity: 'error', summary: 'שגיאה', detail: 'שגיאה ברכישת כרטיס: ' + (err?.error?.message || '') });
+          }
+        });
+      },
+      error: (err) => {
+        this.messageService.add({ severity: 'error', summary: 'שגיאה', detail: 'שגיאה בהוספה לסל: ' + (err?.error?.message || '') });
+      }
+    });
+  }
+  isAdmin(): boolean {
+    const userStr = sessionStorage.getItem('user');
+    if (!userStr) return false;
+    try {
+      const user = JSON.parse(userStr);
+      return user.role === 1; 
+    } catch {
+      return false;
     }
   }
 }

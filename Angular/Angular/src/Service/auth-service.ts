@@ -1,28 +1,53 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { tap } from 'rxjs/operators';
-import { Observable, throwError } from 'rxjs';
+import { BehaviorSubject, Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { routes } from '../app/app.routes';
+import { Router } from '@angular/router';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
   private Url = 'https://localhost:7036/api/Auth';
+  private currentUserSubject = new BehaviorSubject<any>(null);
+  public currentUser$ = this.currentUserSubject.asObservable();
+  constructor(private http: HttpClient, private router: Router) { }
 
-  constructor(private http: HttpClient) { }
 
-  /**
-   * Logs in the user and stores the auth token on success.
-   * @param data Login credentials
-   */
   login(data: { username: string; password: string }): Observable<any> {
     return this.http.post<any>(`${this.Url}/Login`, data).pipe(
       tap(res => {
-        if (res && res.token) {
-          localStorage.setItem('authToken', res.token);
+        const token = res?.Token ?? res?.token ?? res?.TokenType ?? null;
+        if (token) {
+          localStorage.setItem('authToken', token);
+          this.router.navigate(['/gifts']);
+        }
+
+        const userRaw = res?.User ?? res?.user ?? null;
+        if (userRaw) {
+          let roleVal: any = userRaw.Role ?? userRaw.role ?? 0;
+          if (typeof roleVal === 'string') {
+            const r = roleVal.trim().toLowerCase();
+            if (r === 'admin') roleVal = 1;
+            else if (!isNaN(Number(r))) roleVal = Number(r);
+            else roleVal = 0;
+          }
+          if (typeof roleVal === 'object') {
+            const numeric = Number(roleVal.value ?? roleVal.Value ?? roleVal);
+            roleVal = isNaN(numeric) ? 0 : numeric;
+          }
+
+          const normalizedUser = {
+            ...userRaw,
+            role: Number(roleVal)
+          };
+
+          sessionStorage.setItem('user', JSON.stringify(normalizedUser));
+          this.currentUserSubject.next(normalizedUser); // notify app
+          console.log('AuthService: stored normalized user', normalizedUser);
         }
       }),
       catchError(err => {
-        // Return a user-friendly error object
         let message = 'אירעה שגיאה בעת ההתחברות. נסה שוב.';
         if (err.status === 401) {
           message = 'שם משתמש או סיסמה שגויים.';
@@ -39,24 +64,16 @@ export class AuthService {
     return localStorage.getItem('authToken');
   }
 
-  /**
-   * Returns true if the user is logged in.
-   */
+
   isLoggedIn(): boolean {
     return !!this.getToken();
   }
 
-  /**
-   * Logs out the user by removing the auth token.
-   */
   logout() {
     localStorage.removeItem('authToken');
   }
 
-  /**
-   * Registers a new user.
-   * @param data User registration data
-   */
+
   register(data: {
     id: number;
     firstName: string;

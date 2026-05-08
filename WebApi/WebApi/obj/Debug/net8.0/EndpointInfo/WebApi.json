@@ -1121,6 +1121,18 @@
         }
       }
     },
+    "/api/User/GetBasket": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -1165,11 +1177,10 @@
     "schemas": {
       "BasketStatus": {
         "enum": [
-          0,
-          1
+          "Draft",
+          "Confirmed"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "Category": {
         "type": "object",
@@ -1331,6 +1342,9 @@
             "type": "integer",
             "format": "int32"
           },
+          "isRandom": {
+            "type": "boolean"
+          },
           "pictureId": {
             "type": "integer",
             "format": "int32"
@@ -1371,6 +1385,10 @@
           "pictureId": {
             "type": "integer",
             "format": "int32"
+          },
+          "winnerName": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1405,6 +1423,10 @@
             "minimum": 0,
             "type": "number",
             "format": "double"
+          },
+          "pictureId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -1434,6 +1456,10 @@
               "$ref": "#/components/schemas/PurchaseDto"
             },
             "nullable": true
+          },
+          "pictureId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -1456,6 +1482,10 @@
             "format": "double"
           },
           "quantity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pictureId": {
             "type": "integer",
             "format": "int32"
           },
@@ -1500,6 +1530,19 @@
             "minimum": 0,
             "type": "number",
             "format": "double"
+          },
+          "pictureId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "winnerId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "winnerName": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1579,9 +1622,6 @@
           "busketId": {
             "type": "integer",
             "format": "int32"
-          },
-          "isRandom": {
-            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -1662,11 +1702,10 @@
       },
       "Status": {
         "enum": [
-          0,
-          1
+          "User",
+          "Admin"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "User": {
         "type": "object",

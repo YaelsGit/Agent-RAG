@@ -1,27 +1,34 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.EntityFrameworkCore;
-using System;
 using WebApi.Data;
-using WebApi.Models;
-
 
 namespace WebApi.Validation
 {
-    public class RandomValidationAttribute : Attribute,IAsyncActionFilter
+    public class RandomValidationAttribute : IAsyncActionFilter
     {
+        private readonly WebApiContext _context;
+
+        public RandomValidationAttribute(WebApiContext context)
+        {
+            _context = context;
+        }
+
         public async Task OnActionExecutionAsync(
             ActionExecutingContext context,
             ActionExecutionDelegate next)
         {
+            // בדיקה אם כבר בוצעה הגרלה
+            var lotteryDone = await _context.Gifts.AnyAsync(g => g.IsRandom);
 
-            if (Gift.IsRandom == true)
+            if (lotteryDone)
             {
                 context.Result = new BadRequestObjectResult(
-                    "The lottery has already been held – tickets cannot be purchased."
+                    "ההגרלה כבר בוצעה – לא ניתן לבצע פעולות נוספות במערכת."
                 );
                 return;
             }
+
             await next();
         }
     }

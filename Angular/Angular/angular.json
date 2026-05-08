@@ -91,13 +91,13 @@
               "node_modules/primeicons/primeicons.css",
               "src/styles.scss"
             ],
-            "assets": [
-              "src/assets",
-              "src/favicon.ico"
-            ]
-          }
+          "assets": [
+            "src/favicon.ico",
+            "src/assets" 
+          ]
         }
       }
     }
   }
+}
 }

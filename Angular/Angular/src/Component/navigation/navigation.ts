@@ -5,11 +5,6 @@ import { ButtonModule } from 'primeng/button';
 import { filter } from 'rxjs/operators';
 import { Status, User } from '../../Model/User';
 
-/**
- * Navigation component for the main app menu.
- * Handles dynamic menu items based on user authentication and role.
- * Responsive and accessible navigation bar.
- */
 @Component({
   selector: 'app-navigation',
   standalone: true,
@@ -18,65 +13,50 @@ import { Status, User } from '../../Model/User';
   styleUrls: ['./navigation.scss']
 })
 export class Navigation implements OnInit {
-  /**
-   * Menu items to display in the navigation bar.
-   */
   items: any[] = [];
 
-  /**
-   * The current user object, or null if not logged in.
-   */
-  currentUser: User | null = null;
+  constructor(private router: Router) { }
 
-  constructor(private router: Router) {}
-
-  /**
-   * Initializes the navigation component and subscribes to route changes.
-   */
   ngOnInit() {
-    // מאזין לשינויי ניווט: בכל פעם שהעמוד משתנה, התפריט בודק מחדש את מצב המשתמש
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
-    ).subscribe(() => {
-      this.updateMenu();
-    });
-
-    // הרצה ראשונית בטעינת הקומפוננטה
+    ).subscribe(() => this.updateMenu());
     this.updateMenu();
   }
 
-  /**
-   * Updates the navigation menu based on the user's authentication and role.
-   * Handles legacy user objects and robustly checks for admin status.
-   */
   updateMenu() {
     const userData = sessionStorage.getItem('user');
-    console.log('Raw user data from session:', userData);
-
+    console.log('--- שלב 1: בדיקת נתונים מ-sessionStorage ---', userData);
     if (!userData) {
-      this.items = [
-        { label: 'כניסה', icon: 'pi pi-fw pi-sign-in', routerLink: ['/'] },
-        { label: 'הרשמה', icon: 'pi pi-fw pi-user-plus', routerLink: ['/register'] }
-      ];
-      this.currentUser = null;
+      console.log('--- שלב 2: אין נתונים, מציג תפריט אורח ---');
+      this.setGuestMenu();
       return;
     }
 
     try {
-      // Use the User model for type safety
-      const user: any = JSON.parse(userData); // Use 'any' for robust legacy support
-      this.currentUser = user;
-      console.log('Parsed user object:', user);
+      const user: any = JSON.parse(userData);
+      console.log('Parsed user object from session:', user);
 
-      // Robust admin check for different possible role types
+      // Support different JSON shapes: 'role' or 'Role', numeric or string
+      const rawRole = user.role ?? user.Role ?? null;
+      console.log('Raw role value detected:', rawRole);
+
       let isAdmin = false;
-      if (typeof user.role === 'number' && user.role === 1) {
-        isAdmin = true;
-      } else if (typeof user.role === 'string' && user.role.trim().toLowerCase() === 'admin') {
-        isAdmin = true;
-      } else if (user.role === Status.Admin) {
-        isAdmin = true;
+
+      if (rawRole !== null && rawRole !== undefined) {
+        if (typeof rawRole === 'number') {
+          isAdmin = rawRole === Status.Admin || rawRole === 1;
+        } else if (typeof rawRole === 'string') {
+          const r = rawRole.trim().toLowerCase();
+          isAdmin = r === 'admin' || r === String(Status.Admin) || r === '1';
+        } else if (typeof rawRole === 'object') {
+          // Handle possible enum object shapes
+          const numeric = Number(rawRole.value ?? rawRole.Value ?? rawRole);
+          isAdmin = !isNaN(numeric) && numeric === Status.Admin;
+        }
       }
+
+      console.log('isAdmin resolved to:', isAdmin);
 
       if (isAdmin) {
         this.items = [
@@ -92,22 +72,21 @@ export class Navigation implements OnInit {
         ];
       }
     } catch (e) {
-      console.error('Error parsing user data', e);
-      this.logout(); // אם הנתונים ב-Session משובשים, עדיף לצאת
+      console.error('Error parsing user:', e);
+      this.logout();
     }
   }
 
-  /**
-   * Logs out the user, clears session/local storage, and navigates to the login page.
-   */
+  private setGuestMenu() {
+    this.items = [
+      { label: 'כניסה', icon: 'pi pi-fw pi-sign-in', routerLink: ['/'] },
+      { label: 'הרשמה', icon: 'pi pi-fw pi-user-plus', routerLink: ['/register'] }
+    ];
+  }
+
   logout() {
-    // ניקוי נתונים וחזרה לדף הכניסה
-    sessionStorage.removeItem('user');
-    sessionStorage.removeItem('authToken');
-    localStorage.removeItem('authToken');
-    localStorage.removeItem('user');
-    this.currentUser = null;
-    this.router.navigate(['']);
-    // התפריט יתעדכן אוטומטית בגלל ה-NavigationEnd
+    sessionStorage.clear();
+    this.setGuestMenu();
+    this.router.navigate(['/']);
   }
 }

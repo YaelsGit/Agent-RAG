@@ -1,0 +1,1296 @@
+2026-03-15 15:15:45 [Information] User profile is available. Using '"C:\Users\user1\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-15 15:15:47 [Information] Now listening on: "https://localhost:7036"
+2026-03-15 15:15:47 [Information] Now listening on: "http://localhost:5090"
+2026-03-15 15:15:48 [Information] Application started. Press Ctrl+C to shut down.
+2026-03-15 15:15:48 [Information] Hosting environment: "Development"
+2026-03-15 15:15:48 [Information] Content root path: "C:\Users\user1\Downloads\Web-Api-Angular\WebApi\WebApi"
+2026-03-15 15:16:04 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger""" - null null
+2026-03-15 15:16:05 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger""" - 301 0 null 997.8845ms
+2026-03-15 15:16:05 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/index.html""" - null null
+2026-03-15 15:16:05 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/swagger-ui-bundle.js""" - null null
+2026-03-15 15:16:05 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/swagger-ui-standalone-preset.js""" - null null
+2026-03-15 15:16:05 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/swagger-ui.css""" - null null
+2026-03-15 15:16:05 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 551.2948ms
+2026-03-15 15:16:06 [Information] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2026-03-15 15:16:06 [Information] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2026-03-15 15:16:06 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/swagger-ui-standalone-preset.js""" - 200 230280 "text/javascript" 387.0931ms
+2026-03-15 15:16:06 [Information] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2026-03-15 15:16:06 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/swagger-ui.css""" - 200 152034 "text/css" 369.8258ms
+2026-03-15 15:16:06 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-15 15:16:06 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/_vs/browserLink""" - null null
+2026-03-15 15:16:06 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/swagger-ui-bundle.js""" - 200 1456926 "text/javascript" 435.375ms
+2026-03-15 15:16:06 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/_framework/aspnetcore-browser-refresh.js""" - 200 16497 "application/javascript; charset=utf-8" 85.0734ms
+2026-03-15 15:16:06 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 383.4503ms
+2026-03-15 15:16:07 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/v1/swagger.json""" - null null
+2026-03-15 15:16:07 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 132.5693ms
+2026-03-15 15:16:07 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/favicon-32x32.png""" - null null
+2026-03-15 15:16:07 [Information] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"'
+2026-03-15 15:16:07 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/favicon-32x32.png""" - 200 628 "image/png" 20.1294ms
+2026-03-15 17:35:41 [Information] User profile is available. Using '"C:\Users\user1\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-15 17:35:41 [Information] Now listening on: "https://localhost:7036"
+2026-03-15 17:35:41 [Information] Now listening on: "http://localhost:5090"
+2026-03-15 17:35:42 [Information] Application started. Press Ctrl+C to shut down.
+2026-03-15 17:35:42 [Information] Hosting environment: "Development"
+2026-03-15 17:35:42 [Information] Content root path: "C:\Users\user1\Downloads\Web-Api-Angular\WebApi\WebApi"
+2026-03-15 17:35:42 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/index.html""" - null null
+2026-03-15 17:35:44 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-15 17:35:44 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/_vs/browserLink""" - null null
+2026-03-15 17:35:44 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 1196.1408ms
+2026-03-15 17:35:44 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/_framework/aspnetcore-browser-refresh.js""" - 200 16497 "application/javascript; charset=utf-8" 178.2687ms
+2026-03-15 17:35:44 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 541.3981ms
+2026-03-15 17:35:44 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/v1/swagger.json""" - null null
+2026-03-15 17:35:45 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 847.6495ms
+2026-03-15 17:36:16 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Auth/Login""" - null null
+2026-03-15 17:36:16 [Information] Incoming Request: "OPTIONS" "/api/Auth/Login"
+2026-03-15 17:36:16 [Information] CORS policy execution successful.
+2026-03-15 17:36:16 [Information] Completed "OPTIONS" "/api/Auth/Login" responded 204 in 14ms
+2026-03-15 17:36:16 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Auth/Login""" - 204 null null 33.2584ms
+2026-03-15 17:36:16 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - "application/json" 45
+2026-03-15 17:36:16 [Information] Incoming Request: "POST" "/api/Auth/Login"
+2026-03-15 17:36:16 [Information] CORS policy execution successful.
+2026-03-15 17:36:16 [Information] Executing endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-15 17:36:16 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginRequestDto)" on controller "WebApi.Controllers.AuthController" ("WebApi").
+2026-03-15 17:36:17 [Information] Login called for user "יעלי"
+2026-03-15 17:36:17 [Information] User login attempt: "יעלי"
+2026-03-15 17:36:18 [Information] Executed DbCommand ("134"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__userName_0"
+2026-03-15 17:36:19 [Information] User "יעלי" logged in successfully
+2026-03-15 17:36:19 [Information] Executing "OkObjectResult", writing value of type '"WebApi.DTOs.UserDTO+LoginResponseDto"'.
+2026-03-15 17:36:19 [Information] Executed action "WebApi.Controllers.AuthController.Login (WebApi)" in 2234.0377ms
+2026-03-15 17:36:19 [Information] Executed endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-15 17:36:19 [Information] Completed "POST" "/api/Auth/Login" responded 200 in 2349ms
+2026-03-15 17:36:19 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - 200 null "application/json; charset=utf-8" 2376.1097ms
+2026-03-15 17:36:19 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-15 17:36:19 [Information] Incoming Request: "OPTIONS" "/api/Gift"
+2026-03-15 17:36:19 [Information] CORS policy execution successful.
+2026-03-15 17:36:19 [Information] Completed "OPTIONS" "/api/Gift" responded 204 in 6ms
+2026-03-15 17:36:19 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - 204 null null 27.3107ms
+2026-03-15 17:36:19 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-15 17:36:19 [Information] Incoming Request: "GET" "/api/Gift"
+2026-03-15 17:36:19 [Information] CORS policy execution successful.
+2026-03-15 17:36:19 [Information] Executing endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-15 17:36:19 [Information] Route matched with "{action = \"GetAllGift\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.GiftDTO+GiftCategoryDto]]] GetAllGift()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-15 17:36:19 [Information] Executed DbCommand ("18"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:36:19 [Information] GetAllGift called
+2026-03-15 17:36:19 [Information] Getting all gifts
+2026-03-15 17:36:19 [Information] Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Gifts] AS [g]"
+2026-03-15 17:36:19 [Information] Executed DbCommand ("26"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-15 17:36:19 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftResponseDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-15 17:36:19 [Information] Executed action "WebApi.Controllers.GiftController.GetAllGift (WebApi)" in 521.5697ms
+2026-03-15 17:36:19 [Information] Executed endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-15 17:36:19 [Information] Completed "GET" "/api/Gift" responded 200 in 633ms
+2026-03-15 17:36:19 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - 200 null "application/json; charset=utf-8" 668.2425ms
+2026-03-15 17:36:23 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Donor""" - null null
+2026-03-15 17:36:23 [Information] Incoming Request: "OPTIONS" "/api/Donor"
+2026-03-15 17:36:23 [Information] CORS policy execution successful.
+2026-03-15 17:36:23 [Information] Completed "OPTIONS" "/api/Donor" responded 204 in 4ms
+2026-03-15 17:36:23 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Donor""" - 204 null null 17.1713ms
+2026-03-15 17:36:23 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Donor""" - null null
+2026-03-15 17:36:23 [Information] Incoming Request: "GET" "/api/Donor"
+2026-03-15 17:36:23 [Information] CORS policy execution successful.
+2026-03-15 17:36:23 [Information] Executing endpoint '"WebApi.Controllers.DonorController.GetAllDonor (WebApi)"'
+2026-03-15 17:36:23 [Information] Route matched with "{action = \"GetAllDonor\", controller = \"Donor\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.DonorDTO+DonorDto]]] GetAllDonor()" on controller "WebApi.Controllers.DonorController" ("WebApi").
+2026-03-15 17:36:23 [Information] Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:36:23 [Information] GetAllDonor called
+2026-03-15 17:36:23 [Information] Getting all donors
+2026-03-15 17:36:23 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Donors] AS [d]"
+2026-03-15 17:36:23 [Information] Executing "OkObjectResult", writing value of type '"System.Linq.Enumerable+WhereSelectListIterator`2[[WebApi.Models.Donor, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApi.DTOs.DonorDTO+DonorDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-15 17:36:23 [Information] Executed action "WebApi.Controllers.DonorController.GetAllDonor (WebApi)" in 92.5986ms
+2026-03-15 17:36:23 [Information] Executed endpoint '"WebApi.Controllers.DonorController.GetAllDonor (WebApi)"'
+2026-03-15 17:36:23 [Information] Completed "GET" "/api/Donor" responded 200 in 132ms
+2026-03-15 17:36:23 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Donor""" - 200 null "application/json; charset=utf-8" 147.849ms
+2026-03-15 17:36:34 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Donor""" - null null
+2026-03-15 17:36:34 [Information] Incoming Request: "OPTIONS" "/api/Donor"
+2026-03-15 17:36:34 [Information] CORS policy execution successful.
+2026-03-15 17:36:34 [Information] Completed "OPTIONS" "/api/Donor" responded 204 in 3ms
+2026-03-15 17:36:34 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Donor""" - 204 null null 18.3721ms
+2026-03-15 17:36:34 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Donor""" - null null
+2026-03-15 17:36:34 [Information] Incoming Request: "GET" "/api/Donor"
+2026-03-15 17:36:34 [Information] CORS policy execution successful.
+2026-03-15 17:36:34 [Information] Executing endpoint '"WebApi.Controllers.DonorController.GetAllDonor (WebApi)"'
+2026-03-15 17:36:34 [Information] Route matched with "{action = \"GetAllDonor\", controller = \"Donor\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.DonorDTO+DonorDto]]] GetAllDonor()" on controller "WebApi.Controllers.DonorController" ("WebApi").
+2026-03-15 17:36:34 [Information] Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:36:34 [Information] GetAllDonor called
+2026-03-15 17:36:34 [Information] Getting all donors
+2026-03-15 17:36:34 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Donors] AS [d]"
+2026-03-15 17:36:34 [Information] Executing "OkObjectResult", writing value of type '"System.Linq.Enumerable+WhereSelectListIterator`2[[WebApi.Models.Donor, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApi.DTOs.DonorDTO+DonorDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-15 17:36:34 [Information] Executed action "WebApi.Controllers.DonorController.GetAllDonor (WebApi)" in 25.2072ms
+2026-03-15 17:36:34 [Information] Executed endpoint '"WebApi.Controllers.DonorController.GetAllDonor (WebApi)"'
+2026-03-15 17:36:34 [Information] Completed "GET" "/api/Donor" responded 200 in 47ms
+2026-03-15 17:36:34 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Donor""" - 200 null "application/json; charset=utf-8" 62.012ms
+2026-03-15 17:36:43 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Donor/Gift""?gift=%D7%9E%D7%98%D7%91%D7%97%20%D7%90%D7%99%D7%A0%D7%A1%D7%99%D7%99%D7%93" - null null
+2026-03-15 17:36:43 [Information] Incoming Request: "OPTIONS" "/api/Donor/Gift"
+2026-03-15 17:36:43 [Information] CORS policy execution successful.
+2026-03-15 17:36:43 [Information] Completed "OPTIONS" "/api/Donor/Gift" responded 204 in 5ms
+2026-03-15 17:36:43 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Donor/Gift""?gift=%D7%9E%D7%98%D7%91%D7%97%20%D7%90%D7%99%D7%A0%D7%A1%D7%99%D7%99%D7%93" - 204 null null 15.84ms
+2026-03-15 17:36:43 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Donor/Gift""?gift=%D7%9E%D7%98%D7%91%D7%97%20%D7%90%D7%99%D7%A0%D7%A1%D7%99%D7%99%D7%93" - null null
+2026-03-15 17:36:43 [Information] Incoming Request: "GET" "/api/Donor/Gift"
+2026-03-15 17:36:43 [Information] CORS policy execution successful.
+2026-03-15 17:36:43 [Information] Executing endpoint '"WebApi.Controllers.DonorController.GetDonorByGift (WebApi)"'
+2026-03-15 17:36:43 [Information] Route matched with "{action = \"GetDonorByGift\", controller = \"Donor\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.DonorDTO+DonorDto]]] GetDonorByGift(System.String)" on controller "WebApi.Controllers.DonorController" ("WebApi").
+2026-03-15 17:36:43 [Information] Executed DbCommand ("11"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:36:43 [Information] GetDonorByGift called
+2026-03-15 17:36:43 [Information] Getting donor by gift: "מטבח אינסייד"
+2026-03-15 17:36:43 [Information] Executed DbCommand ("23"ms) [Parameters=["@__gift_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone], [g0].[Id], [g0].[CategoryId], [g0].[Description], [g0].[DonorId], [g0].[IsRandom], [g0].[Name], [g0].[PictureId], [g0].[PriceCard], [g0].[Quantity], [g0].[WinnerName]
+FROM [Donors] AS [d]
+LEFT JOIN [Gifts] AS [g0] ON [d].[Id] = [g0].[DonorId]
+WHERE EXISTS (
+    SELECT 1
+    FROM [Gifts] AS [g]
+    WHERE [d].[Id] = [g].[DonorId] AND [g].[Name] = @__gift_0)
+ORDER BY [d].[Id]"
+2026-03-15 17:36:43 [Information] Executing "OkObjectResult", writing value of type '"System.Linq.Enumerable+WhereSelectListIterator`2[[WebApi.Models.Donor, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApi.DTOs.DonorDTO+DonorDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-15 17:36:43 [Information] Executed action "WebApi.Controllers.DonorController.GetDonorByGift (WebApi)" in 167.9458ms
+2026-03-15 17:36:43 [Information] Executed endpoint '"WebApi.Controllers.DonorController.GetDonorByGift (WebApi)"'
+2026-03-15 17:36:43 [Information] Completed "GET" "/api/Donor/Gift" responded 200 in 205ms
+2026-03-15 17:36:43 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Donor/Gift""?gift=%D7%9E%D7%98%D7%91%D7%97%20%D7%90%D7%99%D7%A0%D7%A1%D7%99%D7%99%D7%93" - 200 null "application/json; charset=utf-8" 221.8605ms
+2026-03-15 17:36:49 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Donor/Gift""?gift=%D7%9E%D7%98%D7%91%D7%97%20%D7%90%D7%99%D7%A0%D7%A1%D7%99%D7%99%D7%93" - null null
+2026-03-15 17:36:49 [Information] Incoming Request: "OPTIONS" "/api/Donor/Gift"
+2026-03-15 17:36:49 [Information] CORS policy execution successful.
+2026-03-15 17:36:49 [Information] Completed "OPTIONS" "/api/Donor/Gift" responded 204 in 4ms
+2026-03-15 17:36:49 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Donor/Gift""?gift=%D7%9E%D7%98%D7%91%D7%97%20%D7%90%D7%99%D7%A0%D7%A1%D7%99%D7%99%D7%93" - 204 null null 19.2792ms
+2026-03-15 17:36:49 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Donor/Gift""?gift=%D7%9E%D7%98%D7%91%D7%97%20%D7%90%D7%99%D7%A0%D7%A1%D7%99%D7%99%D7%93" - null null
+2026-03-15 17:36:49 [Information] Incoming Request: "GET" "/api/Donor/Gift"
+2026-03-15 17:36:49 [Information] CORS policy execution successful.
+2026-03-15 17:36:49 [Information] Executing endpoint '"WebApi.Controllers.DonorController.GetDonorByGift (WebApi)"'
+2026-03-15 17:36:49 [Information] Route matched with "{action = \"GetDonorByGift\", controller = \"Donor\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.DonorDTO+DonorDto]]] GetDonorByGift(System.String)" on controller "WebApi.Controllers.DonorController" ("WebApi").
+2026-03-15 17:36:49 [Information] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:36:49 [Information] GetDonorByGift called
+2026-03-15 17:36:49 [Information] Getting donor by gift: "מטבח אינסייד"
+2026-03-15 17:36:49 [Information] Executed DbCommand ("12"ms) [Parameters=["@__gift_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone], [g0].[Id], [g0].[CategoryId], [g0].[Description], [g0].[DonorId], [g0].[IsRandom], [g0].[Name], [g0].[PictureId], [g0].[PriceCard], [g0].[Quantity], [g0].[WinnerName]
+FROM [Donors] AS [d]
+LEFT JOIN [Gifts] AS [g0] ON [d].[Id] = [g0].[DonorId]
+WHERE EXISTS (
+    SELECT 1
+    FROM [Gifts] AS [g]
+    WHERE [d].[Id] = [g].[DonorId] AND [g].[Name] = @__gift_0)
+ORDER BY [d].[Id]"
+2026-03-15 17:36:49 [Information] Executing "OkObjectResult", writing value of type '"System.Linq.Enumerable+WhereSelectListIterator`2[[WebApi.Models.Donor, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApi.DTOs.DonorDTO+DonorDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-15 17:36:49 [Information] Executed action "WebApi.Controllers.DonorController.GetDonorByGift (WebApi)" in 41.8182ms
+2026-03-15 17:36:49 [Information] Executed endpoint '"WebApi.Controllers.DonorController.GetDonorByGift (WebApi)"'
+2026-03-15 17:36:49 [Information] Completed "GET" "/api/Donor/Gift" responded 200 in 57ms
+2026-03-15 17:36:49 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Donor/Gift""?gift=%D7%9E%D7%98%D7%91%D7%97%20%D7%90%D7%99%D7%A0%D7%A1%D7%99%D7%99%D7%93" - 200 null "application/json; charset=utf-8" 125.3012ms
+2026-03-15 17:36:52 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Donor/Gift""?gift=%D7%9E%D7%98%D7%91%D7%97%20%D7%90%D7%99%D7%99%D7%99%D7%A0%D7%A1%D7%99%D7%99%D7%93" - null null
+2026-03-15 17:36:52 [Information] Incoming Request: "OPTIONS" "/api/Donor/Gift"
+2026-03-15 17:36:52 [Information] CORS policy execution successful.
+2026-03-15 17:36:52 [Information] Completed "OPTIONS" "/api/Donor/Gift" responded 204 in 3ms
+2026-03-15 17:36:52 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Donor/Gift""?gift=%D7%9E%D7%98%D7%91%D7%97%20%D7%90%D7%99%D7%99%D7%99%D7%A0%D7%A1%D7%99%D7%99%D7%93" - 204 null null 13.8773ms
+2026-03-15 17:36:52 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Donor/Gift""?gift=%D7%9E%D7%98%D7%91%D7%97%20%D7%90%D7%99%D7%99%D7%99%D7%A0%D7%A1%D7%99%D7%99%D7%93" - null null
+2026-03-15 17:36:52 [Information] Incoming Request: "GET" "/api/Donor/Gift"
+2026-03-15 17:36:52 [Information] CORS policy execution successful.
+2026-03-15 17:36:52 [Information] Executing endpoint '"WebApi.Controllers.DonorController.GetDonorByGift (WebApi)"'
+2026-03-15 17:36:52 [Information] Route matched with "{action = \"GetDonorByGift\", controller = \"Donor\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.DonorDTO+DonorDto]]] GetDonorByGift(System.String)" on controller "WebApi.Controllers.DonorController" ("WebApi").
+2026-03-15 17:36:52 [Information] Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:36:52 [Information] GetDonorByGift called
+2026-03-15 17:36:52 [Information] Getting donor by gift: "מטבח אייינסייד"
+2026-03-15 17:36:52 [Information] Executed DbCommand ("12"ms) [Parameters=["@__gift_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone], [g0].[Id], [g0].[CategoryId], [g0].[Description], [g0].[DonorId], [g0].[IsRandom], [g0].[Name], [g0].[PictureId], [g0].[PriceCard], [g0].[Quantity], [g0].[WinnerName]
+FROM [Donors] AS [d]
+LEFT JOIN [Gifts] AS [g0] ON [d].[Id] = [g0].[DonorId]
+WHERE EXISTS (
+    SELECT 1
+    FROM [Gifts] AS [g]
+    WHERE [d].[Id] = [g].[DonorId] AND [g].[Name] = @__gift_0)
+ORDER BY [d].[Id]"
+2026-03-15 17:36:52 [Information] Executing "OkObjectResult", writing value of type '"System.Linq.Enumerable+WhereSelectListIterator`2[[WebApi.Models.Donor, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApi.DTOs.DonorDTO+DonorDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-15 17:36:52 [Information] Executed action "WebApi.Controllers.DonorController.GetDonorByGift (WebApi)" in 38.3174ms
+2026-03-15 17:36:52 [Information] Executed endpoint '"WebApi.Controllers.DonorController.GetDonorByGift (WebApi)"'
+2026-03-15 17:36:52 [Information] Completed "GET" "/api/Donor/Gift" responded 200 in 56ms
+2026-03-15 17:36:52 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Donor/Gift""?gift=%D7%9E%D7%98%D7%91%D7%97%20%D7%90%D7%99%D7%99%D7%99%D7%A0%D7%A1%D7%99%D7%99%D7%93" - 200 null "application/json; charset=utf-8" 72.6255ms
+2026-03-15 17:36:54 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Donor""" - null null
+2026-03-15 17:36:54 [Information] Incoming Request: "OPTIONS" "/api/Donor"
+2026-03-15 17:36:54 [Information] CORS policy execution successful.
+2026-03-15 17:36:54 [Information] Completed "OPTIONS" "/api/Donor" responded 204 in 6ms
+2026-03-15 17:36:54 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Donor""" - 204 null null 22.962ms
+2026-03-15 17:36:54 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Donor""" - null null
+2026-03-15 17:36:54 [Information] Incoming Request: "GET" "/api/Donor"
+2026-03-15 17:36:54 [Information] CORS policy execution successful.
+2026-03-15 17:36:54 [Information] Executing endpoint '"WebApi.Controllers.DonorController.GetAllDonor (WebApi)"'
+2026-03-15 17:36:54 [Information] Route matched with "{action = \"GetAllDonor\", controller = \"Donor\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.DonorDTO+DonorDto]]] GetAllDonor()" on controller "WebApi.Controllers.DonorController" ("WebApi").
+2026-03-15 17:36:54 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:36:54 [Information] GetAllDonor called
+2026-03-15 17:36:54 [Information] Getting all donors
+2026-03-15 17:36:54 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Donors] AS [d]"
+2026-03-15 17:36:54 [Information] Executing "OkObjectResult", writing value of type '"System.Linq.Enumerable+WhereSelectListIterator`2[[WebApi.Models.Donor, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApi.DTOs.DonorDTO+DonorDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-15 17:36:54 [Information] Executed action "WebApi.Controllers.DonorController.GetAllDonor (WebApi)" in 22.1327ms
+2026-03-15 17:36:54 [Information] Executed endpoint '"WebApi.Controllers.DonorController.GetAllDonor (WebApi)"'
+2026-03-15 17:36:54 [Information] Completed "GET" "/api/Donor" responded 200 in 40ms
+2026-03-15 17:36:54 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Donor""" - 200 null "application/json; charset=utf-8" 57.6703ms
+2026-03-15 17:36:55 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Donor""" - null null
+2026-03-15 17:36:55 [Information] Incoming Request: "GET" "/api/Donor"
+2026-03-15 17:36:55 [Information] CORS policy execution successful.
+2026-03-15 17:36:55 [Information] Executing endpoint '"WebApi.Controllers.DonorController.GetAllDonor (WebApi)"'
+2026-03-15 17:36:55 [Information] Route matched with "{action = \"GetAllDonor\", controller = \"Donor\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.DonorDTO+DonorDto]]] GetAllDonor()" on controller "WebApi.Controllers.DonorController" ("WebApi").
+2026-03-15 17:36:55 [Information] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:36:55 [Information] GetAllDonor called
+2026-03-15 17:36:55 [Information] Getting all donors
+2026-03-15 17:36:55 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Donors] AS [d]"
+2026-03-15 17:36:55 [Information] Executing "OkObjectResult", writing value of type '"System.Linq.Enumerable+WhereSelectListIterator`2[[WebApi.Models.Donor, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApi.DTOs.DonorDTO+DonorDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-15 17:36:55 [Information] Executed action "WebApi.Controllers.DonorController.GetAllDonor (WebApi)" in 38.9453ms
+2026-03-15 17:36:55 [Information] Executed endpoint '"WebApi.Controllers.DonorController.GetAllDonor (WebApi)"'
+2026-03-15 17:36:55 [Information] Completed "GET" "/api/Donor" responded 200 in 63ms
+2026-03-15 17:36:55 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Donor""" - 200 null "application/json; charset=utf-8" 80.7283ms
+2026-03-15 17:37:08 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-15 17:37:08 [Information] Incoming Request: "OPTIONS" "/api/Gift"
+2026-03-15 17:37:08 [Information] CORS policy execution successful.
+2026-03-15 17:37:08 [Information] Completed "OPTIONS" "/api/Gift" responded 204 in 9ms
+2026-03-15 17:37:08 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - 204 null null 33.7484ms
+2026-03-15 17:37:08 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-15 17:37:08 [Information] Incoming Request: "GET" "/api/Gift"
+2026-03-15 17:37:08 [Information] CORS policy execution successful.
+2026-03-15 17:37:08 [Information] Executing endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-15 17:37:08 [Information] Route matched with "{action = \"GetAllGift\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.GiftDTO+GiftCategoryDto]]] GetAllGift()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-15 17:37:08 [Information] Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:37:08 [Information] GetAllGift called
+2026-03-15 17:37:08 [Information] Getting all gifts
+2026-03-15 17:37:08 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Gifts] AS [g]"
+2026-03-15 17:37:08 [Information] Executed DbCommand ("11"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-15 17:37:08 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftResponseDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-15 17:37:08 [Information] Executed action "WebApi.Controllers.GiftController.GetAllGift (WebApi)" in 50.8026ms
+2026-03-15 17:37:08 [Information] Executed endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-15 17:37:08 [Information] Completed "GET" "/api/Gift" responded 200 in 67ms
+2026-03-15 17:37:08 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - 200 null "application/json; charset=utf-8" 83.8097ms
+2026-03-15 17:37:14 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Auth/Login""" - null null
+2026-03-15 17:37:14 [Information] Incoming Request: "OPTIONS" "/api/Auth/Login"
+2026-03-15 17:37:14 [Information] CORS policy execution successful.
+2026-03-15 17:37:14 [Information] Completed "OPTIONS" "/api/Auth/Login" responded 204 in 3ms
+2026-03-15 17:37:14 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Auth/Login""" - 204 null null 12.3405ms
+2026-03-15 17:37:14 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - "application/json" 37
+2026-03-15 17:37:14 [Information] Incoming Request: "POST" "/api/Auth/Login"
+2026-03-15 17:37:14 [Information] CORS policy execution successful.
+2026-03-15 17:37:14 [Information] Executing endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-15 17:37:14 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginRequestDto)" on controller "WebApi.Controllers.AuthController" ("WebApi").
+2026-03-15 17:37:14 [Information] Login called for user "יי"
+2026-03-15 17:37:14 [Information] User login attempt: "יי"
+2026-03-15 17:37:14 [Information] Executed DbCommand ("17"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__userName_0"
+2026-03-15 17:37:14 [Information] User "יי" logged in successfully
+2026-03-15 17:37:14 [Information] Executing "OkObjectResult", writing value of type '"WebApi.DTOs.UserDTO+LoginResponseDto"'.
+2026-03-15 17:37:14 [Information] Executed action "WebApi.Controllers.AuthController.Login (WebApi)" in 35.9644ms
+2026-03-15 17:37:14 [Information] Executed endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-15 17:37:14 [Information] Completed "POST" "/api/Auth/Login" responded 200 in 46ms
+2026-03-15 17:37:14 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - 200 null "application/json; charset=utf-8" 57.2151ms
+2026-03-15 17:37:14 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-15 17:37:14 [Information] Incoming Request: "OPTIONS" "/api/Gift"
+2026-03-15 17:37:14 [Information] CORS policy execution successful.
+2026-03-15 17:37:14 [Information] Completed "OPTIONS" "/api/Gift" responded 204 in 7ms
+2026-03-15 17:37:14 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - 204 null null 26.2227ms
+2026-03-15 17:37:14 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-15 17:37:14 [Information] Incoming Request: "GET" "/api/Gift"
+2026-03-15 17:37:14 [Information] CORS policy execution successful.
+2026-03-15 17:37:14 [Information] Executing endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-15 17:37:14 [Information] Route matched with "{action = \"GetAllGift\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.GiftDTO+GiftCategoryDto]]] GetAllGift()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-15 17:37:14 [Information] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:37:14 [Information] GetAllGift called
+2026-03-15 17:37:14 [Information] Getting all gifts
+2026-03-15 17:37:14 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Gifts] AS [g]"
+2026-03-15 17:37:14 [Information] Executed DbCommand ("17"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-15 17:37:14 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftResponseDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-15 17:37:14 [Information] Executed action "WebApi.Controllers.GiftController.GetAllGift (WebApi)" in 70.1295ms
+2026-03-15 17:37:14 [Information] Executed endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-15 17:37:14 [Information] Completed "GET" "/api/Gift" responded 200 in 87ms
+2026-03-15 17:37:14 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - 200 null "application/json; charset=utf-8" 110.1429ms
+2026-03-15 17:37:17 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/AddToBasket""" - null null
+2026-03-15 17:37:17 [Information] Incoming Request: "OPTIONS" "/api/User/AddToBasket"
+2026-03-15 17:37:17 [Information] CORS policy execution successful.
+2026-03-15 17:37:17 [Information] Completed "OPTIONS" "/api/User/AddToBasket" responded 204 in 6ms
+2026-03-15 17:37:17 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/AddToBasket""" - 204 null null 14.4668ms
+2026-03-15 17:37:17 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - "application/json" 26
+2026-03-15 17:37:17 [Information] Incoming Request: "POST" "/api/User/AddToBasket"
+2026-03-15 17:37:17 [Information] CORS policy execution successful.
+2026-03-15 17:37:17 [Information] Executing endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-15 17:37:17 [Information] Route matched with "{action = \"AddToBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WebApi.Models.Purchase]] AddToBasket(PurchaseBasketDto)" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-15 17:37:17 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:37:17 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:37:17 [Information] AddToBasket called for userId 1018 and giftId 29
+2026-03-15 17:37:17 [Information] Executed DbCommand ("4"ms) [Parameters=["@__dto_GiftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+FROM [Gifts] AS [g]
+WHERE [g].[Id] = @__dto_GiftId_0"
+2026-03-15 17:37:17 [Information] Executed DbCommand ("42"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Purchases] ([BasketId], [BusketId], [Date], [GiftId], [Quantity], [UserId], [basketStatus])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);"
+2026-03-15 17:37:17 [Information] Purchase added to basket for userId 1018 and giftId 29
+2026-03-15 17:37:17 [Information] Executing "OkObjectResult", writing value of type '"WebApi.Models.Purchase"'.
+2026-03-15 17:37:17 [Information] Executed action "WebApi.Controllers.UserController.AddToBasket (WebApi)" in 356.8596ms
+2026-03-15 17:37:17 [Information] Executed endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-15 17:37:17 [Information] Completed "POST" "/api/User/AddToBasket" responded 200 in 379ms
+2026-03-15 17:37:17 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - 200 null "application/json; charset=utf-8" 395.3134ms
+2026-03-15 17:37:20 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/GetBasket""" - null null
+2026-03-15 17:37:20 [Information] Incoming Request: "OPTIONS" "/api/User/GetBasket"
+2026-03-15 17:37:20 [Information] CORS policy execution successful.
+2026-03-15 17:37:20 [Information] Completed "OPTIONS" "/api/User/GetBasket" responded 204 in 3ms
+2026-03-15 17:37:20 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/GetBasket""" - 204 null null 16.322ms
+2026-03-15 17:37:20 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/User/GetBasket""" - null null
+2026-03-15 17:37:20 [Information] Incoming Request: "GET" "/api/User/GetBasket"
+2026-03-15 17:37:20 [Information] CORS policy execution successful.
+2026-03-15 17:37:20 [Information] Executing endpoint '"WebApi.Controllers.UserController.GetBasket (WebApi)"'
+2026-03-15 17:37:20 [Information] Route matched with "{action = \"GetBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBasket()" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-15 17:37:20 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:37:20 [Information] Fetching basket for userId 1018
+2026-03-15 17:37:20 [Information] Executed DbCommand ("14"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[GiftId], [g].[Name] AS [GiftName], [g].[PriceCard] AS [Price], [p].[Quantity], [p].[Date]
+FROM [Purchases] AS [p]
+INNER JOIN [Gifts] AS [g] ON [p].[GiftId] = [g].[Id]
+WHERE [p].[UserId] = @__userId_0 AND [p].[basketStatus] = 0"
+2026-03-15 17:37:20 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-03-15 17:37:20 [Information] Executed action "WebApi.Controllers.UserController.GetBasket (WebApi)" in 66.7056ms
+2026-03-15 17:37:20 [Information] Executed endpoint '"WebApi.Controllers.UserController.GetBasket (WebApi)"'
+2026-03-15 17:37:20 [Information] Completed "GET" "/api/User/GetBasket" responded 200 in 89ms
+2026-03-15 17:37:20 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/User/GetBasket""" - 200 null "application/json; charset=utf-8" 103.5008ms
+2026-03-15 17:37:23 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/ConfirmBasket""" - null null
+2026-03-15 17:37:23 [Information] Incoming Request: "OPTIONS" "/api/User/ConfirmBasket"
+2026-03-15 17:37:23 [Information] CORS policy execution successful.
+2026-03-15 17:37:23 [Information] Completed "OPTIONS" "/api/User/ConfirmBasket" responded 204 in 4ms
+2026-03-15 17:37:23 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/ConfirmBasket""" - 204 null null 12.846ms
+2026-03-15 17:37:23 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/ConfirmBasket""" - "application/json" 0
+2026-03-15 17:37:23 [Information] Incoming Request: "POST" "/api/User/ConfirmBasket"
+2026-03-15 17:37:23 [Information] CORS policy execution successful.
+2026-03-15 17:37:23 [Information] Executing endpoint '"WebApi.Controllers.UserController.ConfirmBasket (WebApi)"'
+2026-03-15 17:37:23 [Information] Route matched with "{action = \"ConfirmBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ConfirmBasket()" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-15 17:37:23 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:37:23 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:37:23 [Information] ConfirmBasket called for userId 1018
+2026-03-15 17:37:23 [Information] Executed DbCommand ("15"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[BasketId], [p].[BusketId], [p].[Date], [p].[GiftId], [p].[Quantity], [p].[UserId], [p].[basketStatus]
+FROM [Purchases] AS [p]
+WHERE [p].[UserId] = @__userId_0 AND [p].[basketStatus] = 0"
+2026-03-15 17:37:24 [Information] Executed DbCommand ("53"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = Int32), @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?' (DbType = DateTime2), @p13='?' (DbType = Int32), @p14='?' (DbType = Int32), @p15='?' (DbType = Int32), @p16='?' (DbType = Int32), @p17='?' (DbType = Int32), @p18='?' (DbType = Int32), @p19='?' (DbType = DateTime2), @p20='?' (DbType = Int32), @p21='?' (DbType = Int32), @p22='?' (DbType = Int32), @p23='?' (DbType = Int32), @p24='?' (DbType = Int32), @p25='?' (DbType = Int32), @p26='?' (DbType = DateTime2), @p27='?' (DbType = Int32), @p28='?' (DbType = Int32), @p29='?' (DbType = Int32), @p30='?' (DbType = Int32), @p31='?' (DbType = Int32), @p32='?' (DbType = Int32), @p33='?' (DbType = DateTime2), @p34='?' (DbType = Int32), @p35='?' (DbType = Int32), @p36='?' (DbType = Int32), @p37='?' (DbType = Int32), @p38='?' (DbType = Int32), @p39='?' (DbType = Int32), @p40='?' (DbType = DateTime2), @p41='?' (DbType = Int32), @p42='?' (DbType = Int32), @p43='?' (DbType = Int32), @p44='?' (DbType = Int32), @p45='?' (DbType = Int32), @p46='?' (DbType = Int32), @p47='?' (DbType = DateTime2), @p48='?' (DbType = Int32), @p49='?' (DbType = Int32), @p50='?' (DbType = Int32), @p51='?' (DbType = Int32), @p52='?' (DbType = Int32), @p53='?' (DbType = Int32), @p54='?' (DbType = DateTime2), @p55='?' (DbType = Int32), @p56='?' (DbType = Int32), @p57='?' (DbType = Int32), @p58='?' (DbType = Int32), @p59='?' (DbType = Int32), @p60='?' (DbType = Int32), @p61='?' (DbType = DateTime2), @p62='?' (DbType = Int32), @p63='?' (DbType = Int32), @p64='?' (DbType = Int32), @p65='?' (DbType = Int32), @p66='?' (DbType = Int32), @p67='?' (DbType = Int32), @p68='?' (DbType = DateTime2), @p69='?' (DbType = Int32), @p70='?' (DbType = Int32), @p71='?' (DbType = Int32), @p72='?' (DbType = Int32), @p73='?' (DbType = Int32), @p74='?' (DbType = Int32), @p75='?' (DbType = DateTime2), @p76='?' (DbType = Int32), @p77='?' (DbType = Int32), @p78='?' (DbType = Int32), @p79='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+DELETE FROM [Purchases]
+OUTPUT 1
+WHERE [Id] = @p0;
+DELETE FROM [Purchases]
+OUTPUT 1
+WHERE [Id] = @p1;
+DELETE FROM [Purchases]
+OUTPUT 1
+WHERE [Id] = @p2;
+MERGE [Purchases] USING (
+VALUES (@p3, @p4, @p5, @p6, @p7, @p8, @p9, 0),
+(@p10, @p11, @p12, @p13, @p14, @p15, @p16, 1),
+(@p17, @p18, @p19, @p20, @p21, @p22, @p23, 2),
+(@p24, @p25, @p26, @p27, @p28, @p29, @p30, 3),
+(@p31, @p32, @p33, @p34, @p35, @p36, @p37, 4),
+(@p38, @p39, @p40, @p41, @p42, @p43, @p44, 5),
+(@p45, @p46, @p47, @p48, @p49, @p50, @p51, 6),
+(@p52, @p53, @p54, @p55, @p56, @p57, @p58, 7),
+(@p59, @p60, @p61, @p62, @p63, @p64, @p65, 8),
+(@p66, @p67, @p68, @p69, @p70, @p71, @p72, 9),
+(@p73, @p74, @p75, @p76, @p77, @p78, @p79, 10)) AS i ([BasketId], [BusketId], [Date], [GiftId], [Quantity], [UserId], [basketStatus], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([BasketId], [BusketId], [Date], [GiftId], [Quantity], [UserId], [basketStatus])
+VALUES (i.[BasketId], i.[BusketId], i.[Date], i.[GiftId], i.[Quantity], i.[UserId], i.[basketStatus])
+OUTPUT INSERTED.[Id], i._Position;"
+2026-03-15 17:37:24 [Information] Basket confirmed for userId 1018
+2026-03-15 17:37:24 [Information] Executing "OkObjectResult", writing value of type '"System.String"'.
+2026-03-15 17:37:24 [Information] Executed action "WebApi.Controllers.UserController.ConfirmBasket (WebApi)" in 188.6229ms
+2026-03-15 17:37:24 [Information] Executed endpoint '"WebApi.Controllers.UserController.ConfirmBasket (WebApi)"'
+2026-03-15 17:37:24 [Information] Completed "POST" "/api/User/ConfirmBasket" responded 200 in 210ms
+2026-03-15 17:37:24 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/ConfirmBasket""" - 200 null "text/plain; charset=utf-8" 220.5527ms
+2026-03-15 17:37:30 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-15 17:37:30 [Information] Incoming Request: "OPTIONS" "/api/Gift"
+2026-03-15 17:37:30 [Information] CORS policy execution successful.
+2026-03-15 17:37:30 [Information] Completed "OPTIONS" "/api/Gift" responded 204 in 5ms
+2026-03-15 17:37:30 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - 204 null null 26.6006ms
+2026-03-15 17:37:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-15 17:37:30 [Information] Incoming Request: "GET" "/api/Gift"
+2026-03-15 17:37:30 [Information] CORS policy execution successful.
+2026-03-15 17:37:30 [Information] Executing endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-15 17:37:30 [Information] Route matched with "{action = \"GetAllGift\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.GiftDTO+GiftCategoryDto]]] GetAllGift()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-15 17:37:30 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:37:30 [Information] GetAllGift called
+2026-03-15 17:37:30 [Information] Getting all gifts
+2026-03-15 17:37:30 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Gifts] AS [g]"
+2026-03-15 17:37:30 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-15 17:37:30 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftResponseDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-15 17:37:30 [Information] Executed action "WebApi.Controllers.GiftController.GetAllGift (WebApi)" in 35.9813ms
+2026-03-15 17:37:30 [Information] Executed endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-15 17:37:30 [Information] Completed "GET" "/api/Gift" responded 200 in 52ms
+2026-03-15 17:37:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - 200 null "application/json; charset=utf-8" 68.3396ms
+2026-03-15 17:37:34 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/AddToBasket""" - null null
+2026-03-15 17:37:34 [Information] Incoming Request: "OPTIONS" "/api/User/AddToBasket"
+2026-03-15 17:37:34 [Information] CORS policy execution successful.
+2026-03-15 17:37:34 [Information] Completed "OPTIONS" "/api/User/AddToBasket" responded 204 in 3ms
+2026-03-15 17:37:34 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/AddToBasket""" - 204 null null 11.3742ms
+2026-03-15 17:37:34 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - "application/json" 26
+2026-03-15 17:37:34 [Information] Incoming Request: "POST" "/api/User/AddToBasket"
+2026-03-15 17:37:34 [Information] CORS policy execution successful.
+2026-03-15 17:37:34 [Information] Executing endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-15 17:37:34 [Information] Route matched with "{action = \"AddToBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WebApi.Models.Purchase]] AddToBasket(PurchaseBasketDto)" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-15 17:37:34 [Information] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:37:34 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:37:34 [Information] AddToBasket called for userId 1018 and giftId 29
+2026-03-15 17:37:34 [Information] Executed DbCommand ("1"ms) [Parameters=["@__dto_GiftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+FROM [Gifts] AS [g]
+WHERE [g].[Id] = @__dto_GiftId_0"
+2026-03-15 17:37:34 [Information] Executed DbCommand ("6"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Purchases] ([BasketId], [BusketId], [Date], [GiftId], [Quantity], [UserId], [basketStatus])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);"
+2026-03-15 17:37:34 [Information] Purchase added to basket for userId 1018 and giftId 29
+2026-03-15 17:37:34 [Information] Executing "OkObjectResult", writing value of type '"WebApi.Models.Purchase"'.
+2026-03-15 17:37:34 [Information] Executed action "WebApi.Controllers.UserController.AddToBasket (WebApi)" in 42.1074ms
+2026-03-15 17:37:34 [Information] Executed endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-15 17:37:35 [Information] Completed "POST" "/api/User/AddToBasket" responded 200 in 58ms
+2026-03-15 17:37:35 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - 200 null "application/json; charset=utf-8" 74.829ms
+2026-03-15 17:37:37 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/GetBasket""" - null null
+2026-03-15 17:37:37 [Information] Incoming Request: "OPTIONS" "/api/User/GetBasket"
+2026-03-15 17:37:37 [Information] CORS policy execution successful.
+2026-03-15 17:37:37 [Information] Completed "OPTIONS" "/api/User/GetBasket" responded 204 in 6ms
+2026-03-15 17:37:37 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/GetBasket""" - 204 null null 18.03ms
+2026-03-15 17:37:37 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/User/GetBasket""" - null null
+2026-03-15 17:37:37 [Information] Incoming Request: "GET" "/api/User/GetBasket"
+2026-03-15 17:37:37 [Information] CORS policy execution successful.
+2026-03-15 17:37:37 [Information] Executing endpoint '"WebApi.Controllers.UserController.GetBasket (WebApi)"'
+2026-03-15 17:37:37 [Information] Route matched with "{action = \"GetBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBasket()" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-15 17:37:37 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:37:37 [Information] Fetching basket for userId 1018
+2026-03-15 17:37:37 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[GiftId], [g].[Name] AS [GiftName], [g].[PriceCard] AS [Price], [p].[Quantity], [p].[Date]
+FROM [Purchases] AS [p]
+INNER JOIN [Gifts] AS [g] ON [p].[GiftId] = [g].[Id]
+WHERE [p].[UserId] = @__userId_0 AND [p].[basketStatus] = 0"
+2026-03-15 17:37:37 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-03-15 17:37:37 [Information] Executed action "WebApi.Controllers.UserController.GetBasket (WebApi)" in 15.9608ms
+2026-03-15 17:37:37 [Information] Executed endpoint '"WebApi.Controllers.UserController.GetBasket (WebApi)"'
+2026-03-15 17:37:37 [Information] Completed "GET" "/api/User/GetBasket" responded 200 in 31ms
+2026-03-15 17:37:37 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/User/GetBasket""" - 200 null "application/json; charset=utf-8" 52.1494ms
+2026-03-15 17:38:09 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-15 17:38:09 [Information] Incoming Request: "OPTIONS" "/api/Gift"
+2026-03-15 17:38:09 [Information] CORS policy execution successful.
+2026-03-15 17:38:09 [Information] Completed "OPTIONS" "/api/Gift" responded 204 in 2ms
+2026-03-15 17:38:09 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - 204 null null 15.1362ms
+2026-03-15 17:38:09 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-15 17:38:09 [Information] Incoming Request: "GET" "/api/Gift"
+2026-03-15 17:38:09 [Information] CORS policy execution successful.
+2026-03-15 17:38:09 [Information] Executing endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-15 17:38:09 [Information] Route matched with "{action = \"GetAllGift\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.GiftDTO+GiftCategoryDto]]] GetAllGift()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-15 17:38:09 [Information] Executed DbCommand ("25"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:38:09 [Information] GetAllGift called
+2026-03-15 17:38:09 [Information] Getting all gifts
+2026-03-15 17:38:09 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Gifts] AS [g]"
+2026-03-15 17:38:09 [Information] Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-15 17:38:09 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftResponseDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-15 17:38:09 [Information] Executed action "WebApi.Controllers.GiftController.GetAllGift (WebApi)" in 64.6907ms
+2026-03-15 17:38:09 [Information] Executed endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-15 17:38:09 [Information] Completed "GET" "/api/Gift" responded 200 in 81ms
+2026-03-15 17:38:09 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - 200 null "application/json; charset=utf-8" 91.2192ms
+2026-03-15 17:38:13 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/AddToBasket""" - null null
+2026-03-15 17:38:13 [Information] Incoming Request: "OPTIONS" "/api/User/AddToBasket"
+2026-03-15 17:38:13 [Information] CORS policy execution successful.
+2026-03-15 17:38:13 [Information] Completed "OPTIONS" "/api/User/AddToBasket" responded 204 in 3ms
+2026-03-15 17:38:13 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/AddToBasket""" - 204 null null 10.6606ms
+2026-03-15 17:38:13 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - "application/json" 26
+2026-03-15 17:38:13 [Information] Incoming Request: "POST" "/api/User/AddToBasket"
+2026-03-15 17:38:13 [Information] CORS policy execution successful.
+2026-03-15 17:38:13 [Information] Executing endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-15 17:38:13 [Information] Route matched with "{action = \"AddToBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WebApi.Models.Purchase]] AddToBasket(PurchaseBasketDto)" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-15 17:38:13 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:38:13 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:38:13 [Information] AddToBasket called for userId 1018 and giftId 23
+2026-03-15 17:38:13 [Information] Executed DbCommand ("2"ms) [Parameters=["@__dto_GiftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+FROM [Gifts] AS [g]
+WHERE [g].[Id] = @__dto_GiftId_0"
+2026-03-15 17:38:13 [Information] Executed DbCommand ("22"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Purchases] ([BasketId], [BusketId], [Date], [GiftId], [Quantity], [UserId], [basketStatus])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);"
+2026-03-15 17:38:13 [Information] Purchase added to basket for userId 1018 and giftId 23
+2026-03-15 17:38:13 [Information] Executing "OkObjectResult", writing value of type '"WebApi.Models.Purchase"'.
+2026-03-15 17:38:13 [Information] Executed action "WebApi.Controllers.UserController.AddToBasket (WebApi)" in 53.2405ms
+2026-03-15 17:38:13 [Information] Executed endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-15 17:38:13 [Information] Completed "POST" "/api/User/AddToBasket" responded 200 in 68ms
+2026-03-15 17:38:13 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - 200 null "application/json; charset=utf-8" 81.2239ms
+2026-03-15 17:38:14 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/GetBasket""" - null null
+2026-03-15 17:38:14 [Information] Incoming Request: "OPTIONS" "/api/User/GetBasket"
+2026-03-15 17:38:14 [Information] CORS policy execution successful.
+2026-03-15 17:38:14 [Information] Completed "OPTIONS" "/api/User/GetBasket" responded 204 in 4ms
+2026-03-15 17:38:14 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/GetBasket""" - 204 null null 19.9888ms
+2026-03-15 17:38:14 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/User/GetBasket""" - null null
+2026-03-15 17:38:14 [Information] Incoming Request: "GET" "/api/User/GetBasket"
+2026-03-15 17:38:14 [Information] CORS policy execution successful.
+2026-03-15 17:38:14 [Information] Executing endpoint '"WebApi.Controllers.UserController.GetBasket (WebApi)"'
+2026-03-15 17:38:14 [Information] Route matched with "{action = \"GetBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBasket()" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-15 17:38:14 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:38:14 [Information] Fetching basket for userId 1018
+2026-03-15 17:38:15 [Information] Executed DbCommand ("8"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[GiftId], [g].[Name] AS [GiftName], [g].[PriceCard] AS [Price], [p].[Quantity], [p].[Date]
+FROM [Purchases] AS [p]
+INNER JOIN [Gifts] AS [g] ON [p].[GiftId] = [g].[Id]
+WHERE [p].[UserId] = @__userId_0 AND [p].[basketStatus] = 0"
+2026-03-15 17:38:15 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-03-15 17:38:15 [Information] Executed action "WebApi.Controllers.UserController.GetBasket (WebApi)" in 21.8468ms
+2026-03-15 17:38:15 [Information] Executed endpoint '"WebApi.Controllers.UserController.GetBasket (WebApi)"'
+2026-03-15 17:38:15 [Information] Completed "GET" "/api/User/GetBasket" responded 200 in 37ms
+2026-03-15 17:38:15 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/User/GetBasket""" - 200 null "application/json; charset=utf-8" 48.6492ms
+2026-03-15 17:38:20 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-15 17:38:20 [Information] Incoming Request: "OPTIONS" "/api/Gift"
+2026-03-15 17:38:20 [Information] CORS policy execution successful.
+2026-03-15 17:38:20 [Information] Completed "OPTIONS" "/api/Gift" responded 204 in 4ms
+2026-03-15 17:38:20 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - 204 null null 22.8681ms
+2026-03-15 17:38:20 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-15 17:38:20 [Information] Incoming Request: "GET" "/api/Gift"
+2026-03-15 17:38:20 [Information] CORS policy execution successful.
+2026-03-15 17:38:20 [Information] Executing endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-15 17:38:20 [Information] Route matched with "{action = \"GetAllGift\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.GiftDTO+GiftCategoryDto]]] GetAllGift()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-15 17:38:20 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:38:20 [Information] GetAllGift called
+2026-03-15 17:38:20 [Information] Getting all gifts
+2026-03-15 17:38:20 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Gifts] AS [g]"
+2026-03-15 17:38:20 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-15 17:38:20 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftResponseDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-15 17:38:20 [Information] Executed action "WebApi.Controllers.GiftController.GetAllGift (WebApi)" in 24.1623ms
+2026-03-15 17:38:20 [Information] Executed endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-15 17:38:20 [Information] Completed "GET" "/api/Gift" responded 200 in 38ms
+2026-03-15 17:38:20 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - 200 null "application/json; charset=utf-8" 51.5022ms
+2026-03-15 17:38:31 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Auth/Login""" - null null
+2026-03-15 17:38:31 [Information] Incoming Request: "OPTIONS" "/api/Auth/Login"
+2026-03-15 17:38:31 [Information] CORS policy execution successful.
+2026-03-15 17:38:31 [Information] Completed "OPTIONS" "/api/Auth/Login" responded 204 in 6ms
+2026-03-15 17:38:31 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Auth/Login""" - 204 null null 15.477ms
+2026-03-15 17:38:31 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - "application/json" 45
+2026-03-15 17:38:31 [Information] Incoming Request: "POST" "/api/Auth/Login"
+2026-03-15 17:38:31 [Information] CORS policy execution successful.
+2026-03-15 17:38:31 [Information] Executing endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-15 17:38:31 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginRequestDto)" on controller "WebApi.Controllers.AuthController" ("WebApi").
+2026-03-15 17:38:31 [Information] Login called for user "יעלי"
+2026-03-15 17:38:31 [Information] User login attempt: "יעלי"
+2026-03-15 17:38:31 [Information] Executed DbCommand ("7"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__userName_0"
+2026-03-15 17:38:31 [Information] User "יעלי" logged in successfully
+2026-03-15 17:38:31 [Information] Executing "OkObjectResult", writing value of type '"WebApi.DTOs.UserDTO+LoginResponseDto"'.
+2026-03-15 17:38:31 [Information] Executed action "WebApi.Controllers.AuthController.Login (WebApi)" in 21.1302ms
+2026-03-15 17:38:31 [Information] Executed endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-15 17:38:31 [Information] Completed "POST" "/api/Auth/Login" responded 200 in 34ms
+2026-03-15 17:38:31 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - 200 null "application/json; charset=utf-8" 46.1545ms
+2026-03-15 17:38:31 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-15 17:38:31 [Information] Incoming Request: "OPTIONS" "/api/Gift"
+2026-03-15 17:38:31 [Information] CORS policy execution successful.
+2026-03-15 17:38:31 [Information] Completed "OPTIONS" "/api/Gift" responded 204 in 3ms
+2026-03-15 17:38:31 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - 204 null null 11.0103ms
+2026-03-15 17:38:31 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-15 17:38:31 [Information] Incoming Request: "GET" "/api/Gift"
+2026-03-15 17:38:31 [Information] CORS policy execution successful.
+2026-03-15 17:38:31 [Information] Executing endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-15 17:38:31 [Information] Route matched with "{action = \"GetAllGift\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.GiftDTO+GiftCategoryDto]]] GetAllGift()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-15 17:38:31 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:38:31 [Information] GetAllGift called
+2026-03-15 17:38:31 [Information] Getting all gifts
+2026-03-15 17:38:31 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Gifts] AS [g]"
+2026-03-15 17:38:31 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-15 17:38:31 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftResponseDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-15 17:38:31 [Information] Executed action "WebApi.Controllers.GiftController.GetAllGift (WebApi)" in 31.4857ms
+2026-03-15 17:38:31 [Information] Executed endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-15 17:38:31 [Information] Completed "GET" "/api/Gift" responded 200 in 48ms
+2026-03-15 17:38:31 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - 200 null "application/json; charset=utf-8" 62.2611ms
+2026-03-15 17:38:35 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift/drawAllWinners""" - null null
+2026-03-15 17:38:35 [Information] Incoming Request: "OPTIONS" "/api/Gift/drawAllWinners"
+2026-03-15 17:38:35 [Information] CORS policy execution successful.
+2026-03-15 17:38:35 [Information] Completed "OPTIONS" "/api/Gift/drawAllWinners" responded 204 in 3ms
+2026-03-15 17:38:35 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift/drawAllWinners""" - 204 null null 15.5753ms
+2026-03-15 17:38:35 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/Gift/drawAllWinners""" - "application/json" 2
+2026-03-15 17:38:35 [Information] Incoming Request: "POST" "/api/Gift/drawAllWinners"
+2026-03-15 17:38:35 [Information] CORS policy execution successful.
+2026-03-15 17:38:35 [Information] Executing endpoint '"WebApi.Controllers.GiftController.DrawAllWinners (WebApi)"'
+2026-03-15 17:38:35 [Information] Route matched with "{action = \"DrawAllWinners\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DrawAllWinners()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-15 17:38:35 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:38:35 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Gifts] AS [g]"
+2026-03-15 17:38:35 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-15 17:38:36 [Information] Executed DbCommand ("16"ms) [Parameters=["@__giftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [g0].[Id], [g0].[CategoryId], [g0].[Description], [g0].[DonorId], [g0].[IsRandom], [g0].[Name], [g0].[PictureId], [g0].[PriceCard], [g0].[Quantity], [g0].[WinnerName], [s].[Id], [s].[BasketId], [s].[BusketId], [s].[Date], [s].[GiftId], [s].[Quantity], [s].[UserId], [s].[basketStatus], [s].[Id0], [s].[BuildingNumber], [s].[City], [s].[Email], [s].[FirstName], [s].[LastName], [s].[Password], [s].[Phone], [s].[Role], [s].[Street], [s].[UserName]
+FROM (
+    SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+    FROM [Gifts] AS [g]
+    WHERE [g].[Id] = @__giftId_0
+) AS [g0]
+LEFT JOIN (
+    SELECT [p].[Id], [p].[BasketId], [p].[BusketId], [p].[Date], [p].[GiftId], [p].[Quantity], [p].[UserId], [p].[basketStatus], [u].[Id] AS [Id0], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+    FROM [Purchases] AS [p]
+    INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+) AS [s] ON [g0].[Id] = [s].[GiftId]
+ORDER BY [g0].[Id], [s].[Id]"
+2026-03-15 17:38:36 [Information] Executed DbCommand ("1"ms) [Parameters=["@__giftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [g0].[Id], [g0].[CategoryId], [g0].[Description], [g0].[DonorId], [g0].[IsRandom], [g0].[Name], [g0].[PictureId], [g0].[PriceCard], [g0].[Quantity], [g0].[WinnerName], [s].[Id], [s].[BasketId], [s].[BusketId], [s].[Date], [s].[GiftId], [s].[Quantity], [s].[UserId], [s].[basketStatus], [s].[Id0], [s].[BuildingNumber], [s].[City], [s].[Email], [s].[FirstName], [s].[LastName], [s].[Password], [s].[Phone], [s].[Role], [s].[Street], [s].[UserName]
+FROM (
+    SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+    FROM [Gifts] AS [g]
+    WHERE [g].[Id] = @__giftId_0
+) AS [g0]
+LEFT JOIN (
+    SELECT [p].[Id], [p].[BasketId], [p].[BusketId], [p].[Date], [p].[GiftId], [p].[Quantity], [p].[UserId], [p].[basketStatus], [u].[Id] AS [Id0], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+    FROM [Purchases] AS [p]
+    INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+) AS [s] ON [g0].[Id] = [s].[GiftId]
+ORDER BY [g0].[Id], [s].[Id]"
+2026-03-15 17:38:36 [Information] Executed DbCommand ("1"ms) [Parameters=["@__giftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [g0].[Id], [g0].[CategoryId], [g0].[Description], [g0].[DonorId], [g0].[IsRandom], [g0].[Name], [g0].[PictureId], [g0].[PriceCard], [g0].[Quantity], [g0].[WinnerName], [s].[Id], [s].[BasketId], [s].[BusketId], [s].[Date], [s].[GiftId], [s].[Quantity], [s].[UserId], [s].[basketStatus], [s].[Id0], [s].[BuildingNumber], [s].[City], [s].[Email], [s].[FirstName], [s].[LastName], [s].[Password], [s].[Phone], [s].[Role], [s].[Street], [s].[UserName]
+FROM (
+    SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+    FROM [Gifts] AS [g]
+    WHERE [g].[Id] = @__giftId_0
+) AS [g0]
+LEFT JOIN (
+    SELECT [p].[Id], [p].[BasketId], [p].[BusketId], [p].[Date], [p].[GiftId], [p].[Quantity], [p].[UserId], [p].[basketStatus], [u].[Id] AS [Id0], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+    FROM [Purchases] AS [p]
+    INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+) AS [s] ON [g0].[Id] = [s].[GiftId]
+ORDER BY [g0].[Id], [s].[Id]"
+2026-03-15 17:38:36 [Information] Executed DbCommand ("1"ms) [Parameters=["@__giftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [g0].[Id], [g0].[CategoryId], [g0].[Description], [g0].[DonorId], [g0].[IsRandom], [g0].[Name], [g0].[PictureId], [g0].[PriceCard], [g0].[Quantity], [g0].[WinnerName], [s].[Id], [s].[BasketId], [s].[BusketId], [s].[Date], [s].[GiftId], [s].[Quantity], [s].[UserId], [s].[basketStatus], [s].[Id0], [s].[BuildingNumber], [s].[City], [s].[Email], [s].[FirstName], [s].[LastName], [s].[Password], [s].[Phone], [s].[Role], [s].[Street], [s].[UserName]
+FROM (
+    SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+    FROM [Gifts] AS [g]
+    WHERE [g].[Id] = @__giftId_0
+) AS [g0]
+LEFT JOIN (
+    SELECT [p].[Id], [p].[BasketId], [p].[BusketId], [p].[Date], [p].[GiftId], [p].[Quantity], [p].[UserId], [p].[basketStatus], [u].[Id] AS [Id0], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+    FROM [Purchases] AS [p]
+    INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+) AS [s] ON [g0].[Id] = [s].[GiftId]
+ORDER BY [g0].[Id], [s].[Id]"
+2026-03-15 17:38:36 [Information] Executed DbCommand ("1"ms) [Parameters=["@__giftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [g0].[Id], [g0].[CategoryId], [g0].[Description], [g0].[DonorId], [g0].[IsRandom], [g0].[Name], [g0].[PictureId], [g0].[PriceCard], [g0].[Quantity], [g0].[WinnerName], [s].[Id], [s].[BasketId], [s].[BusketId], [s].[Date], [s].[GiftId], [s].[Quantity], [s].[UserId], [s].[basketStatus], [s].[Id0], [s].[BuildingNumber], [s].[City], [s].[Email], [s].[FirstName], [s].[LastName], [s].[Password], [s].[Phone], [s].[Role], [s].[Street], [s].[UserName]
+FROM (
+    SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+    FROM [Gifts] AS [g]
+    WHERE [g].[Id] = @__giftId_0
+) AS [g0]
+LEFT JOIN (
+    SELECT [p].[Id], [p].[BasketId], [p].[BusketId], [p].[Date], [p].[GiftId], [p].[Quantity], [p].[UserId], [p].[basketStatus], [u].[Id] AS [Id0], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+    FROM [Purchases] AS [p]
+    INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+) AS [s] ON [g0].[Id] = [s].[GiftId]
+ORDER BY [g0].[Id], [s].[Id]"
+2026-03-15 17:38:36 [Information] Executed DbCommand ("0"ms) [Parameters=["@__giftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [g0].[Id], [g0].[CategoryId], [g0].[Description], [g0].[DonorId], [g0].[IsRandom], [g0].[Name], [g0].[PictureId], [g0].[PriceCard], [g0].[Quantity], [g0].[WinnerName], [s].[Id], [s].[BasketId], [s].[BusketId], [s].[Date], [s].[GiftId], [s].[Quantity], [s].[UserId], [s].[basketStatus], [s].[Id0], [s].[BuildingNumber], [s].[City], [s].[Email], [s].[FirstName], [s].[LastName], [s].[Password], [s].[Phone], [s].[Role], [s].[Street], [s].[UserName]
+FROM (
+    SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+    FROM [Gifts] AS [g]
+    WHERE [g].[Id] = @__giftId_0
+) AS [g0]
+LEFT JOIN (
+    SELECT [p].[Id], [p].[BasketId], [p].[BusketId], [p].[Date], [p].[GiftId], [p].[Quantity], [p].[UserId], [p].[basketStatus], [u].[Id] AS [Id0], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+    FROM [Purchases] AS [p]
+    INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+) AS [s] ON [g0].[Id] = [s].[GiftId]
+ORDER BY [g0].[Id], [s].[Id]"
+2026-03-15 17:38:36 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftWinnerDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-15 17:38:36 [Information] Executed action "WebApi.Controllers.GiftController.DrawAllWinners (WebApi)" in 201.3619ms
+2026-03-15 17:38:36 [Information] Executed endpoint '"WebApi.Controllers.GiftController.DrawAllWinners (WebApi)"'
+2026-03-15 17:38:36 [Information] Completed "POST" "/api/Gift/drawAllWinners" responded 200 in 215ms
+2026-03-15 17:38:36 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/Gift/drawAllWinners""" - 200 null "application/json; charset=utf-8" 227.4394ms
+2026-03-15 17:46:22 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-15 17:46:22 [Information] Incoming Request: "OPTIONS" "/api/Gift"
+2026-03-15 17:46:22 [Information] CORS policy execution successful.
+2026-03-15 17:46:22 [Information] Completed "OPTIONS" "/api/Gift" responded 204 in 3ms
+2026-03-15 17:46:22 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - 204 null null 10.7286ms
+2026-03-15 17:46:22 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-15 17:46:22 [Information] Incoming Request: "GET" "/api/Gift"
+2026-03-15 17:46:22 [Information] CORS policy execution successful.
+2026-03-15 17:46:22 [Information] Executing endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-15 17:46:22 [Information] Route matched with "{action = \"GetAllGift\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.GiftDTO+GiftCategoryDto]]] GetAllGift()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-15 17:46:22 [Information] Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:46:22 [Information] GetAllGift called
+2026-03-15 17:46:22 [Information] Getting all gifts
+2026-03-15 17:46:22 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Gifts] AS [g]"
+2026-03-15 17:46:22 [Information] Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-15 17:46:22 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftResponseDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-15 17:46:22 [Information] Executed action "WebApi.Controllers.GiftController.GetAllGift (WebApi)" in 52.2647ms
+2026-03-15 17:46:22 [Information] Executed endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-15 17:46:22 [Information] Completed "GET" "/api/Gift" responded 200 in 63ms
+2026-03-15 17:46:22 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - 200 null "application/json; charset=utf-8" 71.0869ms
+2026-03-15 17:46:25 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift/drawAllWinners""" - null null
+2026-03-15 17:46:25 [Information] Incoming Request: "OPTIONS" "/api/Gift/drawAllWinners"
+2026-03-15 17:46:25 [Information] CORS policy execution successful.
+2026-03-15 17:46:25 [Information] Completed "OPTIONS" "/api/Gift/drawAllWinners" responded 204 in 3ms
+2026-03-15 17:46:25 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift/drawAllWinners""" - 204 null null 14.2076ms
+2026-03-15 17:46:25 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/Gift/drawAllWinners""" - "application/json" 2
+2026-03-15 17:46:25 [Information] Incoming Request: "POST" "/api/Gift/drawAllWinners"
+2026-03-15 17:46:25 [Information] CORS policy execution successful.
+2026-03-15 17:46:25 [Information] Executing endpoint '"WebApi.Controllers.GiftController.DrawAllWinners (WebApi)"'
+2026-03-15 17:46:25 [Information] Route matched with "{action = \"DrawAllWinners\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DrawAllWinners()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-15 17:46:25 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:46:25 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Gifts] AS [g]"
+2026-03-15 17:46:25 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-15 17:46:25 [Information] Executed DbCommand ("23"ms) [Parameters=["@__giftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [g0].[Id], [g0].[CategoryId], [g0].[Description], [g0].[DonorId], [g0].[IsRandom], [g0].[Name], [g0].[PictureId], [g0].[PriceCard], [g0].[Quantity], [g0].[WinnerName], [s].[Id], [s].[BasketId], [s].[BusketId], [s].[Date], [s].[GiftId], [s].[Quantity], [s].[UserId], [s].[basketStatus], [s].[Id0], [s].[BuildingNumber], [s].[City], [s].[Email], [s].[FirstName], [s].[LastName], [s].[Password], [s].[Phone], [s].[Role], [s].[Street], [s].[UserName]
+FROM (
+    SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+    FROM [Gifts] AS [g]
+    WHERE [g].[Id] = @__giftId_0
+) AS [g0]
+LEFT JOIN (
+    SELECT [p].[Id], [p].[BasketId], [p].[BusketId], [p].[Date], [p].[GiftId], [p].[Quantity], [p].[UserId], [p].[basketStatus], [u].[Id] AS [Id0], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+    FROM [Purchases] AS [p]
+    INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+) AS [s] ON [g0].[Id] = [s].[GiftId]
+ORDER BY [g0].[Id], [s].[Id]"
+2026-03-15 17:46:25 [Information] Executed DbCommand ("1"ms) [Parameters=["@__giftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [g0].[Id], [g0].[CategoryId], [g0].[Description], [g0].[DonorId], [g0].[IsRandom], [g0].[Name], [g0].[PictureId], [g0].[PriceCard], [g0].[Quantity], [g0].[WinnerName], [s].[Id], [s].[BasketId], [s].[BusketId], [s].[Date], [s].[GiftId], [s].[Quantity], [s].[UserId], [s].[basketStatus], [s].[Id0], [s].[BuildingNumber], [s].[City], [s].[Email], [s].[FirstName], [s].[LastName], [s].[Password], [s].[Phone], [s].[Role], [s].[Street], [s].[UserName]
+FROM (
+    SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+    FROM [Gifts] AS [g]
+    WHERE [g].[Id] = @__giftId_0
+) AS [g0]
+LEFT JOIN (
+    SELECT [p].[Id], [p].[BasketId], [p].[BusketId], [p].[Date], [p].[GiftId], [p].[Quantity], [p].[UserId], [p].[basketStatus], [u].[Id] AS [Id0], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+    FROM [Purchases] AS [p]
+    INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+) AS [s] ON [g0].[Id] = [s].[GiftId]
+ORDER BY [g0].[Id], [s].[Id]"
+2026-03-15 17:46:25 [Information] Executed DbCommand ("1"ms) [Parameters=["@__giftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [g0].[Id], [g0].[CategoryId], [g0].[Description], [g0].[DonorId], [g0].[IsRandom], [g0].[Name], [g0].[PictureId], [g0].[PriceCard], [g0].[Quantity], [g0].[WinnerName], [s].[Id], [s].[BasketId], [s].[BusketId], [s].[Date], [s].[GiftId], [s].[Quantity], [s].[UserId], [s].[basketStatus], [s].[Id0], [s].[BuildingNumber], [s].[City], [s].[Email], [s].[FirstName], [s].[LastName], [s].[Password], [s].[Phone], [s].[Role], [s].[Street], [s].[UserName]
+FROM (
+    SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+    FROM [Gifts] AS [g]
+    WHERE [g].[Id] = @__giftId_0
+) AS [g0]
+LEFT JOIN (
+    SELECT [p].[Id], [p].[BasketId], [p].[BusketId], [p].[Date], [p].[GiftId], [p].[Quantity], [p].[UserId], [p].[basketStatus], [u].[Id] AS [Id0], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+    FROM [Purchases] AS [p]
+    INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+) AS [s] ON [g0].[Id] = [s].[GiftId]
+ORDER BY [g0].[Id], [s].[Id]"
+2026-03-15 17:46:25 [Information] Executed DbCommand ("1"ms) [Parameters=["@__giftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [g0].[Id], [g0].[CategoryId], [g0].[Description], [g0].[DonorId], [g0].[IsRandom], [g0].[Name], [g0].[PictureId], [g0].[PriceCard], [g0].[Quantity], [g0].[WinnerName], [s].[Id], [s].[BasketId], [s].[BusketId], [s].[Date], [s].[GiftId], [s].[Quantity], [s].[UserId], [s].[basketStatus], [s].[Id0], [s].[BuildingNumber], [s].[City], [s].[Email], [s].[FirstName], [s].[LastName], [s].[Password], [s].[Phone], [s].[Role], [s].[Street], [s].[UserName]
+FROM (
+    SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+    FROM [Gifts] AS [g]
+    WHERE [g].[Id] = @__giftId_0
+) AS [g0]
+LEFT JOIN (
+    SELECT [p].[Id], [p].[BasketId], [p].[BusketId], [p].[Date], [p].[GiftId], [p].[Quantity], [p].[UserId], [p].[basketStatus], [u].[Id] AS [Id0], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+    FROM [Purchases] AS [p]
+    INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+) AS [s] ON [g0].[Id] = [s].[GiftId]
+ORDER BY [g0].[Id], [s].[Id]"
+2026-03-15 17:46:25 [Information] Executed DbCommand ("1"ms) [Parameters=["@__giftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [g0].[Id], [g0].[CategoryId], [g0].[Description], [g0].[DonorId], [g0].[IsRandom], [g0].[Name], [g0].[PictureId], [g0].[PriceCard], [g0].[Quantity], [g0].[WinnerName], [s].[Id], [s].[BasketId], [s].[BusketId], [s].[Date], [s].[GiftId], [s].[Quantity], [s].[UserId], [s].[basketStatus], [s].[Id0], [s].[BuildingNumber], [s].[City], [s].[Email], [s].[FirstName], [s].[LastName], [s].[Password], [s].[Phone], [s].[Role], [s].[Street], [s].[UserName]
+FROM (
+    SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+    FROM [Gifts] AS [g]
+    WHERE [g].[Id] = @__giftId_0
+) AS [g0]
+LEFT JOIN (
+    SELECT [p].[Id], [p].[BasketId], [p].[BusketId], [p].[Date], [p].[GiftId], [p].[Quantity], [p].[UserId], [p].[basketStatus], [u].[Id] AS [Id0], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+    FROM [Purchases] AS [p]
+    INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+) AS [s] ON [g0].[Id] = [s].[GiftId]
+ORDER BY [g0].[Id], [s].[Id]"
+2026-03-15 17:46:25 [Information] Executed DbCommand ("1"ms) [Parameters=["@__giftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [g0].[Id], [g0].[CategoryId], [g0].[Description], [g0].[DonorId], [g0].[IsRandom], [g0].[Name], [g0].[PictureId], [g0].[PriceCard], [g0].[Quantity], [g0].[WinnerName], [s].[Id], [s].[BasketId], [s].[BusketId], [s].[Date], [s].[GiftId], [s].[Quantity], [s].[UserId], [s].[basketStatus], [s].[Id0], [s].[BuildingNumber], [s].[City], [s].[Email], [s].[FirstName], [s].[LastName], [s].[Password], [s].[Phone], [s].[Role], [s].[Street], [s].[UserName]
+FROM (
+    SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+    FROM [Gifts] AS [g]
+    WHERE [g].[Id] = @__giftId_0
+) AS [g0]
+LEFT JOIN (
+    SELECT [p].[Id], [p].[BasketId], [p].[BusketId], [p].[Date], [p].[GiftId], [p].[Quantity], [p].[UserId], [p].[basketStatus], [u].[Id] AS [Id0], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+    FROM [Purchases] AS [p]
+    INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+) AS [s] ON [g0].[Id] = [s].[GiftId]
+ORDER BY [g0].[Id], [s].[Id]"
+2026-03-15 17:46:25 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftWinnerDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-15 17:46:25 [Information] Executed action "WebApi.Controllers.GiftController.DrawAllWinners (WebApi)" in 86.8255ms
+2026-03-15 17:46:25 [Information] Executed endpoint '"WebApi.Controllers.GiftController.DrawAllWinners (WebApi)"'
+2026-03-15 17:46:25 [Information] Completed "POST" "/api/Gift/drawAllWinners" responded 200 in 106ms
+2026-03-15 17:46:25 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/Gift/drawAllWinners""" - 200 null "application/json; charset=utf-8" 130.307ms
+2026-03-15 17:56:55 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/index.html""" - null null
+2026-03-15 17:56:55 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 72.2566ms
+2026-03-15 17:56:55 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-15 17:56:55 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/_vs/browserLink""" - null null
+2026-03-15 17:56:55 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/_framework/aspnetcore-browser-refresh.js""" - 200 16497 "application/javascript; charset=utf-8" 20.7047ms
+2026-03-15 17:56:55 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 44.082ms
+2026-03-15 17:56:55 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/v1/swagger.json""" - null null
+2026-03-15 17:56:56 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 100.0891ms
+2026-03-15 17:57:02 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/index.html""" - null null
+2026-03-15 17:57:02 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 14.1131ms
+2026-03-15 17:57:02 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-15 17:57:02 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/_vs/browserLink""" - null null
+2026-03-15 17:57:02 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/_framework/aspnetcore-browser-refresh.js""" - 200 16497 "application/javascript; charset=utf-8" 6.135ms
+2026-03-15 17:57:02 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 29.5008ms
+2026-03-15 17:57:02 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/v1/swagger.json""" - null null
+2026-03-15 17:57:02 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 32.5927ms
+2026-03-15 17:58:12 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Auth/Login""" - null null
+2026-03-15 17:58:12 [Information] Incoming Request: "OPTIONS" "/api/Auth/Login"
+2026-03-15 17:58:12 [Information] CORS policy execution successful.
+2026-03-15 17:58:12 [Information] Completed "OPTIONS" "/api/Auth/Login" responded 204 in 6ms
+2026-03-15 17:58:12 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Auth/Login""" - 204 null null 21.4056ms
+2026-03-15 17:58:12 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - "application/json" 45
+2026-03-15 17:58:12 [Information] Incoming Request: "POST" "/api/Auth/Login"
+2026-03-15 17:58:12 [Information] CORS policy execution successful.
+2026-03-15 17:58:12 [Information] Executing endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-15 17:58:12 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginRequestDto)" on controller "WebApi.Controllers.AuthController" ("WebApi").
+2026-03-15 17:58:12 [Information] Login called for user "יעלי"
+2026-03-15 17:58:12 [Information] User login attempt: "יעלי"
+2026-03-15 17:58:12 [Information] Executed DbCommand ("27"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__userName_0"
+2026-03-15 17:58:12 [Information] User "יעלי" logged in successfully
+2026-03-15 17:58:12 [Information] Executing "OkObjectResult", writing value of type '"WebApi.DTOs.UserDTO+LoginResponseDto"'.
+2026-03-15 17:58:12 [Information] Executed action "WebApi.Controllers.AuthController.Login (WebApi)" in 81.7107ms
+2026-03-15 17:58:12 [Information] Executed endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-15 17:58:12 [Information] Completed "POST" "/api/Auth/Login" responded 200 in 102ms
+2026-03-15 17:58:12 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - 200 null "application/json; charset=utf-8" 121.1746ms
+2026-03-15 17:58:12 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-15 17:58:12 [Information] Incoming Request: "OPTIONS" "/api/Gift"
+2026-03-15 17:58:12 [Information] CORS policy execution successful.
+2026-03-15 17:58:12 [Information] Completed "OPTIONS" "/api/Gift" responded 204 in 2ms
+2026-03-15 17:58:12 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - 204 null null 12.8357ms
+2026-03-15 17:58:12 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-15 17:58:12 [Information] Incoming Request: "GET" "/api/Gift"
+2026-03-15 17:58:12 [Information] CORS policy execution successful.
+2026-03-15 17:58:12 [Information] Executing endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-15 17:58:12 [Information] Route matched with "{action = \"GetAllGift\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.GiftDTO+GiftCategoryDto]]] GetAllGift()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-15 17:58:12 [Information] Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:58:12 [Information] GetAllGift called
+2026-03-15 17:58:12 [Information] Getting all gifts
+2026-03-15 17:58:12 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Gifts] AS [g]"
+2026-03-15 17:58:12 [Information] Executed DbCommand ("20"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-15 17:58:12 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftResponseDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-15 17:58:12 [Information] Executed action "WebApi.Controllers.GiftController.GetAllGift (WebApi)" in 60.0785ms
+2026-03-15 17:58:12 [Information] Executed endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-15 17:58:12 [Information] Completed "GET" "/api/Gift" responded 200 in 75ms
+2026-03-15 17:58:12 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - 200 null "application/json; charset=utf-8" 88.9236ms
+2026-03-15 17:58:17 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift/drawAllWinners""" - null null
+2026-03-15 17:58:17 [Information] Incoming Request: "OPTIONS" "/api/Gift/drawAllWinners"
+2026-03-15 17:58:17 [Information] CORS policy execution successful.
+2026-03-15 17:58:17 [Information] Completed "OPTIONS" "/api/Gift/drawAllWinners" responded 204 in 3ms
+2026-03-15 17:58:17 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift/drawAllWinners""" - 204 null null 15.8129ms
+2026-03-15 17:58:17 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/Gift/drawAllWinners""" - "application/json" 2
+2026-03-15 17:58:17 [Information] Incoming Request: "POST" "/api/Gift/drawAllWinners"
+2026-03-15 17:58:17 [Information] CORS policy execution successful.
+2026-03-15 17:58:17 [Information] Executing endpoint '"WebApi.Controllers.GiftController.DrawAllWinners (WebApi)"'
+2026-03-15 17:58:17 [Information] Route matched with "{action = \"DrawAllWinners\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DrawAllWinners()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-15 17:58:17 [Information] Executed DbCommand ("17"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:58:17 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Gifts] AS [g]"
+2026-03-15 17:58:17 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-15 17:58:17 [Information] Executed DbCommand ("20"ms) [Parameters=["@__giftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [g0].[Id], [g0].[CategoryId], [g0].[Description], [g0].[DonorId], [g0].[IsRandom], [g0].[Name], [g0].[PictureId], [g0].[PriceCard], [g0].[Quantity], [g0].[WinnerName], [s].[Id], [s].[BasketId], [s].[BusketId], [s].[Date], [s].[GiftId], [s].[Quantity], [s].[UserId], [s].[basketStatus], [s].[Id0], [s].[BuildingNumber], [s].[City], [s].[Email], [s].[FirstName], [s].[LastName], [s].[Password], [s].[Phone], [s].[Role], [s].[Street], [s].[UserName]
+FROM (
+    SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+    FROM [Gifts] AS [g]
+    WHERE [g].[Id] = @__giftId_0
+) AS [g0]
+LEFT JOIN (
+    SELECT [p].[Id], [p].[BasketId], [p].[BusketId], [p].[Date], [p].[GiftId], [p].[Quantity], [p].[UserId], [p].[basketStatus], [u].[Id] AS [Id0], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+    FROM [Purchases] AS [p]
+    INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+) AS [s] ON [g0].[Id] = [s].[GiftId]
+ORDER BY [g0].[Id], [s].[Id]"
+2026-03-15 17:58:17 [Information] Executed DbCommand ("1"ms) [Parameters=["@__giftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [g0].[Id], [g0].[CategoryId], [g0].[Description], [g0].[DonorId], [g0].[IsRandom], [g0].[Name], [g0].[PictureId], [g0].[PriceCard], [g0].[Quantity], [g0].[WinnerName], [s].[Id], [s].[BasketId], [s].[BusketId], [s].[Date], [s].[GiftId], [s].[Quantity], [s].[UserId], [s].[basketStatus], [s].[Id0], [s].[BuildingNumber], [s].[City], [s].[Email], [s].[FirstName], [s].[LastName], [s].[Password], [s].[Phone], [s].[Role], [s].[Street], [s].[UserName]
+FROM (
+    SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+    FROM [Gifts] AS [g]
+    WHERE [g].[Id] = @__giftId_0
+) AS [g0]
+LEFT JOIN (
+    SELECT [p].[Id], [p].[BasketId], [p].[BusketId], [p].[Date], [p].[GiftId], [p].[Quantity], [p].[UserId], [p].[basketStatus], [u].[Id] AS [Id0], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+    FROM [Purchases] AS [p]
+    INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+) AS [s] ON [g0].[Id] = [s].[GiftId]
+ORDER BY [g0].[Id], [s].[Id]"
+2026-03-15 17:58:17 [Information] Executed DbCommand ("1"ms) [Parameters=["@__giftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [g0].[Id], [g0].[CategoryId], [g0].[Description], [g0].[DonorId], [g0].[IsRandom], [g0].[Name], [g0].[PictureId], [g0].[PriceCard], [g0].[Quantity], [g0].[WinnerName], [s].[Id], [s].[BasketId], [s].[BusketId], [s].[Date], [s].[GiftId], [s].[Quantity], [s].[UserId], [s].[basketStatus], [s].[Id0], [s].[BuildingNumber], [s].[City], [s].[Email], [s].[FirstName], [s].[LastName], [s].[Password], [s].[Phone], [s].[Role], [s].[Street], [s].[UserName]
+FROM (
+    SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+    FROM [Gifts] AS [g]
+    WHERE [g].[Id] = @__giftId_0
+) AS [g0]
+LEFT JOIN (
+    SELECT [p].[Id], [p].[BasketId], [p].[BusketId], [p].[Date], [p].[GiftId], [p].[Quantity], [p].[UserId], [p].[basketStatus], [u].[Id] AS [Id0], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+    FROM [Purchases] AS [p]
+    INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+) AS [s] ON [g0].[Id] = [s].[GiftId]
+ORDER BY [g0].[Id], [s].[Id]"
+2026-03-15 17:58:17 [Information] Executed DbCommand ("1"ms) [Parameters=["@__giftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [g0].[Id], [g0].[CategoryId], [g0].[Description], [g0].[DonorId], [g0].[IsRandom], [g0].[Name], [g0].[PictureId], [g0].[PriceCard], [g0].[Quantity], [g0].[WinnerName], [s].[Id], [s].[BasketId], [s].[BusketId], [s].[Date], [s].[GiftId], [s].[Quantity], [s].[UserId], [s].[basketStatus], [s].[Id0], [s].[BuildingNumber], [s].[City], [s].[Email], [s].[FirstName], [s].[LastName], [s].[Password], [s].[Phone], [s].[Role], [s].[Street], [s].[UserName]
+FROM (
+    SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+    FROM [Gifts] AS [g]
+    WHERE [g].[Id] = @__giftId_0
+) AS [g0]
+LEFT JOIN (
+    SELECT [p].[Id], [p].[BasketId], [p].[BusketId], [p].[Date], [p].[GiftId], [p].[Quantity], [p].[UserId], [p].[basketStatus], [u].[Id] AS [Id0], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+    FROM [Purchases] AS [p]
+    INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+) AS [s] ON [g0].[Id] = [s].[GiftId]
+ORDER BY [g0].[Id], [s].[Id]"
+2026-03-15 17:58:17 [Information] Executed DbCommand ("3"ms) [Parameters=["@__giftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [g0].[Id], [g0].[CategoryId], [g0].[Description], [g0].[DonorId], [g0].[IsRandom], [g0].[Name], [g0].[PictureId], [g0].[PriceCard], [g0].[Quantity], [g0].[WinnerName], [s].[Id], [s].[BasketId], [s].[BusketId], [s].[Date], [s].[GiftId], [s].[Quantity], [s].[UserId], [s].[basketStatus], [s].[Id0], [s].[BuildingNumber], [s].[City], [s].[Email], [s].[FirstName], [s].[LastName], [s].[Password], [s].[Phone], [s].[Role], [s].[Street], [s].[UserName]
+FROM (
+    SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+    FROM [Gifts] AS [g]
+    WHERE [g].[Id] = @__giftId_0
+) AS [g0]
+LEFT JOIN (
+    SELECT [p].[Id], [p].[BasketId], [p].[BusketId], [p].[Date], [p].[GiftId], [p].[Quantity], [p].[UserId], [p].[basketStatus], [u].[Id] AS [Id0], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+    FROM [Purchases] AS [p]
+    INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+) AS [s] ON [g0].[Id] = [s].[GiftId]
+ORDER BY [g0].[Id], [s].[Id]"
+2026-03-15 17:58:17 [Information] Executed DbCommand ("1"ms) [Parameters=["@__giftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [g0].[Id], [g0].[CategoryId], [g0].[Description], [g0].[DonorId], [g0].[IsRandom], [g0].[Name], [g0].[PictureId], [g0].[PriceCard], [g0].[Quantity], [g0].[WinnerName], [s].[Id], [s].[BasketId], [s].[BusketId], [s].[Date], [s].[GiftId], [s].[Quantity], [s].[UserId], [s].[basketStatus], [s].[Id0], [s].[BuildingNumber], [s].[City], [s].[Email], [s].[FirstName], [s].[LastName], [s].[Password], [s].[Phone], [s].[Role], [s].[Street], [s].[UserName]
+FROM (
+    SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+    FROM [Gifts] AS [g]
+    WHERE [g].[Id] = @__giftId_0
+) AS [g0]
+LEFT JOIN (
+    SELECT [p].[Id], [p].[BasketId], [p].[BusketId], [p].[Date], [p].[GiftId], [p].[Quantity], [p].[UserId], [p].[basketStatus], [u].[Id] AS [Id0], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+    FROM [Purchases] AS [p]
+    INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+) AS [s] ON [g0].[Id] = [s].[GiftId]
+ORDER BY [g0].[Id], [s].[Id]"
+2026-03-15 17:58:17 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftWinnerDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-15 17:58:17 [Information] Executed action "WebApi.Controllers.GiftController.DrawAllWinners (WebApi)" in 110.9031ms
+2026-03-15 17:58:17 [Information] Executed endpoint '"WebApi.Controllers.GiftController.DrawAllWinners (WebApi)"'
+2026-03-15 17:58:17 [Information] Completed "POST" "/api/Gift/drawAllWinners" responded 200 in 146ms
+2026-03-15 17:58:17 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/Gift/drawAllWinners""" - 200 null "application/json; charset=utf-8" 157.5211ms
+2026-03-15 17:58:48 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/AddToBasket""" - null null
+2026-03-15 17:58:48 [Information] Incoming Request: "OPTIONS" "/api/User/AddToBasket"
+2026-03-15 17:58:48 [Information] CORS policy execution successful.
+2026-03-15 17:58:48 [Information] Completed "OPTIONS" "/api/User/AddToBasket" responded 204 in 6ms
+2026-03-15 17:58:48 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/AddToBasket""" - 204 null null 19.6161ms
+2026-03-15 17:58:48 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - "application/json" 14
+2026-03-15 17:58:48 [Information] Incoming Request: "POST" "/api/User/AddToBasket"
+2026-03-15 17:58:48 [Information] CORS policy execution successful.
+2026-03-15 17:58:48 [Information] Executing endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-15 17:58:48 [Information] Route matched with "{action = \"AddToBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WebApi.Models.Purchase]] AddToBasket(PurchaseBasketDto)" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-15 17:58:48 [Information] Executed DbCommand ("11"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:58:48 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-15 17:58:48 [Information] AddToBasket called for userId 7 and giftId 0
+2026-03-15 17:58:48 [Information] Executed DbCommand ("3"ms) [Parameters=["@__dto_GiftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+FROM [Gifts] AS [g]
+WHERE [g].[Id] = @__dto_GiftId_0"
+2026-03-15 17:58:48 [Warning] Gift not found for AddToBasket: 0
+2026-03-15 17:58:48 [Information] Executing "BadRequestObjectResult", writing value of type '"System.String"'.
+2026-03-15 17:58:48 [Information] Executed action "WebApi.Controllers.UserController.AddToBasket (WebApi)" in 60.0149ms
+2026-03-15 17:58:48 [Information] Executed endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-15 17:58:48 [Information] Completed "POST" "/api/User/AddToBasket" responded 400 in 84ms
+2026-03-15 17:58:48 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - 400 null "text/plain; charset=utf-8" 98.3785ms

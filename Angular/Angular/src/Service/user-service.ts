@@ -12,23 +12,23 @@ export class UserService {
     const token = localStorage.getItem('authToken');
     return { 'Authorization': `Bearer ${token}` };
   }
-  AddToBasket(PurchaseData: Purchase) {
-    if (!PurchaseData || !PurchaseData.giftId || !PurchaseData.userId) {
-      return {
-        subscribe: (cb: any, errCb: any) => errCb({ userMessage: 'יש למלא את כל השדות הנדרשים בסל.' })
-      };
-    }
-    console.log('Adding to basket:', PurchaseData);
-    return this.http.post(`${this.Url}`, PurchaseData, { headers: this.getHeaders() });
-  }
-  TicketPurchase(TicketData: Purchase) {
-    if (!TicketData || !TicketData.giftId || !TicketData.userId) {
-      return {
-        subscribe: (cb: any, errCb: any) => errCb({ userMessage: 'יש למלא את כל השדות הנדרשים לרכישת כרטיס.' })
-      };
-    }
-    console.log('Purchasing ticket:', TicketData);
-    return this.http.post(`${this.Url}/TicketPurchase`, TicketData, { headers: this.getHeaders() });
+  AddToBasket(purchaseData: any) {
+    return this.http.post(`${this.Url}/AddToBasket`, purchaseData, { headers: this.getHeaders() });
   }
 
+  TicketPurchase(purchaseData: any) {
+    return this.http.post(`${this.Url}/TicketPurchase`, purchaseData, { headers: this.getHeaders() });
+  }
+
+  ConfirmBasket() {
+    return this.http.post(`${this.Url}/ConfirmBasket`, {}, { headers: this.getHeaders() });
+  }
+
+  RemoveFromBasket(purchaseId: number) {
+    return this.http.delete(`${this.Url}/RemoveFromBasket/${purchaseId}`, { headers: this.getHeaders() });
+  }
+
+  GetGiftsWithWinners() {
+    return this.http.get(`${this.Url}/GiftsWithWinners`, { headers: this.getHeaders() });
+  }
 }

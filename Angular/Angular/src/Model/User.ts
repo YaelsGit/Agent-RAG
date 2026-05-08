@@ -10,7 +10,7 @@ import { EmailValidator } from "@angular/forms";
     public firstName: string='';
     public lastName: string='';
     public userName: string='';
-    public email: EmailValidator=new EmailValidator();
+    public email: string='';
     public password: string='';
     public role: Status=Status.User;
     public city: string='';

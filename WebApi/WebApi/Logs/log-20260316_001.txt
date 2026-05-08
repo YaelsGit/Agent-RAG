@@ -1,0 +1,720 @@
+2026-03-16 09:32:51 [Information] User profile is available. Using '"C:\Users\user1\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-16 09:32:51 [Error] Hosting failed to start
+System.IO.IOException: Failed to bind to address https://127.0.0.1:7036: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-03-16 09:44:41 [Information] User profile is available. Using '"C:\Users\user1\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-16 09:44:41 [Information] Now listening on: "https://localhost:7036"
+2026-03-16 09:44:41 [Information] Now listening on: "http://localhost:5090"
+2026-03-16 09:44:41 [Information] Application started. Press Ctrl+C to shut down.
+2026-03-16 09:44:41 [Information] Hosting environment: "Development"
+2026-03-16 09:44:41 [Information] Content root path: "C:\Users\user1\Downloads\Web-Api-Angular\WebApi\WebApi"
+2026-03-16 09:44:43 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/index.html""" - null null
+2026-03-16 09:44:43 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 254.1785ms
+2026-03-16 09:44:43 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/_vs/browserLink""" - null null
+2026-03-16 09:44:43 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-16 09:44:43 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/_framework/aspnetcore-browser-refresh.js""" - 200 16497 "application/javascript; charset=utf-8" 379.8925ms
+2026-03-16 09:44:44 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 405.5903ms
+2026-03-16 09:44:44 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/v1/swagger.json""" - null null
+2026-03-16 09:44:44 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 394.1106ms
+2026-03-16 09:45:26 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Auth/Login""" - null null
+2026-03-16 09:45:26 [Information] Incoming Request: "OPTIONS" "/api/Auth/Login"
+2026-03-16 09:45:26 [Information] CORS policy execution successful.
+2026-03-16 09:45:26 [Information] Completed "OPTIONS" "/api/Auth/Login" responded 204 in 17ms
+2026-03-16 09:45:26 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Auth/Login""" - 204 null null 29.6763ms
+2026-03-16 09:45:26 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - "application/json" 37
+2026-03-16 09:45:26 [Information] Incoming Request: "POST" "/api/Auth/Login"
+2026-03-16 09:45:26 [Information] CORS policy execution successful.
+2026-03-16 09:45:26 [Information] Executing endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-16 09:45:26 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginRequestDto)" on controller "WebApi.Controllers.AuthController" ("WebApi").
+2026-03-16 09:45:26 [Information] Login called for user "יי"
+2026-03-16 09:45:26 [Information] User login attempt: "יי"
+2026-03-16 09:45:28 [Information] Executed DbCommand ("100"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__userName_0"
+2026-03-16 09:45:28 [Information] User "יי" logged in successfully
+2026-03-16 09:45:28 [Information] Executing "OkObjectResult", writing value of type '"WebApi.DTOs.UserDTO+LoginResponseDto"'.
+2026-03-16 09:45:28 [Information] Executed action "WebApi.Controllers.AuthController.Login (WebApi)" in 2216.0907ms
+2026-03-16 09:45:28 [Information] Executed endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-16 09:45:28 [Information] Completed "POST" "/api/Auth/Login" responded 200 in 2329ms
+2026-03-16 09:45:28 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - 200 null "application/json; charset=utf-8" 2355.6783ms
+2026-03-16 09:45:28 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-16 09:45:28 [Information] Incoming Request: "OPTIONS" "/api/Gift"
+2026-03-16 09:45:28 [Information] CORS policy execution successful.
+2026-03-16 09:45:28 [Information] Completed "OPTIONS" "/api/Gift" responded 204 in 5ms
+2026-03-16 09:45:28 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - 204 null null 16.2916ms
+2026-03-16 09:45:28 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-16 09:45:28 [Information] Incoming Request: "GET" "/api/Gift"
+2026-03-16 09:45:28 [Information] CORS policy execution successful.
+2026-03-16 09:45:28 [Information] Executing endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-16 09:45:28 [Information] Route matched with "{action = \"GetAllGift\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.GiftDTO+GiftCategoryDto]]] GetAllGift()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-16 09:45:28 [Information] Executed DbCommand ("35"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-16 09:45:28 [Information] GetAllGift called
+2026-03-16 09:45:28 [Information] Executed DbCommand ("35"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-16 09:45:29 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftResponseDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-16 09:45:29 [Information] Executed action "WebApi.Controllers.GiftController.GetAllGift (WebApi)" in 480.4994ms
+2026-03-16 09:45:29 [Information] Executed endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-16 09:45:29 [Information] Completed "GET" "/api/Gift" responded 200 in 559ms
+2026-03-16 09:45:29 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - 200 null "application/json; charset=utf-8" 570.8708ms
+2026-03-16 09:45:33 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/AddToBasket""" - null null
+2026-03-16 09:45:33 [Information] Incoming Request: "OPTIONS" "/api/User/AddToBasket"
+2026-03-16 09:45:33 [Information] CORS policy execution successful.
+2026-03-16 09:45:33 [Information] Completed "OPTIONS" "/api/User/AddToBasket" responded 204 in 4ms
+2026-03-16 09:45:33 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/AddToBasket""" - 204 null null 12.4318ms
+2026-03-16 09:45:33 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - "application/json" 26
+2026-03-16 09:45:33 [Information] Incoming Request: "POST" "/api/User/AddToBasket"
+2026-03-16 09:45:33 [Information] CORS policy execution successful.
+2026-03-16 09:45:33 [Information] Executing endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-16 09:45:33 [Information] Route matched with "{action = \"AddToBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WebApi.Models.Purchase]] AddToBasket(PurchaseBasketDto)" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-16 09:45:33 [Information] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-16 09:45:33 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-16 09:45:33 [Information] AddToBasket called for userId 1018 and giftId 30
+2026-03-16 09:45:33 [Information] Executed DbCommand ("5"ms) [Parameters=["@__dto_GiftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+FROM [Gifts] AS [g]
+WHERE [g].[Id] = @__dto_GiftId_0"
+2026-03-16 09:45:33 [Warning] Cannot add to basket, gift already has winner: 30
+2026-03-16 09:45:33 [Information] Executing "BadRequestObjectResult", writing value of type '"<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-03-16 09:45:33 [Information] Executed action "WebApi.Controllers.UserController.AddToBasket (WebApi)" in 77.853ms
+2026-03-16 09:45:33 [Information] Executed endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-16 09:45:33 [Information] Completed "POST" "/api/User/AddToBasket" responded 400 in 106ms
+2026-03-16 09:45:33 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - 400 null "application/json; charset=utf-8" 117.9945ms
+2026-03-16 09:45:36 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/GetBasket""" - null null
+2026-03-16 09:45:36 [Information] Incoming Request: "OPTIONS" "/api/User/GetBasket"
+2026-03-16 09:45:36 [Information] CORS policy execution successful.
+2026-03-16 09:45:36 [Information] Completed "OPTIONS" "/api/User/GetBasket" responded 204 in 2ms
+2026-03-16 09:45:36 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/GetBasket""" - 204 null null 9.7916ms
+2026-03-16 09:45:36 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/User/GetBasket""" - null null
+2026-03-16 09:45:36 [Information] Incoming Request: "GET" "/api/User/GetBasket"
+2026-03-16 09:45:36 [Information] CORS policy execution successful.
+2026-03-16 09:45:36 [Information] Executing endpoint '"WebApi.Controllers.UserController.GetBasket (WebApi)"'
+2026-03-16 09:45:36 [Information] Route matched with "{action = \"GetBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBasket()" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-16 09:45:36 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-16 09:45:36 [Information] Fetching basket for userId 1018
+2026-03-16 09:45:36 [Information] Executed DbCommand ("11"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[GiftId], [g].[Name] AS [GiftName], [g].[PriceCard] AS [Price], [p].[Quantity], [p].[Date]
+FROM [Purchases] AS [p]
+INNER JOIN [Gifts] AS [g] ON [p].[GiftId] = [g].[Id]
+WHERE [p].[UserId] = @__userId_0 AND [p].[basketStatus] = 0"
+2026-03-16 09:45:36 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-03-16 09:45:36 [Information] Executed action "WebApi.Controllers.UserController.GetBasket (WebApi)" in 63.8408ms
+2026-03-16 09:45:36 [Information] Executed endpoint '"WebApi.Controllers.UserController.GetBasket (WebApi)"'
+2026-03-16 09:45:36 [Information] Completed "GET" "/api/User/GetBasket" responded 200 in 91ms
+2026-03-16 09:45:36 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/User/GetBasket""" - 200 null "application/json; charset=utf-8" 105.3303ms
+2026-03-16 09:45:37 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-16 09:45:37 [Information] Incoming Request: "OPTIONS" "/api/Gift"
+2026-03-16 09:45:37 [Information] CORS policy execution successful.
+2026-03-16 09:45:37 [Information] Completed "OPTIONS" "/api/Gift" responded 204 in 4ms
+2026-03-16 09:45:37 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - 204 null null 13.6154ms
+2026-03-16 09:45:37 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-16 09:45:37 [Information] Incoming Request: "GET" "/api/Gift"
+2026-03-16 09:45:37 [Information] CORS policy execution successful.
+2026-03-16 09:45:37 [Information] Executing endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-16 09:45:37 [Information] Route matched with "{action = \"GetAllGift\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.GiftDTO+GiftCategoryDto]]] GetAllGift()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-16 09:45:37 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-16 09:45:37 [Information] GetAllGift called
+2026-03-16 09:45:37 [Information] Executed DbCommand ("10"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-16 09:45:37 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftResponseDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-16 09:45:37 [Information] Executed action "WebApi.Controllers.GiftController.GetAllGift (WebApi)" in 27.4804ms
+2026-03-16 09:45:37 [Information] Executed endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-16 09:45:37 [Information] Completed "GET" "/api/Gift" responded 200 in 42ms
+2026-03-16 09:45:37 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - 200 null "application/json; charset=utf-8" 54.9527ms
+2026-03-16 09:45:41 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/AddToBasket""" - null null
+2026-03-16 09:45:41 [Information] Incoming Request: "OPTIONS" "/api/User/AddToBasket"
+2026-03-16 09:45:41 [Information] CORS policy execution successful.
+2026-03-16 09:45:41 [Information] Completed "OPTIONS" "/api/User/AddToBasket" responded 204 in 4ms
+2026-03-16 09:45:41 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/AddToBasket""" - 204 null null 11.4433ms
+2026-03-16 09:45:41 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - "application/json" 26
+2026-03-16 09:45:41 [Information] Incoming Request: "POST" "/api/User/AddToBasket"
+2026-03-16 09:45:41 [Information] CORS policy execution successful.
+2026-03-16 09:45:41 [Information] Executing endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-16 09:45:41 [Information] Route matched with "{action = \"AddToBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WebApi.Models.Purchase]] AddToBasket(PurchaseBasketDto)" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-16 09:45:41 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-16 09:45:41 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-16 09:45:41 [Information] AddToBasket called for userId 1018 and giftId 30
+2026-03-16 09:45:41 [Information] Executed DbCommand ("1"ms) [Parameters=["@__dto_GiftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+FROM [Gifts] AS [g]
+WHERE [g].[Id] = @__dto_GiftId_0"
+2026-03-16 09:45:41 [Warning] Cannot add to basket, gift already has winner: 30
+2026-03-16 09:45:41 [Information] Executing "BadRequestObjectResult", writing value of type '"<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-03-16 09:45:41 [Information] Executed action "WebApi.Controllers.UserController.AddToBasket (WebApi)" in 23.5725ms
+2026-03-16 09:45:41 [Information] Executed endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-16 09:45:41 [Information] Completed "POST" "/api/User/AddToBasket" responded 400 in 41ms
+2026-03-16 09:45:41 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - 400 null "application/json; charset=utf-8" 50.0651ms
+2026-03-16 09:45:43 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/GetBasket""" - null null
+2026-03-16 09:45:43 [Information] Incoming Request: "OPTIONS" "/api/User/GetBasket"
+2026-03-16 09:45:43 [Information] CORS policy execution successful.
+2026-03-16 09:45:43 [Information] Completed "OPTIONS" "/api/User/GetBasket" responded 204 in 4ms
+2026-03-16 09:45:43 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/GetBasket""" - 204 null null 13.5926ms
+2026-03-16 09:45:43 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/User/GetBasket""" - null null
+2026-03-16 09:45:43 [Information] Incoming Request: "GET" "/api/User/GetBasket"
+2026-03-16 09:45:43 [Information] CORS policy execution successful.
+2026-03-16 09:45:43 [Information] Executing endpoint '"WebApi.Controllers.UserController.GetBasket (WebApi)"'
+2026-03-16 09:45:43 [Information] Route matched with "{action = \"GetBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBasket()" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-16 09:45:43 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-16 09:45:43 [Information] Fetching basket for userId 1018
+2026-03-16 09:45:43 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[GiftId], [g].[Name] AS [GiftName], [g].[PriceCard] AS [Price], [p].[Quantity], [p].[Date]
+FROM [Purchases] AS [p]
+INNER JOIN [Gifts] AS [g] ON [p].[GiftId] = [g].[Id]
+WHERE [p].[UserId] = @__userId_0 AND [p].[basketStatus] = 0"
+2026-03-16 09:45:43 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-03-16 09:45:43 [Information] Executed action "WebApi.Controllers.UserController.GetBasket (WebApi)" in 15.9061ms
+2026-03-16 09:45:43 [Information] Executed endpoint '"WebApi.Controllers.UserController.GetBasket (WebApi)"'
+2026-03-16 09:45:43 [Information] Completed "GET" "/api/User/GetBasket" responded 200 in 29ms
+2026-03-16 09:45:43 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/User/GetBasket""" - 200 null "application/json; charset=utf-8" 40.6161ms
+2026-03-16 09:48:18 [Information] User profile is available. Using '"C:\Users\user1\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-16 09:48:18 [Information] Now listening on: "https://localhost:7036"
+2026-03-16 09:48:18 [Information] Now listening on: "http://localhost:5090"
+2026-03-16 09:48:18 [Information] Application started. Press Ctrl+C to shut down.
+2026-03-16 09:48:18 [Information] Hosting environment: "Development"
+2026-03-16 09:48:18 [Information] Content root path: "C:\Users\user1\Downloads\Web-Api-Angular\WebApi\WebApi"
+2026-03-16 09:48:19 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/index.html""" - null null
+2026-03-16 09:48:19 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 124.2492ms
+2026-03-16 09:48:19 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-16 09:48:19 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/_vs/browserLink""" - null null
+2026-03-16 09:48:19 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/_framework/aspnetcore-browser-refresh.js""" - 200 16497 "application/javascript; charset=utf-8" 4.565ms
+2026-03-16 09:48:19 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 23.134ms
+2026-03-16 09:48:19 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/v1/swagger.json""" - null null
+2026-03-16 09:48:19 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 34.7048ms
+2026-03-16 09:48:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/index.html""" - null null
+2026-03-16 09:48:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 21.955ms
+2026-03-16 09:48:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-16 09:48:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/_vs/browserLink""" - null null
+2026-03-16 09:48:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/_framework/aspnetcore-browser-refresh.js""" - 200 16497 "application/javascript; charset=utf-8" 26.5932ms
+2026-03-16 09:48:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 56.1759ms
+2026-03-16 09:48:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/v1/swagger.json""" - null null
+2026-03-16 09:48:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 64.6235ms
+2026-03-16 09:48:44 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/index.html""" - null null
+2026-03-16 09:48:44 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 10.0534ms
+2026-03-16 09:48:44 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-16 09:48:44 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/_vs/browserLink""" - null null
+2026-03-16 09:48:44 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/_framework/aspnetcore-browser-refresh.js""" - 200 16497 "application/javascript; charset=utf-8" 10.6445ms
+2026-03-16 09:48:44 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 28.7365ms
+2026-03-16 09:48:44 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/v1/swagger.json""" - null null
+2026-03-16 09:48:44 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 30.0952ms
+2026-03-16 09:48:50 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Auth/Login""" - null null
+2026-03-16 09:48:50 [Information] Incoming Request: "OPTIONS" "/api/Auth/Login"
+2026-03-16 09:48:50 [Information] CORS policy execution successful.
+2026-03-16 09:48:50 [Information] Completed "OPTIONS" "/api/Auth/Login" responded 204 in 25ms
+2026-03-16 09:48:50 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Auth/Login""" - 204 null null 51.1276ms
+2026-03-16 09:48:50 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - "application/json" 37
+2026-03-16 09:48:50 [Information] Incoming Request: "POST" "/api/Auth/Login"
+2026-03-16 09:48:50 [Information] CORS policy execution successful.
+2026-03-16 09:48:50 [Information] Executing endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-16 09:48:50 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginRequestDto)" on controller "WebApi.Controllers.AuthController" ("WebApi").
+2026-03-16 09:48:51 [Information] Login called for user "יי"
+2026-03-16 09:48:51 [Information] User login attempt: "יי"
+2026-03-16 09:48:51 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - "application/json" 37
+2026-03-16 09:48:51 [Information] Incoming Request: "POST" "/api/Auth/Login"
+2026-03-16 09:48:51 [Information] CORS policy execution successful.
+2026-03-16 09:48:51 [Information] Executing endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-16 09:48:51 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginRequestDto)" on controller "WebApi.Controllers.AuthController" ("WebApi").
+2026-03-16 09:48:51 [Information] Login called for user "יי"
+2026-03-16 09:48:51 [Information] User login attempt: "יי"
+2026-03-16 09:48:51 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - "application/json" 37
+2026-03-16 09:48:51 [Information] Incoming Request: "POST" "/api/Auth/Login"
+2026-03-16 09:48:51 [Information] CORS policy execution successful.
+2026-03-16 09:48:51 [Information] Executing endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-16 09:48:51 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginRequestDto)" on controller "WebApi.Controllers.AuthController" ("WebApi").
+2026-03-16 09:48:51 [Information] Login called for user "יי"
+2026-03-16 09:48:51 [Information] User login attempt: "יי"
+2026-03-16 09:48:51 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - "application/json" 37
+2026-03-16 09:48:51 [Information] Incoming Request: "POST" "/api/Auth/Login"
+2026-03-16 09:48:51 [Information] CORS policy execution successful.
+2026-03-16 09:48:51 [Information] Executing endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-16 09:48:51 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginRequestDto)" on controller "WebApi.Controllers.AuthController" ("WebApi").
+2026-03-16 09:48:51 [Information] Login called for user "יי"
+2026-03-16 09:48:51 [Information] User login attempt: "יי"
+2026-03-16 09:48:51 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - "application/json" 37
+2026-03-16 09:48:51 [Information] Incoming Request: "POST" "/api/Auth/Login"
+2026-03-16 09:48:51 [Information] CORS policy execution successful.
+2026-03-16 09:48:51 [Information] Executing endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-16 09:48:51 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginRequestDto)" on controller "WebApi.Controllers.AuthController" ("WebApi").
+2026-03-16 09:48:51 [Information] Login called for user "יי"
+2026-03-16 09:48:51 [Information] User login attempt: "יי"
+2026-03-16 09:48:51 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - "application/json" 37
+2026-03-16 09:48:51 [Information] Incoming Request: "POST" "/api/Auth/Login"
+2026-03-16 09:48:51 [Information] CORS policy execution successful.
+2026-03-16 09:48:51 [Information] Executing endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-16 09:48:52 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginRequestDto)" on controller "WebApi.Controllers.AuthController" ("WebApi").
+2026-03-16 09:48:52 [Information] Login called for user "יי"
+2026-03-16 09:48:52 [Information] User login attempt: "יי"
+2026-03-16 09:48:52 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - "application/json" 37
+2026-03-16 09:48:52 [Information] Incoming Request: "POST" "/api/Auth/Login"
+2026-03-16 09:48:52 [Information] CORS policy execution successful.
+2026-03-16 09:48:52 [Information] Executing endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-16 09:48:52 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginRequestDto)" on controller "WebApi.Controllers.AuthController" ("WebApi").
+2026-03-16 09:48:52 [Information] Login called for user "יי"
+2026-03-16 09:48:52 [Information] User login attempt: "יי"
+2026-03-16 09:48:53 [Information] Executed DbCommand ("104"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__userName_0"
+2026-03-16 09:48:53 [Information] Executed DbCommand ("112"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__userName_0"
+2026-03-16 09:48:53 [Information] Executed DbCommand ("117"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__userName_0"
+2026-03-16 09:48:53 [Information] Executed DbCommand ("117"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__userName_0"
+2026-03-16 09:48:53 [Information] Executed DbCommand ("117"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__userName_0"
+2026-03-16 09:48:53 [Information] Executed DbCommand ("117"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__userName_0"
+2026-03-16 09:48:53 [Information] Executed DbCommand ("99"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__userName_0"
+2026-03-16 09:48:53 [Information] User "יי" logged in successfully
+2026-03-16 09:48:53 [Information] User "יי" logged in successfully
+2026-03-16 09:48:53 [Information] User "יי" logged in successfully
+2026-03-16 09:48:53 [Information] User "יי" logged in successfully
+2026-03-16 09:48:53 [Information] User "יי" logged in successfully
+2026-03-16 09:48:53 [Information] User "יי" logged in successfully
+2026-03-16 09:48:53 [Information] User "יי" logged in successfully
+2026-03-16 09:48:53 [Information] Executing "OkObjectResult", writing value of type '"WebApi.DTOs.UserDTO+LoginResponseDto"'.
+2026-03-16 09:48:53 [Information] Executing "OkObjectResult", writing value of type '"WebApi.DTOs.UserDTO+LoginResponseDto"'.
+2026-03-16 09:48:53 [Information] Executing "OkObjectResult", writing value of type '"WebApi.DTOs.UserDTO+LoginResponseDto"'.
+2026-03-16 09:48:53 [Information] Executing "OkObjectResult", writing value of type '"WebApi.DTOs.UserDTO+LoginResponseDto"'.
+2026-03-16 09:48:53 [Information] Executing "OkObjectResult", writing value of type '"WebApi.DTOs.UserDTO+LoginResponseDto"'.
+2026-03-16 09:48:53 [Information] Executing "OkObjectResult", writing value of type '"WebApi.DTOs.UserDTO+LoginResponseDto"'.
+2026-03-16 09:48:53 [Information] Executing "OkObjectResult", writing value of type '"WebApi.DTOs.UserDTO+LoginResponseDto"'.
+2026-03-16 09:48:53 [Information] Executed action "WebApi.Controllers.AuthController.Login (WebApi)" in 1794.2685ms
+2026-03-16 09:48:53 [Information] Executed endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-16 09:48:53 [Information] Executed action "WebApi.Controllers.AuthController.Login (WebApi)" in 1241.8517ms
+2026-03-16 09:48:53 [Information] Executed endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-16 09:48:53 [Information] Completed "POST" "/api/Auth/Login" responded 200 in 1261ms
+2026-03-16 09:48:53 [Information] Executed action "WebApi.Controllers.AuthController.Login (WebApi)" in 1597.33ms
+2026-03-16 09:48:53 [Information] Executed endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-16 09:48:53 [Information] Completed "POST" "/api/Auth/Login" responded 200 in 1631ms
+2026-03-16 09:48:53 [Information] Completed "POST" "/api/Auth/Login" responded 200 in 1812ms
+2026-03-16 09:48:53 [Information] Executed action "WebApi.Controllers.AuthController.Login (WebApi)" in 2661.8269ms
+2026-03-16 09:48:53 [Information] Executed action "WebApi.Controllers.AuthController.Login (WebApi)" in 1961.591ms
+2026-03-16 09:48:53 [Information] Executed action "WebApi.Controllers.AuthController.Login (WebApi)" in 2167.883ms
+2026-03-16 09:48:53 [Information] Executed endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-16 09:48:53 [Information] Completed "POST" "/api/Auth/Login" responded 200 in 2211ms
+2026-03-16 09:48:53 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - 200 null "application/json; charset=utf-8" 1284.8243ms
+2026-03-16 09:48:53 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - 200 null "application/json; charset=utf-8" 1838.8486ms
+2026-03-16 09:48:53 [Information] Executed endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-16 09:48:53 [Information] Executed endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-16 09:48:53 [Information] Completed "POST" "/api/Auth/Login" responded 200 in 2020ms
+2026-03-16 09:48:53 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - 200 null "application/json; charset=utf-8" 1669.1853ms
+2026-03-16 09:48:53 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - 200 null "application/json; charset=utf-8" 2224.0622ms
+2026-03-16 09:48:53 [Information] Completed "POST" "/api/Auth/Login" responded 200 in 2838ms
+2026-03-16 09:48:53 [Information] Executed action "WebApi.Controllers.AuthController.Login (WebApi)" in 1446.0722ms
+2026-03-16 09:48:53 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - 200 null "application/json; charset=utf-8" 2027.3397ms
+2026-03-16 09:48:53 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-16 09:48:53 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - 200 null "application/json; charset=utf-8" 2874.5029ms
+2026-03-16 09:48:53 [Information] Executed endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-16 09:48:53 [Information] Completed "POST" "/api/Auth/Login" responded 200 in 1529ms
+2026-03-16 09:48:53 [Information] Incoming Request: "OPTIONS" "/api/Gift"
+2026-03-16 09:48:53 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - 200 null "application/json; charset=utf-8" 1536.5592ms
+2026-03-16 09:48:53 [Information] CORS policy execution successful.
+2026-03-16 09:48:53 [Information] Completed "OPTIONS" "/api/Gift" responded 204 in 14ms
+2026-03-16 09:48:53 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - 204 null null 31.2959ms
+2026-03-16 09:48:53 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-16 09:48:53 [Information] Incoming Request: "GET" "/api/Gift"
+2026-03-16 09:48:53 [Information] CORS policy execution successful.
+2026-03-16 09:48:53 [Information] Executing endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-16 09:48:53 [Information] Route matched with "{action = \"GetAllGift\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.GiftDTO+GiftCategoryDto]]] GetAllGift()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-16 09:48:53 [Information] GetAllGift called
+2026-03-16 09:48:53 [Information] Executed DbCommand ("16"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-16 09:48:53 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftResponseDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-16 09:48:53 [Information] Executed action "WebApi.Controllers.GiftController.GetAllGift (WebApi)" in 295.233ms
+2026-03-16 09:48:53 [Information] Executed endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-16 09:48:53 [Information] Completed "GET" "/api/Gift" responded 200 in 374ms
+2026-03-16 09:48:53 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - 200 null "application/json; charset=utf-8" 380.4008ms
+2026-03-16 09:48:57 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/AddToBasket""" - null null
+2026-03-16 09:48:57 [Information] Incoming Request: "OPTIONS" "/api/User/AddToBasket"
+2026-03-16 09:48:57 [Information] CORS policy execution successful.
+2026-03-16 09:48:57 [Information] Completed "OPTIONS" "/api/User/AddToBasket" responded 204 in 4ms
+2026-03-16 09:48:57 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/User/AddToBasket""" - 204 null null 14.8994ms
+2026-03-16 09:48:57 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - "application/json" 26
+2026-03-16 09:48:57 [Information] Incoming Request: "POST" "/api/User/AddToBasket"
+2026-03-16 09:48:57 [Information] CORS policy execution successful.
+2026-03-16 09:48:57 [Information] Executing endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-16 09:48:57 [Information] Route matched with "{action = \"AddToBasket\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WebApi.Models.Purchase]] AddToBasket(PurchaseBasketDto)" on controller "WebApi.Controllers.UserController" ("WebApi").
+2026-03-16 09:48:57 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-16 09:48:57 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-16 09:48:57 [Information] AddToBasket called for userId 1018 and giftId 26
+2026-03-16 09:48:57 [Information] Executed DbCommand ("4"ms) [Parameters=["@__dto_GiftId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName]
+FROM [Gifts] AS [g]
+WHERE [g].[Id] = @__dto_GiftId_0"
+2026-03-16 09:48:57 [Warning] Cannot add to basket, gift already has winner: 26
+2026-03-16 09:48:57 [Information] Executing "BadRequestObjectResult", writing value of type '"<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-03-16 09:48:57 [Information] Executed action "WebApi.Controllers.UserController.AddToBasket (WebApi)" in 103.0795ms
+2026-03-16 09:48:57 [Information] Executed endpoint '"WebApi.Controllers.UserController.AddToBasket (WebApi)"'
+2026-03-16 09:48:57 [Information] Completed "POST" "/api/User/AddToBasket" responded 400 in 132ms
+2026-03-16 09:48:57 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/User/AddToBasket""" - 400 null "application/json; charset=utf-8" 144.2373ms
+2026-03-16 10:06:11 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Auth/Login""" - null null
+2026-03-16 10:06:11 [Information] Incoming Request: "OPTIONS" "/api/Auth/Login"
+2026-03-16 10:06:11 [Information] CORS policy execution successful.
+2026-03-16 10:06:11 [Information] Completed "OPTIONS" "/api/Auth/Login" responded 204 in 1ms
+2026-03-16 10:06:11 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Auth/Login""" - 204 null null 14.6602ms
+2026-03-16 10:06:11 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - "application/json" 37
+2026-03-16 10:06:11 [Information] Incoming Request: "POST" "/api/Auth/Login"
+2026-03-16 10:06:11 [Information] CORS policy execution successful.
+2026-03-16 10:06:11 [Information] Executing endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-16 10:06:11 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginRequestDto)" on controller "WebApi.Controllers.AuthController" ("WebApi").
+2026-03-16 10:06:11 [Information] Login called for user "יי"
+2026-03-16 10:06:11 [Information] User login attempt: "יי"
+2026-03-16 10:06:11 [Information] Executed DbCommand ("9"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__userName_0"
+2026-03-16 10:06:11 [Information] User "יי" logged in successfully
+2026-03-16 10:06:11 [Information] Executing "OkObjectResult", writing value of type '"WebApi.DTOs.UserDTO+LoginResponseDto"'.
+2026-03-16 10:06:11 [Information] Executed action "WebApi.Controllers.AuthController.Login (WebApi)" in 33.2271ms
+2026-03-16 10:06:11 [Information] Executed endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-16 10:06:11 [Information] Completed "POST" "/api/Auth/Login" responded 200 in 50ms
+2026-03-16 10:06:11 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - 200 null "application/json; charset=utf-8" 59.0454ms
+2026-03-16 10:06:11 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-16 10:06:11 [Information] Incoming Request: "OPTIONS" "/api/Gift"
+2026-03-16 10:06:11 [Information] CORS policy execution successful.
+2026-03-16 10:06:11 [Information] Completed "OPTIONS" "/api/Gift" responded 204 in 2ms
+2026-03-16 10:06:11 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - 204 null null 6.8868ms
+2026-03-16 10:06:11 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-16 10:06:11 [Information] Incoming Request: "GET" "/api/Gift"
+2026-03-16 10:06:11 [Information] CORS policy execution successful.
+2026-03-16 10:06:11 [Information] Executing endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-16 10:06:11 [Information] Route matched with "{action = \"GetAllGift\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.GiftDTO+GiftCategoryDto]]] GetAllGift()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-16 10:06:11 [Information] GetAllGift called
+2026-03-16 10:06:11 [Information] Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-16 10:06:11 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftResponseDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-16 10:06:11 [Information] Executed action "WebApi.Controllers.GiftController.GetAllGift (WebApi)" in 20.6825ms
+2026-03-16 10:06:11 [Information] Executed endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-16 10:06:11 [Information] Completed "GET" "/api/Gift" responded 200 in 29ms
+2026-03-16 10:06:11 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - 200 null "application/json; charset=utf-8" 34.8161ms
+2026-03-16 10:06:42 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Auth/Login""" - null null
+2026-03-16 10:06:42 [Information] Incoming Request: "OPTIONS" "/api/Auth/Login"
+2026-03-16 10:06:42 [Information] CORS policy execution successful.
+2026-03-16 10:06:42 [Information] Completed "OPTIONS" "/api/Auth/Login" responded 204 in 3ms
+2026-03-16 10:06:42 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Auth/Login""" - 204 null null 12.937ms
+2026-03-16 10:06:42 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - "application/json" 45
+2026-03-16 10:06:42 [Information] Incoming Request: "POST" "/api/Auth/Login"
+2026-03-16 10:06:42 [Information] CORS policy execution successful.
+2026-03-16 10:06:42 [Information] Executing endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-16 10:06:42 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginRequestDto)" on controller "WebApi.Controllers.AuthController" ("WebApi").
+2026-03-16 10:06:42 [Information] Login called for user "יעלי"
+2026-03-16 10:06:42 [Information] User login attempt: "יעלי"
+2026-03-16 10:06:42 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BuildingNumber], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Phone], [u].[Role], [u].[Street], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__userName_0"
+2026-03-16 10:06:42 [Information] User "יעלי" logged in successfully
+2026-03-16 10:06:42 [Information] Executing "OkObjectResult", writing value of type '"WebApi.DTOs.UserDTO+LoginResponseDto"'.
+2026-03-16 10:06:42 [Information] Executed action "WebApi.Controllers.AuthController.Login (WebApi)" in 17.0804ms
+2026-03-16 10:06:42 [Information] Executed endpoint '"WebApi.Controllers.AuthController.Login (WebApi)"'
+2026-03-16 10:06:42 [Information] Completed "POST" "/api/Auth/Login" responded 200 in 39ms
+2026-03-16 10:06:42 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7036""""/api/Auth/Login""" - 200 null "application/json; charset=utf-8" 57.621ms
+2026-03-16 10:06:42 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-16 10:06:42 [Information] Incoming Request: "OPTIONS" "/api/Gift"
+2026-03-16 10:06:42 [Information] CORS policy execution successful.
+2026-03-16 10:06:42 [Information] Completed "OPTIONS" "/api/Gift" responded 204 in 5ms
+2026-03-16 10:06:42 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - 204 null null 13.2007ms
+2026-03-16 10:06:42 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-16 10:06:42 [Information] Incoming Request: "GET" "/api/Gift"
+2026-03-16 10:06:42 [Information] CORS policy execution successful.
+2026-03-16 10:06:42 [Information] Executing endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-16 10:06:42 [Information] Route matched with "{action = \"GetAllGift\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.GiftDTO+GiftCategoryDto]]] GetAllGift()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-16 10:06:42 [Information] GetAllGift called
+2026-03-16 10:06:42 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-16 10:06:42 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftResponseDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-16 10:06:42 [Information] Executed action "WebApi.Controllers.GiftController.GetAllGift (WebApi)" in 15.1116ms
+2026-03-16 10:06:42 [Information] Executed endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-16 10:06:42 [Information] Completed "GET" "/api/Gift" responded 200 in 24ms
+2026-03-16 10:06:42 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - 200 null "application/json; charset=utf-8" 40.528ms
+2026-03-16 10:07:04 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/index.html""" - null null
+2026-03-16 10:07:04 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 22.9987ms
+2026-03-16 10:07:04 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-16 10:07:04 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/_vs/browserLink""" - null null
+2026-03-16 10:07:04 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/_framework/aspnetcore-browser-refresh.js""" - 200 16497 "application/javascript; charset=utf-8" 85.1572ms
+2026-03-16 10:07:04 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 111.778ms
+2026-03-16 10:07:05 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/v1/swagger.json""" - null null
+2026-03-16 10:07:05 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 31.2778ms
+2026-03-16 10:07:27 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Donor""" - null null
+2026-03-16 10:07:27 [Information] Incoming Request: "OPTIONS" "/api/Donor"
+2026-03-16 10:07:27 [Information] CORS policy execution successful.
+2026-03-16 10:07:27 [Information] Completed "OPTIONS" "/api/Donor" responded 204 in 9ms
+2026-03-16 10:07:27 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Donor""" - 204 null null 22.6476ms
+2026-03-16 10:07:27 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Donor""" - null null
+2026-03-16 10:07:27 [Information] Incoming Request: "GET" "/api/Donor"
+2026-03-16 10:07:27 [Information] CORS policy execution successful.
+2026-03-16 10:07:27 [Information] Executing endpoint '"WebApi.Controllers.DonorController.GetAllDonor (WebApi)"'
+2026-03-16 10:07:27 [Information] Route matched with "{action = \"GetAllDonor\", controller = \"Donor\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.DonorDTO+DonorDto]]] GetAllDonor()" on controller "WebApi.Controllers.DonorController" ("WebApi").
+2026-03-16 10:07:27 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-16 10:07:27 [Information] GetAllDonor called
+2026-03-16 10:07:27 [Information] Getting all donors
+2026-03-16 10:07:27 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Donors] AS [d]"
+2026-03-16 10:07:27 [Information] Executing "OkObjectResult", writing value of type '"System.Linq.Enumerable+WhereSelectListIterator`2[[WebApi.Models.Donor, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApi.DTOs.DonorDTO+DonorDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-16 10:07:27 [Information] Executed action "WebApi.Controllers.DonorController.GetAllDonor (WebApi)" in 60.6415ms
+2026-03-16 10:07:27 [Information] Executed endpoint '"WebApi.Controllers.DonorController.GetAllDonor (WebApi)"'
+2026-03-16 10:07:27 [Information] Completed "GET" "/api/Donor" responded 200 in 97ms
+2026-03-16 10:07:27 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Donor""" - 200 null "application/json; charset=utf-8" 138.1185ms
+2026-03-16 10:07:28 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-16 10:07:28 [Information] Incoming Request: "OPTIONS" "/api/Gift"
+2026-03-16 10:07:28 [Information] CORS policy execution successful.
+2026-03-16 10:07:28 [Information] Completed "OPTIONS" "/api/Gift" responded 204 in 8ms
+2026-03-16 10:07:28 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - 204 null null 36.4023ms
+2026-03-16 10:07:28 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-16 10:07:28 [Information] Incoming Request: "GET" "/api/Gift"
+2026-03-16 10:07:28 [Information] CORS policy execution successful.
+2026-03-16 10:07:28 [Information] Executing endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-16 10:07:28 [Information] Route matched with "{action = \"GetAllGift\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.GiftDTO+GiftCategoryDto]]] GetAllGift()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-16 10:07:28 [Information] GetAllGift called
+2026-03-16 10:07:28 [Information] Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-16 10:07:28 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftResponseDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-16 10:07:28 [Information] Executed action "WebApi.Controllers.GiftController.GetAllGift (WebApi)" in 31.6443ms
+2026-03-16 10:07:28 [Information] Executed endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-16 10:07:28 [Information] Completed "GET" "/api/Gift" responded 200 in 47ms
+2026-03-16 10:07:28 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - 200 null "application/json; charset=utf-8" 82.2239ms
+2026-03-16 10:07:34 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Donor""" - null null
+2026-03-16 10:07:34 [Information] Incoming Request: "OPTIONS" "/api/Donor"
+2026-03-16 10:07:34 [Information] CORS policy execution successful.
+2026-03-16 10:07:34 [Information] Completed "OPTIONS" "/api/Donor" responded 204 in 26ms
+2026-03-16 10:07:34 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Donor""" - 204 null null 51.4504ms
+2026-03-16 10:07:34 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Donor""" - null null
+2026-03-16 10:07:34 [Information] Incoming Request: "GET" "/api/Donor"
+2026-03-16 10:07:34 [Information] CORS policy execution successful.
+2026-03-16 10:07:34 [Information] Executing endpoint '"WebApi.Controllers.DonorController.GetAllDonor (WebApi)"'
+2026-03-16 10:07:34 [Information] Route matched with "{action = \"GetAllDonor\", controller = \"Donor\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.DonorDTO+DonorDto]]] GetAllDonor()" on controller "WebApi.Controllers.DonorController" ("WebApi").
+2026-03-16 10:07:34 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-16 10:07:34 [Information] GetAllDonor called
+2026-03-16 10:07:34 [Information] Getting all donors
+2026-03-16 10:07:34 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Donors] AS [d]"
+2026-03-16 10:07:34 [Information] Executing "OkObjectResult", writing value of type '"System.Linq.Enumerable+WhereSelectListIterator`2[[WebApi.Models.Donor, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApi.DTOs.DonorDTO+DonorDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-16 10:07:34 [Information] Executed action "WebApi.Controllers.DonorController.GetAllDonor (WebApi)" in 19.3372ms
+2026-03-16 10:07:34 [Information] Executed endpoint '"WebApi.Controllers.DonorController.GetAllDonor (WebApi)"'
+2026-03-16 10:07:34 [Information] Completed "GET" "/api/Donor" responded 200 in 39ms
+2026-03-16 10:07:34 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Donor""" - 200 null "application/json; charset=utf-8" 50.2704ms
+2026-03-16 10:07:40 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-16 10:07:40 [Information] Incoming Request: "OPTIONS" "/api/Gift"
+2026-03-16 10:07:40 [Information] CORS policy execution successful.
+2026-03-16 10:07:40 [Information] Completed "OPTIONS" "/api/Gift" responded 204 in 18ms
+2026-03-16 10:07:40 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - 204 null null 40.6397ms
+2026-03-16 10:07:40 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-16 10:07:40 [Information] Incoming Request: "GET" "/api/Gift"
+2026-03-16 10:07:40 [Information] CORS policy execution successful.
+2026-03-16 10:07:40 [Information] Executing endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-16 10:07:40 [Information] Route matched with "{action = \"GetAllGift\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.GiftDTO+GiftCategoryDto]]] GetAllGift()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-16 10:07:40 [Information] GetAllGift called
+2026-03-16 10:07:40 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-16 10:07:40 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftResponseDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-16 10:07:40 [Information] Executed action "WebApi.Controllers.GiftController.GetAllGift (WebApi)" in 19.2925ms
+2026-03-16 10:07:40 [Information] Executed endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-16 10:07:40 [Information] Completed "GET" "/api/Gift" responded 200 in 38ms
+2026-03-16 10:07:40 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - 200 null "application/json; charset=utf-8" 59.0359ms
+2026-03-16 10:07:41 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Donor""" - null null
+2026-03-16 10:07:41 [Information] Incoming Request: "OPTIONS" "/api/Donor"
+2026-03-16 10:07:41 [Information] CORS policy execution successful.
+2026-03-16 10:07:41 [Information] Completed "OPTIONS" "/api/Donor" responded 204 in 19ms
+2026-03-16 10:07:41 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Donor""" - 204 null null 41.7149ms
+2026-03-16 10:07:41 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Donor""" - null null
+2026-03-16 10:07:41 [Information] Incoming Request: "GET" "/api/Donor"
+2026-03-16 10:07:41 [Information] CORS policy execution successful.
+2026-03-16 10:07:41 [Information] Executing endpoint '"WebApi.Controllers.DonorController.GetAllDonor (WebApi)"'
+2026-03-16 10:07:41 [Information] Route matched with "{action = \"GetAllDonor\", controller = \"Donor\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.DonorDTO+DonorDto]]] GetAllDonor()" on controller "WebApi.Controllers.DonorController" ("WebApi").
+2026-03-16 10:07:41 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Gifts] AS [g]
+        WHERE [g].[IsRandom] = CAST(1 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-16 10:07:41 [Information] GetAllDonor called
+2026-03-16 10:07:41 [Information] Getting all donors
+2026-03-16 10:07:41 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Donors] AS [d]"
+2026-03-16 10:07:41 [Information] Executing "OkObjectResult", writing value of type '"System.Linq.Enumerable+WhereSelectListIterator`2[[WebApi.Models.Donor, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApi.DTOs.DonorDTO+DonorDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-16 10:07:41 [Information] Executed action "WebApi.Controllers.DonorController.GetAllDonor (WebApi)" in 22.2219ms
+2026-03-16 10:07:41 [Information] Executed endpoint '"WebApi.Controllers.DonorController.GetAllDonor (WebApi)"'
+2026-03-16 10:07:41 [Information] Completed "GET" "/api/Donor" responded 200 in 55ms
+2026-03-16 10:07:41 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Donor""" - 200 null "application/json; charset=utf-8" 79.0712ms
+2026-03-16 10:07:46 [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-16 10:07:46 [Information] Incoming Request: "OPTIONS" "/api/Gift"
+2026-03-16 10:07:46 [Information] CORS policy execution successful.
+2026-03-16 10:07:46 [Information] Completed "OPTIONS" "/api/Gift" responded 204 in 7ms
+2026-03-16 10:07:46 [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7036""""/api/Gift""" - 204 null null 30.711ms
+2026-03-16 10:07:46 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - null null
+2026-03-16 10:07:46 [Information] Incoming Request: "GET" "/api/Gift"
+2026-03-16 10:07:46 [Information] CORS policy execution successful.
+2026-03-16 10:07:46 [Information] Executing endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-16 10:07:46 [Information] Route matched with "{action = \"GetAllGift\", controller = \"Gift\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApi.DTOs.GiftDTO+GiftCategoryDto]]] GetAllGift()" on controller "WebApi.Controllers.GiftController" ("WebApi").
+2026-03-16 10:07:46 [Information] GetAllGift called
+2026-03-16 10:07:46 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [g].[Id], [g].[CategoryId], [g].[Description], [g].[DonorId], [g].[IsRandom], [g].[Name], [g].[PictureId], [g].[PriceCard], [g].[Quantity], [g].[WinnerName], [c].[Id], [c].[Name], [d].[Id], [d].[Email], [d].[FirstName], [d].[LastName], [d].[Phone]
+FROM [Gifts] AS [g]
+INNER JOIN [Categories] AS [c] ON [g].[CategoryId] = [c].[Id]
+INNER JOIN [Donors] AS [d] ON [g].[DonorId] = [d].[Id]"
+2026-03-16 10:07:46 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[WebApi.DTOs.GiftDTO+GiftResponseDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-16 10:07:46 [Information] Executed action "WebApi.Controllers.GiftController.GetAllGift (WebApi)" in 41.9175ms
+2026-03-16 10:07:46 [Information] Executed endpoint '"WebApi.Controllers.GiftController.GetAllGift (WebApi)"'
+2026-03-16 10:07:46 [Information] Completed "GET" "/api/Gift" responded 200 in 78ms
+2026-03-16 10:07:46 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/api/Gift""" - 200 null "application/json; charset=utf-8" 102.981ms
+2026-03-16 10:39:47 [Information] User profile is available. Using '"C:\Users\user1\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-16 10:39:47 [Information] Now listening on: "https://localhost:7036"
+2026-03-16 10:39:47 [Information] Now listening on: "http://localhost:5090"
+2026-03-16 10:39:47 [Information] Application started. Press Ctrl+C to shut down.
+2026-03-16 10:39:47 [Information] Hosting environment: "Development"
+2026-03-16 10:39:47 [Information] Content root path: "C:\Users\user1\Downloads\Web-Api-Angular\WebApi\WebApi"
+2026-03-16 10:39:48 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/index.html""" - null null
+2026-03-16 10:39:48 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 163.1196ms
+2026-03-16 10:39:48 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-16 10:39:48 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/_vs/browserLink""" - null null
+2026-03-16 10:39:48 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/_framework/aspnetcore-browser-refresh.js""" - 200 16497 "application/javascript; charset=utf-8" 12.3411ms
+2026-03-16 10:39:48 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 38.1603ms
+2026-03-16 10:39:48 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/v1/swagger.json""" - null null
+2026-03-16 10:39:48 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7036""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 51.593ms

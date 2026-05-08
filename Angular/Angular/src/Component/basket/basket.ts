@@ -4,7 +4,6 @@ import { RouterModule, Router } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { MessageService } from 'primeng/api';
 import { ApiService } from '../../Service/api.service';
-import { from } from 'rxjs';
 
 @Component({
     selector: 'app-basket',
@@ -12,30 +11,34 @@ import { from } from 'rxjs';
     imports: [CommonModule, RouterModule, ButtonModule],
     templateUrl: './basket.html',
     styleUrls: ['./basket.scss'],
-    providers: [MessageService, ApiService]
+    providers: [MessageService]
 })
 export class Basket implements OnInit {
     basketItems: any[] = [];
     isRaffleComplete = false;
     winners: any[] = [];
-    messageService = inject(MessageService);
+    totalPrice: number = 0;
+    private messageService = inject(MessageService);
     private api = inject(ApiService);
     private router = inject(Router);
-
     ngOnInit() {
         this.loadBasket();
-        from(this.api.getWinners<any[]>())
-            .subscribe({
-                next: w => this.winners = w || [],
-                error: () => this.winners = []
-            });
     }
+loadBasket() {
+    this.api.getBasket().subscribe({
+        next: (data: any[]) => { // הוספת : any[]
+            this.basketItems = data;
+            this.calculateTotal();
+        },
+        error: (err: any) => { // הוספת : any
+            console.error('Error loading basket:', err);
+        }
+    });
+}
 
-    loadBasket() {
-        const data = sessionStorage.getItem('basket');
-        this.basketItems = data ? JSON.parse(data) : [];
+    calculateTotal() {
+        this.totalPrice = this.basketItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     }
-
     updateQty(itemId: number, delta: number) {
         if (this.isRaffleComplete) return;
         const item = this.basketItems.find(it => it.id === itemId);
@@ -58,57 +61,41 @@ export class Basket implements OnInit {
         return this.basketItems.reduce((sum, item) => sum + (item.priceCard || 0) * (item.Quentity || 1), 0);
     }
 
-    goToGifts() {
-        this.router.navigate(['/gifts']);
-    }
+    async confirmPurchase() {
+        if (this.isRaffleComplete) return;
 
-   confirmPurchase() {
-        // Try to get userId from sessionStorage, or extract from stored user object
-        let userId: number | null = null;
-
-        const userIdStr = sessionStorage.getItem('userId');
-        if (userIdStr) {
-            userId = Number(userIdStr);
-        } else {
-            const userStr = sessionStorage.getItem('user');
-            if (userStr) {
-                try {
-                    const user = JSON.parse(userStr);
-                    userId = user.id;
-                } catch (e) {
-                    console.error('Failed to parse user from sessionStorage', e);
-                }
-            }
-        }
-
-        if (!userId) {
-            this.messageService.add({
-                severity: 'error',
-                summary: 'שגיאה',
-                detail: 'משתמש לא מחובר'
-            });
+        if (!this.api.isLoggedIn()) {
+            this.messageService.add({ severity: 'error', summary: 'שגיאה', detail: 'משתמש לא מחובר' });
             return;
         }
 
-        const basketData = {
-            userId: userId,
-            items: this.basketItems.map(item => ({
-                giftId: item.id,
-                quantity: item.Quentity ?? 1
-            }))
-        };
-        if (this.isRaffleComplete) return;
-        from(this.api.confirmBasket(basketData))
-            .subscribe({
-                next: () => {
-                    this.messageService.add({ severity: 'success', summary: 'הצלחה', detail: 'הרכישה אושרה' });
-                    sessionStorage.removeItem('basket');
-                    this.basketItems = [];
-                    this.isRaffleComplete = true;
-                },
-                error: err => {
-                    this.messageService.add({ severity: 'error', summary: 'שגיאה', detail: err?.message || 'שגיאת שרת' });
-                }
+        try {
+            await this.api.confirmBasket();
+
+            this.messageService.add({ severity: 'success', summary: 'הצלחה', detail: 'הרכישה אושרה' });
+            sessionStorage.removeItem('basket');
+            this.basketItems = [];
+            this.isRaffleComplete = true;
+        } catch (err: any) {
+            console.error(err);
+            this.messageService.add({
+                severity: 'error',
+                summary: 'שגיאה',
+                detail: err?.message || 'אירעה שגיאה באישור הסל'
             });
+        }
+    }
+
+    goToGifts() {
+        this.router.navigate(['/gifts']);
+    }
+    async handleAddGift(giftId: number, quantity: number) {
+        try {
+            await this.api.addToBasket(giftId, quantity);
+
+            this.messageService.add({ severity: 'success', detail: 'נוסף לסל בהצלחה' });
+        } catch (err: any) {
+            this.messageService.add({ severity: 'error', detail: 'הוספה נכשלה: ' + err.message });
+        }
     }
 }

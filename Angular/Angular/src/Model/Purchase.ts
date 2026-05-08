@@ -9,5 +9,6 @@ export class Purchase {
     public userId: number=0;
     public user: User=new User();
     public static totalSum: number = 0;
-  
+    public isRandom: boolean = false;
+    
 }

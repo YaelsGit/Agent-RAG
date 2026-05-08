@@ -11,7 +11,7 @@ namespace WebApi.Interface
         Task<GiftResponseDto> CreateGift(GiftFormDto GiftForm);
         Task<bool> DeleteGift(int Id);
         Task<GiftResponseDto?> UpdateGift(int Id, [FromBody] GiftResponseDto giftForm);
-        Task<IEnumerable<GiftCategoryDto?>> GetAllGift();
+        Task<IEnumerable<GiftResponseDto?>> GetAllGift();
         Task<GiftResponseDto?> GetGiftByName(string name);
         Task<IEnumerable<GiftResponseDto?>> GetGiftByDonor(string firstName, string lastName);
         Task<IEnumerable<GiftResponseDto?>> GetGiftByNumPurchase(int num);

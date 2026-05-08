@@ -12,12 +12,12 @@ export class GiftService {
   constructor(private http: HttpClient) { }
 
   private getHeaders() {
-    const token = localStorage.getItem('authToken'); 
-   console.log("Auth Token:", token);
+    const token = localStorage.getItem('authToken');
+    console.log("Auth Token:", token);
     return { 'Authorization': `Bearer ${token}` };
   }
   getallGifts(): Observable<Gift[]> {
-    
+
     return this.http.get<Gift[]>(this.Url, { headers: this.getHeaders() });
   }
   getGiftByGiftName(name: string): Observable<any[]> {
@@ -43,56 +43,60 @@ export class GiftService {
       headers: this.getHeaders()
     });
   }
-deleteGift(id: number): Observable<void> {
-  return this.http.delete<void>(`${this.Url}/${id}`, {
-    headers: this.getHeaders()
-  });
-}
+  deleteGift(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.Url}/${id}`, {
+      headers: this.getHeaders()
+    });
+  }
   GetGiftPurchases(giftId: number): Observable<any> {
     const params = new HttpParams().set('giftId', giftId.toString());
     return this.http.get<any>(`${this.Url}/Purchase&Gift`, { headers: this.getHeaders(), params });
   }
   GetGiftsBySorted(sortBy: string): Observable<any[]> {
-    if (sortBy !== 'price') {
-      return this.http.get<any[]>(`${this.Url}/purchases/sort-by-price`, { headers: this.getHeaders() });
+    if (sortBy == 'price') {
+      return this.http.get<any[]>(`${this.Url}/sort-by-price`, { headers: this.getHeaders() });
     } else {
-      return this.http.get<any[]>(`${this.Url}/purchases/sort-by-most-purchased`, { headers: this.getHeaders() });
+      return this.http.get<any[]>(`${this.Url}/sort-by-most-purchased`, { headers: this.getHeaders() });
     }
   }
 
-GetsPurchaseWithUser(giftId: number): Observable<any[]> {
-  const params = new HttpParams().set('giftId', giftId.toString());
-  return this.http.get<any[]>(`${this.Url}/purchases-with-users`, { headers: this.getHeaders(), params })
-    .pipe(
-      map(purchases => purchases.map((p: any) => ({
-        id: p.id ?? 0,
-        date: p.date ?? '',
-        giftId: p.giftId ?? 0,
-        userId: p.userId ?? 0,
-        firstName: p.firstName ?? '',
-        lastName: p.lastName ?? ''
-      })))
+  GetsPurchaseWithUser(giftId: number): Observable<any[]> {
+    const params = new HttpParams().set('giftId', giftId.toString());
+    return this.http.get<any[]>(`${this.Url}/purchases-with-users`, { headers: this.getHeaders(), params })
+      .pipe(
+        map(purchases => purchases.map((p: any) => ({
+          id: p.id ?? 0,
+          date: p.date ?? '',
+          giftId: p.giftId ?? 0,
+          userId: p.userId ?? 0,
+          firstName: p.firstName ?? '',
+          lastName: p.lastName ?? ''
+        })))
+      );
+  }
+
+
+  GiftRandom(): Observable<any[]> {
+    return this.http.post<any[]>(
+      `${this.Url}/drawAllWinners`,
+      {},
+      { headers: this.getHeaders() }
     );
-}
-
-
-GiftRandom(): Observable<any[]> {
-  return this.http.get<any[]>(`${this.Url}/Random`, { headers: this.getHeaders() });
-}
+  }
 
   GetTotalSum(): Observable<any> {
     return this.http.get<any>(`${this.Url}/TotalSum`, { headers: this.getHeaders() });
   }
-   GetGiftsBySortedCategoryOrPrice(sortedBy: string): Observable<any[]> {
+  GetGiftsBySortedCategoryOrPrice(sortedBy: string): Observable<any[]> {
     const params = new HttpParams().set('sortedBy', sortedBy);
     return this.http.get<any[]>(`${this.Url}/GetBySorted`, { headers: this.getHeaders(), params });
-}
-DownloadGiftRandomFile() {
-  return this.http.get(`${this.Url}/RandomFile`, { 
-    headers: this.getHeaders(),
-    responseType: 'blob' // חשוב! כדי לקבל קובץ ולא JSON
-  });
-}
+  }
+  DownloadGiftRandomFile() {
+    return this.http.get(`${this.Url}/generateWinnersFile`, {
+      headers: this.getHeaders(),
+      responseType: 'blob'
+    });
+  }
   AddToBasket(PurchaseData: any) {
     console.log('Adding to basket:', PurchaseData);
     return this.http.post(`${this.Url}`, PurchaseData, { headers: this.getHeaders() });
